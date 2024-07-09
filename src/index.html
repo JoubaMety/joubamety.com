@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<head>
+    <title>JoubaMety Website</title>
+    <meta charset="UTF-8" lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <script src="./main.js"></script>
+</head>
+
+<body class="bg-crust text-text">
+    <script>updateTheme();</script>
+    <header class="fixed top-0 z-50 w-full">
+        <div class="h-8 w-full bg-red text-center content-center">
+            <h1 class="text-crust text-xl font-black">SITE IS CURRENTLY UNDER WORK IN PROGRESS!</h1>
+        </div>
+        <nav class="h-16 w-full backdrop-blur-3xl bg-base/75 hover:bg-base/90 flex flex-row items-center content-center justify-between p-6 lg:px-8 drop-shadow-md"
+            aria-label="Global">
+            <!-- JOUBAMETY NAME -->
+            <div>
+                <a href="./index.html" class="text-3xl font-black text-blue hover:text-text">JoubaMety</a>
+            </div>
+            <div class="flex flex-row justify-between items-center gap-x-12">
+                <a href="https://notes.joubamety.com" class="font-bold text-xl hover:text-blue flex flex-row gap-x-1 items-center">
+                    <img class="size-5" src="https://notes.joubamety.com/static/icon.webp">
+                    Notes
+                </a>
+            </div>
+            <!-- LIGHT/DARK MODE -->
+            <div>
+                <button onclick="themeSwitch()" class="hover:text-blue">Switch Theme</button>
+            </div>
+        </nav>
+    </header>
+    <main class="absolute top-0 left-0 h-screen w-full">
+        <div class="relative h-screen w-full">
+            <div class="absolute top-0 left-0 z-10 w-full h-full backdrop-blur-sm bg-gradient-to-b from-crust/50 to-crust">
+                <div class="mx-auto py-96 text-center">
+                    <h1 class="text-blue text-8xl font-black">JoubaMety</h1>
+                    <p class="text-lavender text-4xl font-semibold">Jan Rašnovský</p>
+                    <p class="py-64 text-4xl">Scroll for more</p>
+                </div>
+            </div>
+            <div class="absolute top-0 left-0 -z-100  w-full h-full ">
+                <!--<img class="object-cover w-full h-full" src="./2024-06-29_22.09.55.png">-->
+                <video class="object-cover w-full h-full" autoplay loop controls muted src="./media/background_AV1.webm"></vid>
+            </div>
+        </div>
+        <div class="relative w-full flex justify-between px-32 py-16">
+            <div class="basis-1/2 px-32">
+                <h2 class="text-4xl">Hello there!</h2>
+                <p class="text-xl">I'm Jan <span class="text-blue">"JoubaMety"</span> Rašnovský and I have no idea what to put here yet. So here's some lorem ipsum. </p>
+                <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue blandit commodo. Proin pharetra massa at dapibus venenatis. Pellentesque et lacus vitae arcu pellentesque sagittis. Sed in nunc at ipsum eleifend vestibulum. Nam eget diam quis ante ultricies euismod sed quis nisl. Aliquam vitae posuere ligula, sed blandit libero. Morbi pharetra turpis ipsum, sed aliquam massa efficitur sed. Duis mi libero, laoreet non dapibus sed, fermentum eu urna. Nunc ultricies vulputate magna ut rhoncus. Suspendisse nec nisl in sapien bibendum elementum quis sed nisi.</p>
+                <p class="text-xl">Fusce leo erat, ullamcorper a odio at, congue ultricies ante. Curabitur efficitur libero id felis consequat aliquet. Curabitur in ex sed felis dignissim ullamcorper eget vel metus. Morbi molestie magna quis elementum maximus. Donec in cursus dolor, a sagittis metus. Nulla malesuada porttitor felis, eu bibendum ipsum aliquam sed. Ut consequat velit sit amet felis volutpat, sit amet rhoncus arcu auctor. Sed blandit tortor ut hendrerit fringilla. Nulla id lorem commodo, vulputate nisl et, posuere ipsum. Nunc pellentesque finibus mauris nec rutrum. In dictum non neque non fringilla. Donec molestie, neque vitae ullamcorper elementum, risus risus euismod nibh, sit amet facilisis ligula felis fermentum turpis.</p>
+                <p class="text-xl">Sed pretium iaculis orci, ut vestibulum orci scelerisque ut. Sed gravida elit quis ante viverra, vel pharetra felis fringilla. Mauris ac erat sed orci ornare blandit in eu ex. Cras nec malesuada quam. Nullam vel varius risus, a tincidunt ex. Integer magna augue, vestibulum non tortor in, dapibus rhoncus mi. Proin elementum quam et lectus rutrum varius. Praesent ut est justo. Curabitur bibendum consequat nisi, eu lobortis libero hendrerit luctus. Nam vehicula sodales purus non scelerisque. Quisque vehicula tellus nisi, quis rutrum ex venenatis in. Vestibulum ac nulla varius, scelerisque erat vitae, hendrerit arcu.</p>
+            </div>
+            <div class="basis-1/2">
+                <img class="w-4/5 h-auto" src="./media/joubait.png">
+                <p class="italic">Frenchified Ame-chan from NEEDY GIRL OVERDOSE, ayo.</p>
+            </div>
+        </div>
+
+        <div class="relative w-full flex flex-col justify-between content-center items-center px-32 py-16 gap-4">
+            <p class="text-xl">Oh yeah, don't forget to check out my lovely other website, where I store my notes about various stuff!</p>
+            <a href="https://notes.joubamety.com/" class="text-4xl font-bold text-blue hover:text-text">notes.joubamety.com</a>
+            <a class="w-1/2 h-auto" href="https://notes.joubamety.com/"><img src="https://notes.joubamety.com/_media/root/banner.webp"></a>
+        </div>
+
+        <div class="text-xl text-center p-8">
+            JoubaMety 2024, made with <a href="https://tailwindcss.com/" class="text-blue hover:text-text">Tailwind CSS</a> and <a href="https://github.com/catppuccin/tailwindcss" class="text-blue hover:text-text">Catppuccin Tailwind CSS</a>.
+        </div>
+    </main>
+        
+</body>
