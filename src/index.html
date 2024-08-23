@@ -1,102 +1,138 @@
-<!DOCTYPE html>
-
+<!doctype html>
+<html lang="en">
 <head>
-    <title>JoubaMety Website</title>
-    <meta charset="UTF-8" lang="en">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="./static/icon.png">
-    <link rel="stylesheet" href="./output.css">
-    <script src="./main.js"></script>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="only dark">
+  <link href="./output.css" rel="stylesheet">
+  <script src="./script.js" defer></script>
 
-<body class="bg-crust text-text">
-    <script>updateTheme();</script>
-    <header class="fixed top-0 z-50 w-full">
-        <div class="h-8 w-full bg-red text-center content-center">
-            <h1 class="text-crust text-xl font-black">SITE IS CURRENTLY UNDER WORK IN PROGRESS!</h1>
-        </div>
-        <nav class="h-16 w-full backdrop-blur-3xl bg-base/75 hover:bg-base/90 flex flex-row items-center content-center justify-between p-6 lg:px-8 drop-shadow-md"
-            aria-label="Global">
-            <!-- JOUBAMETY NAME -->
-            <div>
-                <a href="./index.html" class="text-3xl font-black text-blue hover:text-text">JoubaMety</a>
+  <title>JoubaMety</title>
+  <meta name="description" content="JoubaMety's personal website.">
+  <meta name="keywords" content="JoubaMety, Jan Rašnovský, Minecraft, Machinima, FFmpeg, Rolepay, Films, Shorts, Czech, Slovak, YouTuber, Content Creator, Content Creation">
+  <meta name="author" content="JoubaMety">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="JoubaMety">
+  <meta property="og:description" content="JoubaMety's personal website.">
+  <meta property="og:image" content="./media/avatar.webp">
+  <meta property="og:url" content="https://joubamety.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="JoubaMety">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@JoubaMety">
+  <meta name="twitter:creator" content="@JoubaMety">
+  <meta name="twitter:title" content="JoubaMety">
+  <meta name="twitter:description" content="JoubaMety's personal website.">
+  <meta name="twitter:image" content="./media/avatar.webp">
+  <meta name="twitter:url" content="https://joubamety.com/">
+
+  <link rel="icon" type="image/png" href="./media/avatar.webp">
+  <link rel="apple-touch-icon" href="./media/avatar.webp">
+  <link rel="canonical" href="https://joubamety.com/">
+
+</head>
+<body class="dark w-full flex flex-col items-center">
+    <div class="w-5/6 md:w-full mt-16 mb-16">
+        <div class="max-w-full flex md:flex-row flex-col justify-center gap-16 items-center md:items-start md:p-4">
+            <div class="max-w-full h-90 flex flex-col items-center justify-center text-center gap-2">
+                <img class="size-72" src="./media/avatar.webp">
+                <h1 class="text-5xl font-bold font-archivoBlack">JoubaMety</h1>
+                <p class="text-xl italic font-archivo">Jan Rašnovský</p>
             </div>
-            <div class="flex flex-row justify-between items-center gap-x-12">
-                <a href="https://notes.joubamety.com" class="font-bold text-xl hover:text-blue flex flex-row gap-x-1 items-center">
-                    <img class="size-5" src="https://notes.joubamety.com/static/icon.webp">
-                    Notes
-                </a>
-            </div>
-            <!-- LIGHT/DARK MODE -->
-            <div>
-                <button onclick="themeSwitch()" class="hover:text-blue">Switch Theme</button>
-            </div>
-        </nav>
-    </header>
-    <main class="absolute top-0 left-0 h-screen w-full">
-        <div id="hero-carousel" class="relative w-full h-screen">
-            <div id="hero-carousel-wrapper" class="absolute top-0 left-0 w-full h-screen -z-100 flex flex-row flex-nowrap transition-transform">
-                <div id="hero-notes" class="flex-none relative -mr-[100%] w-full h-full transition-transform">
-                    <div id="hero-overlay" class="select-none absolute top-0 left-0 w-full h-screen z-10 bg-gradient-to-b from-crust/25 via-crust/65 to-crust"></div>
-                    <div class="absolute top-0 left-0 h-full mx-8 md:mx-16 z-10 flex items-center">
-                        <div class="flex flex-col justify-start">
-                            <div class="flex items-center gap-x-2 md:gap-x-8">
-                                <img class="size-24 md:size-36 object-center" src="https://notes.joubamety.com/static/icon.webp">
-                                <h1 class="text-5xl md:text-8xl font-black text-blue">
-                                    JoubaMety's<br>Notes
-                                </h1>
+            <div class="max-w-full md:w-1/2 items-center justify-center">
+                <div>
+                    <h2 class="text-3xl font-bold font-archivoBlack">Hello!</h2>
+                    <div class="m-4">
+                        <p>
+                            I'm
+                            <span class="inline-flex items-baseline">
+                                <img class="size-4 self-center mx-1" alt="Flag of Czech Republic" src="./media/flag_czechia.webp">
+                                <span>Czech</span>
+                            </span>
+                            & 
+                            <span class="inline-flex items-baseline">
+                                <img class="size-4 self-center mx-1" alt="Flag of Slovakia" src="./media/flag_slovakia.webp">
+                                <span>Slovak</span>
+                            </span>
+                            young adult man. I create <span class="font-bold">Minecraft content</span> (<span class="tooltip tooltip-top underline decoration-dotted" data-tooltip="Videos like films, roleplays or shorts, created in-game.">machinimas</span> and pictures/screenshots) and work with <a class="font-bold link-primary" href="https://notes.joubamety.com/ffmpeg/">FFmpeg</a> extensively.
+                            I program from time to time, used to program in <span class="font-bold">C++</span> and <span class="font-bold">Kotlin</span>, nowadays I program in <span class="font-bold">Go</span>. 
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold font-archivoBlack">Other Websites</h3>
+                    <div class="flex gap-4 m-4">
+                        <a href="https://notes.joubamety.com/" target="_blank"><button class="btn"><img class="size-4" src="./media/notes.webp"><div class="divider divider-vertical mx-0 h-2"></div>notes.joubamety.com</button></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold font-archivoBlack">Socials</h3>
+                    <div class="flex flex-wrap gap-4 m-4">
+                        <a href="https://discord.gg/yE4mjJks" target="_blank"><button class="btn btn-solid"><img class="h-4" src="./media/discord.webp"><div class="divider divider-vertical mx-0 h-2"></div>joubamety</button></a>
+                        <a href="https://x.com/JoubaMety" target="_blank"><button class="btn btn-solid"><img class="w-4" src="./media/twitter.webp"><div class="divider divider-vertical mx-0 h-2"></div>@JoubaMety</button></a>
+                        <a href="https://github.com/JoubaMety" target="_blank"><button class="btn"><img class="h-4" id="github0" src="./media/github_white.webp"><div class="divider divider-vertical mx-0 h-2"></div>JoubaMety</button></a>
+                        <a href="https://www.youtube.com/@JoubaMety" target="_blank"><button class="btn btn-solid"><img class="w-4" src="./media/youtube.webp"><div class="divider divider-vertical mx-0 h-2"></div>@joubamety</button></a>
+                        <a href="https://www.castingcall.club/joubamety" target="_blank"><button class="btn"><img class="h-3" src="./media/casting_call_club.webp"><div class="divider divider-vertical mx-0 h-2"></div>joubamety</button></a>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold font-archivoBlack">Works / Creations</h2>
+                    <div class="flex flex-wrap gap-4 m-4 justify-center">
+                        <!-- 2024-06-YUI -->
+                        <div class="card card-image-cover">
+                            <img src="./media/2024-06-YUI.webp" alt="Thumbnail of 2024-06-YUI Machinima" />
+                            <div class="card-body">
+                                <h2 class="card-header font-archivoBlack">2024-06-YUI</h2>
+                                <p class="text-content2">A Minecraft Machinima -- <span class="italic">Yuuta finds an old box and examines the "sweet memories" with Yui.</span></p>
+                                <div class="card-footer">
+                                    <a href="https://youtu.be/ksJQnBe_qGE"target="_blank">
+                                    <button class="btn btn-solid-primary">Watch on <span class="inline-flex items-baseline">
+                                            <img class="w-4 self-center mx-1" alt="YouTube logo" src="./media/youtube.webp">
+                                            <span>YouTube</span>
+                                        </span>
+                                    &NonBreakingSpace;(03:00)</button></a>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="https://www.castingcall.club/credits/7983-2024-06-yui"target="_blank">
+                                    <button class="btn btn-outline">
+                                        <span class="inline-flex items-baseline">
+                                            <img class="w-20 self-center mx-1" alt="Casting Call Club logo" src="./media/casting_call_club.webp">
+                                            <span>Production Credits</span>
+                                        </span>
+                                    </button></a>
+                                </div>
                             </div>
-                            <div class="md:px-44 py-4 text-2xl md:text-2xl">
-                                <h2 class="font-medium">
-                                    Read my notes about media creation via FFmpeg and other tools.
-                                </h2>
-                                <a href="https://notes.joubamety.com">
-                                    <button class="my-2 text-base bg-blue rounded-lg px-3 h-9 md:h-8 text-[1.45rem] md:text-lg font-bold transition-all hover:scale-[110%] hover:bg-lavender">
-                                        Visit
-                                    </button>
-                                </a>
+                        </div>
+                        <!-- notes.joubamety.com -->
+                        <div class="card card-image-cover">
+                            <img src="./media/notes_banner.webp" alt="Banner of website of JoubaMety's Notes" />
+                            <div class="card-body">
+                                <h2 class="card-header font-archivoBlack">JoubaMety's Notes</h2>
+                                <p class="text-content2">Website where I store all my notes.</p>
+                                <div class="card-footer">
+                                    <a href="https://notes.joubamety.com/" target="_blank"><button class="btn btn-solid-primary"><img class="size-4" src="./media/notes.webp"><div class="divider divider-vertical mx-0 h-2"></div>Read JoubaMety's Notes</button></a>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="https://github.com/JoubaMety/notes.joubamety.com" target="_blank"><button class="btn btn-outline"><img class="size-4" id="github1" src="./media/github_white.webp"><div class="divider divider-vertical mx-0 h-2"></div>GitHub Repository</button></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <img class="object-cover w-full h-full" src="./media/hero_notes2.webp">    
+                    
                 </div>
-                <!--
-                <div id="hero-machinimas" class="flex-none relative w-full h-full translate-x-full">
-                    <div id="hero-overlay" class="select-none absolute top-0 left-0 w-full h-screen z-10 backdrop-blur-sm bg-gradient-to-b from-crust/50 to-crust"></div>
-                    <div class="absolute top-0 left-0 h-full mx-16 z-10 flex items-center gap-x-8">
-                        <img class="size-36 object-center" src="./media/__ame_chan_needy_girl_overdose_drawn_by_an_mu__9c230ac674be632b4f166f8234ca1971_9_fullest2_leftamechan_crop.png">
-                        <h1 class="text-blue text-8xl font-black">
-                            Machinimas
-                        </h1>
-                    </div>
-                    <video class="object-cover w-full h-full" autoplay loop controls muted src="./media/background_AV1.webm"></vid>
-                </div>
-                -->
             </div>
         </div>
-        <div class="relative w-full flex flex-col md:flex-row justify-between px-16 md:px-32 py-16">
-            <div class="md:basis-1/2 md:px-32">
-                <h2 class="text-4xl">Hello there!</h2>
-                <p class="text-xl">I'm Jan <span class="text-blue">"JoubaMety"</span> Rašnovský and I have no idea what to put here yet. So here's some lorem ipsum. </p>
-                <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue blandit commodo. Proin pharetra massa at dapibus venenatis. Pellentesque et lacus vitae arcu pellentesque sagittis. Sed in nunc at ipsum eleifend vestibulum. Nam eget diam quis ante ultricies euismod sed quis nisl. Aliquam vitae posuere ligula, sed blandit libero. Morbi pharetra turpis ipsum, sed aliquam massa efficitur sed. Duis mi libero, laoreet non dapibus sed, fermentum eu urna. Nunc ultricies vulputate magna ut rhoncus. Suspendisse nec nisl in sapien bibendum elementum quis sed nisi.</p>
-                <p class="text-xl">Fusce leo erat, ullamcorper a odio at, congue ultricies ante. Curabitur efficitur libero id felis consequat aliquet. Curabitur in ex sed felis dignissim ullamcorper eget vel metus. Morbi molestie magna quis elementum maximus. Donec in cursus dolor, a sagittis metus. Nulla malesuada porttitor felis, eu bibendum ipsum aliquam sed. Ut consequat velit sit amet felis volutpat, sit amet rhoncus arcu auctor. Sed blandit tortor ut hendrerit fringilla. Nulla id lorem commodo, vulputate nisl et, posuere ipsum. Nunc pellentesque finibus mauris nec rutrum. In dictum non neque non fringilla. Donec molestie, neque vitae ullamcorper elementum, risus risus euismod nibh, sit amet facilisis ligula felis fermentum turpis.</p>
-                <p class="text-xl">Sed pretium iaculis orci, ut vestibulum orci scelerisque ut. Sed gravida elit quis ante viverra, vel pharetra felis fringilla. Mauris ac erat sed orci ornare blandit in eu ex. Cras nec malesuada quam. Nullam vel varius risus, a tincidunt ex. Integer magna augue, vestibulum non tortor in, dapibus rhoncus mi. Proin elementum quam et lectus rutrum varius. Praesent ut est justo. Curabitur bibendum consequat nisi, eu lobortis libero hendrerit luctus. Nam vehicula sodales purus non scelerisque. Quisque vehicula tellus nisi, quis rutrum ex venenatis in. Vestibulum ac nulla varius, scelerisque erat vitae, hendrerit arcu.</p>
-            </div>
-            <div class="md:basis-1/2">
-                <img class="w-[36rem] h-auto" src="./media/joubait.webp">
-                <p class="italic">Frenchified Ame-chan from NEEDY GIRL OVERDOSE, ayo.</p>
-            </div>
+        <div class="max-w-full text-center self-center">
+            <p>Created with love by <span class="italic">yours truly</span> with <a class="link link-primary" href="https://www.ripple-ui.com/">RippleUI</a> and <a class="link link-primary" href="https://tailwindcss.com/">Tailwind CSS</a>.</p>
+            <p>You can also check out <a class="link link-primary" href="https://github.com/JoubaMety/joubamety.com">the source code</a> of this website on GitHub.</p>
         </div>
-
-        <div class="relative w-full flex flex-col justify-between content-center items-center px-16 md:px-32 py-16 gap-4">
-            <p class="text-xl">Oh yeah, don't forget to check out my lovely other website, where I store my notes about various stuff!</p>
-            <a href="https://notes.joubamety.com/" class="text-4xl font-bold text-blue hover:text-text">notes.joubamety.com</a>
-            <a class="w-[20rem] md:w-[42rem] h-auto hover:opacity-85" href="https://notes.joubamety.com/"><img src="https://notes.joubamety.com/_media/root/banner.webp"></a>
+        <div class="max-w-full h-6 text-xl flex justify-center text-center self-center content-center my-2 gap-x-4">
+            <p class="h-6 content-center">Light/Dark Mode</p>
+            <div class="h-8 content-center items-center"><input type="checkbox" class="switch" id="ChangeTheme" onclick="changeIcons()"/></div>
         </div>
-
-        <div class="text-xl text-center p-8">
-            JoubaMety 2024, made with <a href="https://tailwindcss.com/" class="text-blue hover:text-text">Tailwind CSS</a> and <a href="https://github.com/catppuccin/tailwindcss" class="text-blue hover:text-text">Catppuccin Tailwind CSS</a>.
-        </div>
-    </main>
-        
+    </div>
 </body>
+</html>
