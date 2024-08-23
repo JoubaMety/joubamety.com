@@ -2485,11 +2485,6 @@ html:has(.modal-state:checked) {
   height: 2rem;
 }
 
-.size-6 {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
 .h-2 {
   height: 0.5rem;
 }
@@ -2512,6 +2507,10 @@ html:has(.modal-state:checked) {
 
 .h-8 {
   height: 2rem;
+}
+
+.h-10 {
+  height: 2.5rem;
 }
 
 .w-20 {
@@ -2591,11 +2590,6 @@ html:has(.modal-state:checked) {
   border-radius: 0.75rem;
 }
 
-.bg-red-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
-}
-
 .bg-red-4 {
   --tw-bg-opacity: 1;
   background-color: rgb(var(--red-4) / var(--tw-bg-opacity));
@@ -2603,6 +2597,16 @@ html:has(.modal-state:checked) {
 
 .p-4 {
   padding: 1rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .text-center {
@@ -2650,6 +2654,11 @@ html:has(.modal-state:checked) {
   font-style: italic;
 }
 
+.text-blue-11 {
+  --tw-text-opacity: 1;
+  color: rgb(var(--blue-11) / var(--tw-text-opacity));
+}
+
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
@@ -2665,29 +2674,14 @@ html:has(.modal-state:checked) {
   color: rgb(74 222 128 / var(--tw-text-opacity));
 }
 
-.text-red-600 {
-  --tw-text-opacity: 1;
-  color: rgb(220 38 38 / var(--tw-text-opacity));
-}
-
 .text-red-11 {
   --tw-text-opacity: 1;
   color: rgb(var(--red-11) / var(--tw-text-opacity));
 }
 
-.text-blue-600 {
+.text-red-600 {
   --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity));
-}
-
-.text-blue-4 {
-  --tw-text-opacity: 1;
-  color: rgb(var(--blue-4) / var(--tw-text-opacity));
-}
-
-.text-blue-11 {
-  --tw-text-opacity: 1;
-  color: rgb(var(--blue-11) / var(--tw-text-opacity));
+  color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2724,24 +2718,4 @@ html:has(.modal-state:checked) {
   .md\:p-4 {
     padding: 1rem;
   }
-}
-
-.dark\:bg-red-700:where(.dark, .dark *) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
-}
-
-.dark\:bg-red-950:where(.dark, .dark *) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(69 10 10 / var(--tw-bg-opacity));
-}
-
-.dark\:bg-red-11:where(.dark, .dark *) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(var(--red-11) / var(--tw-bg-opacity));
-}
-
-.dark\:bg-red-4:where(.dark, .dark *) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(var(--red-4) / var(--tw-bg-opacity));
 }
