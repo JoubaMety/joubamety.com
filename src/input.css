@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --github_logo: url('./media/github_dark.webp');
+    --brainmade_logo: url('./media/brainmade-black.svg');
+}
+
+:root[data-theme="dark"] {
+    --github_logo: url('./media/github_white.webp');
+    --brainmade_logo: url('./media/brainmade-white.svg');
+}
+
+.github-logo {
+    content: var(--github_logo);
+    transition: content 0.2s ease;
+}
+
+.brainmade {
+    content: var(--brainmade_logo);
+    transition: content 0.2s ease;
+    transition: opacity 0.2s ease;
+}
+
+.brainmade:hover {
+    opacity: 75%;
+}

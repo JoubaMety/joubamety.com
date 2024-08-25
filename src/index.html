@@ -160,7 +160,7 @@
                     <div class="flex flex-wrap gap-4 m-4">
                         <label class="btn btn-solid" for="discord-modal-1"><img class="h-4" src="./media/discord.webp" alt="Discord Logo"><div class="divider divider-vertical mx-0 h-2"></div>Discord</label>
                         <a href="https://x.com/JoubaMety" target="_blank" class="btn btn-solid"><img class="w-4" src="./media/twitter.webp" alt="Twitter/X Logo"><div class="divider divider-vertical mx-0 h-2"></div>Twitter/X</a>
-                        <a href="https://github.com/JoubaMety" target="_blank" class="btn btn-solid"><img class="h-4" id="github0" src="./media/github_white.webp" alt="GitHub Logo"><div class="divider divider-vertical mx-0 h-2"></div>GitHub</a>
+                        <a href="https://github.com/JoubaMety" target="_blank" class="btn btn-solid"><img class="h-4 github-logo" src="./media/github_white.webp" alt="GitHub Logo"><div class="divider divider-vertical mx-0 h-2"></div>GitHub</a>
                         <a href="https://www.youtube.com/@JoubaMety" target="_blank" class="btn btn-solid"><img class="w-4" src="./media/youtube.webp" alt="YouTube Logo"><div class="divider divider-vertical mx-0 h-2"></div>YouTube</a>
                         <a href="https://www.castingcall.club/joubamety" target="_blank" class="btn btn-solid"><img class="h-3" src="./media/casting_call_club.webp" alt="Logo of Casting Call Club"></a>
                         <a href="https://myanimelist.net/profile/JoubaMety" target="_blank" class="btn btn-solid"><img class="w-4" src="./media/myanimelist.webp" alt="MyAnimeList Logo"><div class="divider divider-vertical mx-0 h-2"></div>MyAnimeList</a>
@@ -212,7 +212,7 @@
                                     <a href="https://notes.joubamety.com/" target="_blank"><button class="btn btn-solid-primary"><img class="size-4" src="./media/notes.webp" alt="Logo of notes.joubamety.com"><div class="divider divider-vertical mx-0 h-2"></div>Read JoubaMety's Notes</button></a>
                                 </div>
                                 <div class="card-footer">
-                                    <a href="https://github.com/JoubaMety/notes.joubamety.com" target="_blank"><button class="btn btn-outline"><img class="size-4" id="github1" src="./media/github_white.webp" alt="GitHub Logo"><div class="divider divider-vertical mx-0 h-2"></div>GitHub Repository</button></a>
+                                    <a href="https://github.com/JoubaMety/notes.joubamety.com" target="_blank"><button class="btn btn-outline"><img class="size-4 github-logo" src="./media/github_white.webp" alt="GitHub Logo"><div class="divider divider-vertical mx-0 h-2"></div>GitHub Repository</button></a>
                                 </div>
                             </div>
                         </div>
@@ -221,16 +221,20 @@
                 </div>
             </div>
         </div>
+        <div class="max-w-full h-6 text-xl flex justify-center text-center self-center content-center my-2 gap-x-4 pb-16">
+            <label>
+                <p class="h-6 content-center">Light/Dark Mode:</p>
+                <div class="h-8 content-center items-center"><input type="checkbox" class="switch" id="ChangeTheme" onclick="changeIcons()"/></div>
+            </label>
+        </div>
         <div class="max-w-full text-center self-center">
+            <div class="flex flex-wrap justify-center mb-4">
+                <!-- brainmade -->
+                <a href="https://brainmade.org/" target="_blank"><img id="brainmade" class="brainmade" src="./media/brainmade-white.svg"></img></a>
+            </div>
             <p>Created with love by <span class="italic">yours truly</span> with <a class="link link-primary" href="https://www.ripple-ui.com/" target="_blank">RippleUI</a> and <a class="link link-primary" href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a>.</p>
             <p>You can also check out <a class="link link-primary" href="https://github.com/JoubaMety/joubamety.com" target="_blank">the source code</a> of this website on GitHub.</p>
         </div>
-        <label>
-            <div class="max-w-full h-6 text-xl flex justify-center text-center self-center content-center my-2 gap-x-4">
-                <p class="h-6 content-center">Light/Dark Mode:</p>
-                <div class="h-8 content-center items-center"><input type="checkbox" class="switch" id="ChangeTheme" onclick="changeIcons()"/></div>
-            </div>
-        </label>
     </div>
 
     <input class="modal-state" id="discord-modal-1" type="checkbox" />

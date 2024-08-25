@@ -12,6 +12,21 @@ module.exports = {
     extend: {},
   },
   plugins: [require("rippleui")],
-
+  rippleui: {
+    themes: [
+			{
+				themeName: "light",
+				colorScheme: "light",
+				colors: {
+				},
+			},
+			{
+				themeName: "dark",
+				colorScheme: "dark",
+				colors: {
+      
+				},
+			},
+		],
+  }
 }
-
