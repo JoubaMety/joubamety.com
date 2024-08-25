@@ -34,8 +34,8 @@
 
 </head>
 <body class="dark w-full flex flex-col items-center">
-    <div class="w-5/6 md:w-full mt-16 mb-16">
-        <div class="max-w-full flex md:flex-row flex-col justify-center gap-16 items-center md:items-start md:p-4">
+    <div class="w-5/6 lg:w-full mt-16 mb-16">
+        <div class="max-w-full flex lg:flex-row flex-col justify-center gap-16 items-center lg:items-start lg:p-4">
             <div class="max-w-full h-90 flex flex-col items-center justify-center text-center gap-2">
                 <span class="tooltip tooltip-bottom" data-tooltip="French-ified Ame-chan from NEEDY GIRL OVERDOSE, edited by me, original by @Nyalra on Twitter/X">
                     <img class="rounded-xl size-72 shadow-lg" src="./media/avatar.webp" alt="JoubaMety's Avatar">
@@ -68,7 +68,7 @@
                     </div>
                 </div>
             </div>
-            <div class="max-w-full md:w-1/2 items-center justify-center">
+            <div class="max-w-full lg:w-1/2 items-center justify-center">
                 <div>
                     <h2 class="text-3xl font-bold font-archivoBlack">
                         <span class="inline-flex items-baseline">
@@ -178,7 +178,7 @@
                     </h2>
                     <div class="flex flex-wrap gap-4 m-4 justify-center">
                         <!-- 2024-06-YUI -->
-                        <div class="card card-image-cover">
+                        <div class="flex-auto w-96 card card-image-cover">
                             <img src="./media/2024-06-YUI.webp" alt="Thumbnail of 2024-06-YUI Machinima" />
                             <div class="card-body">
                                 <h2 class="card-header font-archivoBlack">2024-06-YUI</h2>
@@ -203,7 +203,7 @@
                             </div>
                         </div>
                         <!-- notes.joubamety.com -->
-                        <div class="card card-image-cover">
+                        <div class="flex-auto w-96 card card-image-cover">
                             <img src="./media/notes_banner.webp" alt="Banner of website of JoubaMety's Notes" />
                             <div class="card-body">
                                 <h2 class="card-header font-archivoBlack">JoubaMety's Notes</h2>
@@ -236,19 +236,22 @@
     <input class="modal-state" id="discord-modal-1" type="checkbox" />
     <div class="modal">
 	<label class="modal-overlay" for="discord-modal-1"></label>
-	<div class="modal-content flex flex-col gap-5">
-		<label for="discord-modal-1" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
-		<h2 class="text-2xl font-bold">
+	<div class="modal-content flex flex-col gap-5 ">
+		<label for="discord-modal-1" class="flex-1 btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
+		<h2 class="flex-1 text-2xl font-bold">
             <span class="inline-flex items-baseline">
                 <svg class="size-8 self-center mx-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" /></svg>                  
-                Info about <img class="h-5 self-center mx-2" src="./media/discord.webp">
-                Discord
+                Info about 
+                <span class="inline-flex items-baseline">
+                    <img class="h-5 self-center mx-2" src="./media/discord.webp">
+                    Discord
+                </span>
             </span>
         </h2>
-		<div class="flex flex-col gap-4">
-            <p><span class="font-bold text-red-600">I'm not accepting unsolicited friend requests!</span> But my DMs are free, so <span class="font-bold text-green-400">message me with general introduction/courtesies</span> and then <span class="italic">maybe</span> I'll accept your friend request.</p>
+		<div class="flex-1 flex flex-col gap-4">
+            <p><span class="font-bold text-red-600">I'm not accepting unsolicited friend requests!</span> But my DMs are free, so <span class="font-bold text-green-400">message me with general introduction / courtesies</span> and then <span class="italic">maybe</span> I'll accept your friend request.</p>
             <p>Anyway, my user handle is <span class="text-blue-500">joubamety</span> or here's my friend link:</p>
-            <a href="https://discord.gg/yE4mjJks" target="_blank"><button class="btn btn-solid"><img class="h-4" src="./media/discord.webp"><div class="divider divider-vertical mx-0 h-2"></div>joubamety</button></a>
+            <a href="https://discord.gg/yE4mjJks" target="_blank"><button class="btn btn-solid"><img class="h-4" src="./media/discord.webp"><div class="divider divider-vertical mx-0 h-2"></div>Friend Invite</button></a>
         </div>
 	</div>
 </div>
