@@ -78,7 +78,7 @@
     --whiteInverted: 255 255 255;
     --blackInverted: 0 0 0;
     --neutral: 105 113 119;
-    --primary: 143 188 187;
+    --primary: 136 192 208;
     --secondary: 180 142 173;
     --success: 163 190 140;
     --error: 191 97 106;
@@ -337,7 +337,7 @@ h3 {
 }
 
 .modal {
-    @apply bg-[#11111b]/25 backdrop-blur-md;
+    @apply bg-black/25 backdrop-blur-md;
 }
 
 html:has(.modal-state:checked, .modal-open) {
