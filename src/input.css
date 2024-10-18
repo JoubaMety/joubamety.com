@@ -2,22 +2,142 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Catppuccin Latte */
+:root[data-theme="light"] {
+    color-scheme: light;
+    --backgroundPrimary: 230 233 239;
+    --backgroundSecondary: 239 241 245;
+    --border: 188 192 204;
+    --content1: 76 79 105;
+    --content2: 92 95 119;
+    --content3: 108 111 133;
+    --whiteInverted: 0 0 0;
+    --blackInverted: 255 255 255;
+    --neutral: 105 113 119;
+    --primary: 30 102 245;
+    --secondary: 136 57 239;
+    --success: 64 160 43;
+    --error: 210 15 57;
+    --warning: 223 142 29;
+
+    --github_logo: url("./media/github__light.webp");
+	--twitter-x_logo: url("./media/twitter-x__light.webp");
+	--brainmade_logo: url("./media/brainmade__light.svg");
+}
+/* Catppuccin Mocha */
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --backgroundPrimary: 30 30 46;
+    --backgroundSecondary: 49 50 68;
+    --border: 69 71 90;
+    --content1: 205 214 244;
+    --content2: 186 194 222;
+    --content3: 166 173 200;
+    --whiteInverted: 255 255 255;
+    --blackInverted: 0 0 0;
+    --neutral: 105 113 119;
+    --primary: 137 180 250;
+    --secondary: 203 166 247;
+    --success: 166 227 161;
+    --error: 243 139 168;
+    --warning: 249 226 175;
+
+    --github_logo: url("./media/github__dark.webp");
+	--twitter-x_logo: url("./media/twitter-x__dark.webp");
+	--brainmade_logo: url("./media/brainmade__dark.svg");
+}
+:root[data-theme="nord-light"] {
+    color-scheme: light;
+    --backgroundPrimary: 236 239 244;
+    --backgroundSecondary: 229 233 240;
+    --border: 216 222 233;
+    --content1: 46 52 64;
+    --content2: 59 66 82;
+    --content3: 67 76 94;
+    --whiteInverted: 0 0 0;
+    --blackInverted: 255 255 255;
+    --neutral: 105 113 119;
+    --primary: 84 180 206;
+    --secondary: 178 46 154;
+    --success: 116 188 52;
+    --error: 188 43 57;
+    --warning: 234 173 51;
+
+    --github_logo: url("./media/github__nord_light.webp");
+	--twitter-x_logo: url("./media/twitter-x__nord_light.webp");
+	--brainmade_logo: url("./media/brainmade__nord_light.svg");
+}
+:root[data-theme="nord-dark"] {
+    color-scheme: dark;
+    --backgroundPrimary: 36 41 51;
+    --backgroundSecondary: 59 66 82;
+    --border: 76 86 106;
+    --content1: 236 239 244;
+    --content2: 229 233 240;
+    --content3: 216 222 233;
+    --whiteInverted: 255 255 255;
+    --blackInverted: 0 0 0;
+    --neutral: 105 113 119;
+    --primary: 143 188 187;
+    --secondary: 180 142 173;
+    --success: 163 190 140;
+    --error: 191 97 106;
+    --warning: 235 203 139;
+
+    --github_logo: url("./media/github__nord_dark.webp");
+	--twitter-x_logo: url("./media/twitter-x__nord_dark.webp");
+	--brainmade_logo: url("./media/brainmade__nord_dark.svg");
+}
+:root[data-theme="catppuccin-frappe"] {
+    color-scheme: dark;
+    --backgroundPrimary: 48 52 70;
+    --backgroundSecondary: 65 69 89;
+    --border: 81 87 109;
+    --content1: 198 208 245;
+    --content2: 181 191 226;
+    --content3: 165 173 206;
+    --whiteInverted: 255 255 255;
+    --blackInverted: 0 0 0;
+    --neutral: 105 113 119;
+    --primary: 140 170 238;
+    --secondary: 202 158 230;
+    --success: 166 209 137;
+    --error: 231 130 132;
+    --warning: 229 200 144;
+
+    --github_logo: url("./media/github__catppuccin_frappe.webp");
+	--twitter-x_logo: url("./media/twitter-x__catppuccin_frappe.webp");
+	--brainmade_logo: url("./media/brainmade__catppuccin_frappe.svg");
+}
+:root[data-theme="catppuccin-macchiato"] {
+    color-scheme: dark;
+    --backgroundPrimary: 36 39 58;
+    --backgroundSecondary: 54 58 79;
+    --border: 73 77 100;
+    --content1: 202 211 245;
+    --content2: 184 192 224;
+    --content3: 165 173 203;
+    --whiteInverted: 255 255 255;
+    --blackInverted: 0 0 0;
+    --neutral: 105 113 119;
+    --primary: 138 173 244;
+    --secondary: 198 160 246;
+    --success: 166 218 149;
+    --error: 237 135 150;
+    --warning: 238 212 159;
+
+    --github_logo: url("./media/github__catppuccin_macchiato.webp");
+	--twitter-x_logo: url("./media/twitter-x__catppuccin_macchiato.webp");
+	--brainmade_logo: url("./media/brainmade__catppuccin_macchiato.svg");
+}
+
 :root {
+    @apply bg-backgroundPrimary;
     /* WHY THE FUCK IS THIS POSIBLE WITHOUT QUOTES */
     --avatar_img: ./media/avatar.webp;
     --avatar_blink_img: ./media/avatar_blink.webp;
     --favicon: ./favicon.ico;
     --favicon_blink: ./favicon_blink.ico;
-
-	--github_logo: url("./media/github_dark.webp");
-	--twitter-x_logo: url("./media/twitter-x_dark.webp");
-	--brainmade_logo: url("./media/brainmade-dark.svg");
-}
-
-:root[data-theme="dark"] {
-	--github_logo: url("./media/github_white.webp");
-	--twitter-x_logo: url("./media/twitter-x_white.webp");
-	--brainmade_logo: url("./media/brainmade-light.svg");
 }
 
 html {
@@ -81,6 +201,10 @@ html {
     @apply bg-opacity-75;
 }
 
+.btn:focus {
+    @apply bg-opacity-75;
+}
+
 .btn-primary {
     @apply text-backgroundPrimary;
 }
@@ -93,9 +217,9 @@ html {
 	@apply bg-border border-border;
 }
 
-.popover-error {
+.popover-warning {
     .popover-trigger {
-        @apply bg-backgroundSecondary text-error;
+        @apply  my-2 btn btn-solid-warning bg-backgroundSecondary text-warning font-bold;
     }
     
     .popover-trigger:hover {
@@ -103,9 +227,9 @@ html {
     }
 
     .popover-content {
-        @apply bg-backgroundSecondary/90 backdrop-blur-sm text-error p-4 text-sm;
+        @apply bg-backgroundSecondary/90 backdrop-blur-sm text-warning p-4 text-sm;
         .link {
-            @apply text-sm;
+            @apply text-sm font-bold;
         }
         .popover-arrow {
             @apply bg-backgroundSecondary/90 backdrop-blur-sm
@@ -131,9 +255,9 @@ html {
 
 body {
     @apply w-full flex flex-col items-center font-archivo;
-    --blink-min: 1;
-    --blink-max: 10;
-    --blink-time: 0.1;
+    --blink-min: 2.25;
+    --blink-max: 15;
+    --blink-time: 0.25;
 }
 
 .body-standard {
@@ -223,4 +347,18 @@ html:has(.modal-state:checked, .modal-open) {
 
 *::selection {
     background-color: rgb(var(--selection) / 0.25);
+}
+
+.dropdown-menu {
+    @apply bg-backgroundSecondary/90 backdrop-blur-sm text-content1 p-4;
+}
+
+.dropdown-item:hover  {
+    @apply bg-border/90;        
+}
+.dropdown-active {
+    @apply bg-primary text-backgroundPrimary;
+}
+.dropdown-item.dropdown-active:hover {
+    @apply bg-primary/90;
 }

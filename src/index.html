@@ -3,15 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
-  <script src="./script.js" defer></script>
-
+  
   <title>JoubaMety</title>
   <meta name="description" content="JoubaMety's personal website.">
   <meta name="keywords" content="JoubaMety, Jan Rašnovský, Minecraft, Machinima, FFmpeg, Rolepay, Films, Shorts, Czech, Slovak, YouTuber, Content Creator, Content Creation">
   <meta name="author" content="JoubaMety">
   <meta name="robots" content="index, follow">
-
+  
   <meta property="og:title" content="JoubaMety">
   <meta property="og:description" content="JoubaMety's personal website.">
   <meta property="og:image" content="./media/avatar.webp">
@@ -19,7 +17,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="JoubaMety">
   <meta property="og:locale" content="en_US">
-
+  
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@JoubaMety">
   <meta name="twitter:creator" content="@JoubaMety">
@@ -27,13 +25,17 @@
   <meta name="twitter:description" content="JoubaMety's personal website.">
   <meta name="twitter:image" content="./media/avatar.webp">
   <meta name="twitter:url" content="https://joubamety.com/">
-
-  <link rel="icon" type="image/x-icon" href="./media/favicon.png">
+  
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
   <link rel="apple-touch-icon" href="./media/avatar.webp">
   <link rel="canonical" href="https://joubamety.com/">
-
+  
+  <link href="./output.css" rel="stylesheet">
+  <script src="./script.js"></script>
+  <link rel="prefetch" href="./media/avatar_blink.webp" as="image" type="image/webp" />
 </head>
-<body class="dark">
+<body>
+    <script>theme();</script>
     <div class="body-standard">
         <div class="main">
             <div class="header h-90">
@@ -41,7 +43,7 @@
                     <img id="avatar" class="avatar-standard" src="./media/avatar.webp" alt="JoubaMety's Avatar">
                 </span>
                 <h1 class="text-5xl font-bold font-archivoBlack">JoubaMety</h1>
-                <p class="text-xl italic font-archivo">Jan Rašnovský</p>
+                <p class="text-xl italic">Jan Rašnovský</p>
                 <div class="w-56 flex flex-wrap items-center content-center gap-4">
                     <span class="flag-header" data-tooltip="Proud Citizen of Czech Republic">
                         <img alt="Flag of Czech Republic" src="./media/flag_czechia.webp">
@@ -53,13 +55,13 @@
                         <img alt="Flag of European Union" src="./media/flag_eu.webp">
                     </span>
                 </div>
-                <div class="popover popover-hover popover-error">
-                    <label class="popover-trigger my-2 btn btn-solid-error">
+                <div class="popover popover-hover popover-warning">
+                    <label class="popover-trigger">
                         <span class="inline-flex items-baseline">
                             <svg class="size-4 self-center mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" >
                                 <path fill-rule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" />
                               </svg>
-                            Website is still Work In Progress!
+                            WEBSITE IS STILL WORK-IN-PROGRESS!
                         </span>
                     </label>
                     <div class="popover-content">
@@ -164,7 +166,7 @@
                         <a href="https://github.com/JoubaMety" target="_blank" class="btn-standard"><img class="h-4 github-logo" src="./media/github_white.webp" alt="GitHub Logo"><div class="divider"></div>GitHub</a>
                         <a href="https://www.youtube.com/@JoubaMety" target="_blank" class="btn-standard"><img class="w-4" src="./media/youtube.webp" alt="YouTube Logo"><div class="divider"></div>YouTube</a>
                         <a href="https://www.castingcall.club/joubamety" target="_blank" class="btn-standard"><img class="h-3" src="./media/casting_call_club.webp" alt="Logo of Casting Call Club"></a>
-                        <a href="https://myanimelist.net/profile/JoubaMety" target="_blank" class="btn-standard"><img class="w-4" src="./media/myanimelist.webp" alt="MyAnimeList Logo"><div class="divider"></div>MyAnimeList</a>
+                        <a href="https://myanimelist.net/profile/JoubaMety" target="_blank" class="btn-standard"><img class="w-4" src="./media/myanimelist.svg" alt="MyAnimeList Logo"><div class="divider"></div>MyAnimeList</a>
                         <a href="https://x.com/JoubaMety" target="_blank" class="btn-standard"><img class="w-4" src="./media/twitter.webp" alt="Twitter Logo"><div class="spacer w-2 h-2"></div><img class="w-[13.16px] twitter-x-logo" src="./media/twitter-x_white.webp" alt="Twitter (currently X) Logo"><div class="divider"></div>Twitter (currently X)</a>
                     </div>
                 </div>
@@ -186,20 +188,19 @@
                                 <h2 class="card-header font-archivoBlack">2024-06-YUI</h2>
                                 <p class="text-content2">A Minecraft Machinima -- <span class="italic">Yuuta finds an old box and examines the "sweet memories" with Yui.</span></p>
                                 <div class="card-footer">
-                                    <a href="https://youtu.be/ksJQnBe_qGE"target="_blank"><button class="btn btn-primary text-backgroundPrimary">
+                                    <a href="https://youtu.be/ksJQnBe_qGE"target="_blank"class="btn btn-primary text-backgroundPrimary">
                                             <img class="w-4 self-center mx-1" alt="YouTube Logo" src="./media/youtube.webp">
                                             <div class="divider divider-vertical-backgroundPrimary mx-0 h-2"></div>
                                             Watch on YouTube (03:00)
-                                    </button></a>
+                                    </a>
                                 </div>
                                 <div class="card-footer">
-                                    <a href="https://www.castingcall.club/credits/7983-2024-06-yui"target="_blank">
-                                    <button class="btn btn-outline">
+                                    <a href="https://www.castingcall.club/credits/7983-2024-06-yui"target="_blank"class="btn btn-outline">
                                         <span class="inline-flex items-baseline">
                                             <img class="w-20 self-center mx-1" alt="Logo of Casting Call Club" src="./media/casting_call_club.webp">
                                             <span>Production Credits</span>
                                         </span>
-                                    </button></a>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -207,13 +208,13 @@
                         <div class="flex-auto w-96 card card-image-cover bg-backgroundSecondary">
                             <img src="./media/notes_banner.webp" alt="Banner of website of JoubaMety's Notes" />
                             <div class="card-body">
-                                <h2 class="card-header font-archivoBlack">JoubaMety's Notes</h2>
+                                <h2 class="card-header">JoubaMety's Notes</h2>
                                 <p class="text-content2">Website where I store all my notes.</p>
                                 <div class="card-footer">
-                                    <a href="https://notes.joubamety.com/" target="_blank"><button class="btn btn-primary text-backgroundPrimary"><img class="size-4" src="./media/notes.webp" alt="Logo of notes.joubamety.com"><div class="divider divider-vertical-backgroundPrimary mx-0 h-2"></div>Read JoubaMety's Notes</button></a>
+                                    <a href="https://notes.joubamety.com/" target="_blank" class="btn btn-primary text-backgroundPrimary"><img class="size-4" src="./media/notes.webp" alt="Logo of notes.joubamety.com"><div class="divider divider-vertical-backgroundPrimary mx-0 h-2"></div>Read JoubaMety's Notes</a>
                                 </div>
                                 <div class="card-footer">
-                                    <a href="https://github.com/JoubaMety/notes.joubamety.com" target="_blank"><button class="btn btn-outline"><img class="size-4 github-logo" src="./media/github_white.webp" alt="GitHub Logo"><div class="divider"></div>GitHub Repository</button></a>
+                                    <a href="https://github.com/JoubaMety/notes.joubamety.com" target="_blank" class="btn btn-outline"><img class="size-4 github-logo" src="./media/github_white.webp" alt="GitHub Logo"><div class="divider"></div>GitHub Repository</a>
                                 </div>
                             </div>
                         </div>
@@ -223,18 +224,29 @@
             </div>
         </div>
         <div class="footer">
-            <label>
-                <p class="h-6 content-center select-none">Light/Dark Mode:</p>
-                <div class="h-8 content-center items-center"><input type="checkbox" class="switch" id="ChangeTheme" onclick="changeIcons()"/></div>
-            </label>
+            <div class="dropdown">
+                <label class="btn btn-primary mx-2" tabindex="0"><span class="text-border"></span>Theme: &nbsp;<span id="SelectedTheme"></span></label>
+                <div class="dropdown-menu dropdown-menu-top-center gap-1">
+                    <a class="dropdown-item text-sm text-error" onclick="resetTheme();">Revert To System Theme</a>
+                    <p tabindex="-1" class="select-none text-sm font-bold text-center px-[6.5px] pt-2">Light Themes</p>
+                    <a id="select-light" tabindex="-1" class="dropdown-item text-sm" onclick="changeTheme('light', 'light');">Catppuccin Latte</a>
+                    <a id="select-nord-light" tabindex="-1" class="dropdown-item text-sm" onclick="changeTheme('nord-light', 'light');">Nord</a>
+                    <p class="select-none text-sm font-bold text-center px-[6.5px] pt-2">Dark Themes</p>
+                    <a id="select-catppuccin-frappe" tabindex="-1" class="dropdown-item text-sm" onclick="changeTheme('catppuccin-frappe', 'dark');">Catppuccin Frappé</a>
+                    <a id="select-catppuccin-macchiato"tabindex="-1" class="dropdown-item text-sm" onclick="changeTheme('catppuccin-macchiato', 'dark');">Catppuccin Macchiato</a>
+                    <a id="select-dark" tabindex="-1" class="dropdown-item text-sm" onclick="changeTheme('dark', 'dark');">Catppuccin Mocha</a>
+                    <a id="select-nord-dark" tabindex="-1" class="dropdown-item text-sm" onclick="changeTheme('nord-dark', 'dark');">Nord</a>
+                </div>
+            </div>
         </div>
+        <script>theme();</script>
         <div class="max-w-full text-center self-center">
             <div class="flex flex-wrap justify-center mb-4">
                 <!-- brainmade -->
-                <a href="https://brainmade.org/" target="_blank"><img id="brainmade" class="brainmade w-[265px] h-[80px]" src="./media/brainmade-light.svg"></img></a>
+                <a href="https://brainmade.org/" target="_blank" class=""><img id="brainmade" alt="The Brainmade Mark" class="brainmade w-[265px] h-[80px]" src="./media/brainmade_white.svg"></img></a>
             </div>
-            <p>Created with love by <span class="italic">yours truly</span> with <a class="link link-primary" href="https://www.ripple-ui.com/" target="_blank">Ripple UI</a>, <a class="link link-primary" href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a>
-                <br>and <a class="link link-primary" href="https://catppuccin.com/" target="_blank">Catppuccin</a> color palette.</p>
+            <p>Created with love by <span class="italic">yours truly</span> with <a class="link link-primary" href="https://www.ripple-ui.com/" target="_blank">Ripple UI</a> and <a class="link link-primary" href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a>.</p>
+            <p>Used color palletes: <a class="link link-primary" href="https://catppuccin.com/" target="_blank">Catppuccin</a>, <a class="link link-primary" href="https://www.nordtheme.com/" target="_blank">Nord</a> (modified).</p>
             <p>You can also check out <a class="link link-primary" href="https://github.com/JoubaMety/joubamety.com" target="_blank">the source code</a> of this website on GitHub.</p>
         </div>
     </div>
@@ -255,8 +267,8 @@
             </span>
         </h2>
 		<div class="flex-1 flex flex-col gap-4">
-            <p><span class="font-bold text-red-600">I'm not accepting unsolicited friend requests!</span> But my DMs are free, so <span class="font-bold text-green-400">message me with general introduction / courtesies</span> and then <span class="italic">maybe</span> I'll accept your friend request.</p>
-            <p>Anyway, my user handle is <span class="text-blue-500">joubamety</span> or here's my friend link:</p>
+            <p><span class="font-bold text-error">I'm not accepting unsolicited friend requests!</span> But my DMs are free, so <span class="font-bold text-success">message me with general introduction / courtesies</span> and then <span class="italic">maybe</span> I'll accept your friend request.</p>
+            <p>Anyway, my user handle is <span class="text-primary">joubamety</span> or here's my friend link:</p>
             <a href="https://discord.gg/yE4mjJks" target="_blank"><button class="btn-standard"><img class="h-4" src="./media/discord.webp"><div class="divider"></div>Friend Invite</button></a>
         </div>
 	</div>
