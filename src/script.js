@@ -36,3 +36,18 @@ function changeIcons() {
         document.documentElement.setAttribute('data-theme', 'dark');
 	}
 }
+
+// blink, yoinked from https://github.com/sugoidogo/pngtube2/blob/master/v8/blink.html
+(function blink(){
+	const style=getComputedStyle(document.body)
+	const min=+style.getPropertyValue('--blink-min')
+	const max=+style.getPropertyValue('--blink-max')
+	const time=+style.getPropertyValue('--blink-time')
+	document.getElementById("avatar").src = style.getPropertyValue("--avatar_blink_img");
+	document.querySelector("link[rel*='icon']").href = style.getPropertyValue("--favicon_blink");
+	setTimeout(()=>{
+		document.getElementById("avatar").src = style.getPropertyValue("--avatar_img");
+		document.querySelector("link[rel*='icon']").href = style.getPropertyValue("--favicon");
+	},time*1000)
+	setTimeout(blink, (Math.random() * (max - min) + min)*1000)
+})()
