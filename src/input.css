@@ -130,7 +130,7 @@ html {
 }
 
 body {
-    @apply w-full flex flex-col items-center;
+    @apply w-full flex flex-col items-center font-archivo;
     --blink-min: 1;
     --blink-max: 10;
     --blink-time: 0.1;

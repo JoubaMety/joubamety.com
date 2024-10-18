@@ -3197,6 +3197,7 @@ body {
   width: 100%;
   flex-direction: column;
   align-items: center;
+  font-family: Archivo, sans-serif;
   --blink-min: 1;
   --blink-max: 10;
   --blink-time: 0.1;
