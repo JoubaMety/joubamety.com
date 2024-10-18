@@ -103,11 +103,15 @@ html {
     }
 
     .popover-content {
-        @apply bg-backgroundSecondary/90 text-error backdrop-blur-sm p-4 text-sm;
+        @apply bg-backgroundSecondary/90 backdrop-blur-sm text-error p-4 text-sm;
         .link {
             @apply text-sm;
         }
+        .popover-arrow {
+            @apply bg-backgroundSecondary/90 backdrop-blur-sm
+        }
     }
+    
 }
 
 .btn-standard {
