@@ -183,7 +183,7 @@
 }
 
 html {
-    @apply min-w-[560px];
+    @apply min-w-[475.75px];
     scrollbar-color: rgb(var(--content1)) rgb(var(--backgroundPrimary));
 }
 
@@ -304,7 +304,7 @@ body {
 }
 
 .body-standard {
-    @apply w-5/6 lg:w-full mt-0 mb-0;
+    @apply w-full mt-0 mb-0;
 }
 
 .main {
@@ -333,7 +333,7 @@ body {
 }
 
 h2 {
-    @apply text-3xl font-bold font-archivoBlack;
+    @apply mx-4 text-3xl font-bold font-archivoBlack;
     .icon {
         @apply size-8 self-center mr-1;
         pointer-events: none;
@@ -344,7 +344,7 @@ h2 {
 }
 
 h3 {
-    @apply text-xl font-bold font-archivoBlack;
+    @apply mx-4 text-xl font-bold font-archivoBlack;
     .icon {
         @apply size-5 self-center mr-1;
     }
