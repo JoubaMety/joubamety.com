@@ -419,11 +419,6 @@ html:has(.modal-state:checked, .modal-open) {
     @apply overflow-hidden mr-4;
 }
 
-
-*::selection {
-    background-color: rgb(var(--selection) / 0.25);
-}
-
 .dropdown-menu {
     @apply bg-backgroundSecondary/90 backdrop-blur-sm text-content1 p-4 z-50;
 }
@@ -448,4 +443,8 @@ html:has(.modal-state:checked, .modal-open) {
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+}
+
+*::selection {
+    @apply bg-content3/25
 }
