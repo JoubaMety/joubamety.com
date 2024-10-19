@@ -130,6 +130,48 @@
 	--twitter-x_logo: url("./media/twitter-x__catppuccin_macchiato.webp");
 	--brainmade_logo: url("./media/brainmade__catppuccin_macchiato.svg");
 }
+:root[data-theme="tango-dark"] {
+    color-scheme: dark;
+    --backgroundPrimary: 0 0 0;
+    --backgroundSecondary: 18 18 18;
+    --border: 38 38 38;
+    --content1: 238 238 236;
+    --content2: 211 215 207;
+    --content3: 186 189 182;
+    --whiteInverted: 255 255 255;
+    --blackInverted: 0 0 0;
+    --neutral: 105 113 119;
+    --primary: 114 159 207;
+    --secondary: 212 142 224;
+    --success: 138 226 52;
+    --error: 239 41 41;
+    --warning: 252 233 79;
+
+    --github_logo: url("./media/github_white.webp");
+	--twitter-x_logo: url("./media/twitter-x_white.webp");
+	--brainmade_logo: url("./media/brainmade_white.svg");    
+}
+:root[data-theme="tango-light"] {
+    color-scheme: light;
+    --backgroundPrimary: 255 255 255;
+    --backgroundSecondary: 238 238 236;
+    --border: 211 215 207;
+    --content1: 0 0 0;
+    --content2: 46 52 54;
+    --content3: 85 87 83;
+    --whiteInverted: 255 255 255;
+    --blackInverted: 0 0 0;
+    --neutral: 105 113 119;
+    --primary: 52 101 164;
+    --secondary: 117 80 123;
+    --success: 78 154 6;
+    --error: 204 0 0;
+    --warning: 196 160 0;
+
+    --github_logo: url("./media/github_black.webp");
+	--twitter-x_logo: url("./media/twitter-x_black.webp");
+	--brainmade_logo: url("./media/brainmade_black.svg");    
+}
 
 :root {
     @apply bg-backgroundPrimary;
@@ -219,21 +261,22 @@ html {
 
 .popover-warning {
     .popover-trigger {
-        @apply  my-2 btn btn-solid-warning bg-backgroundSecondary text-warning font-bold;
+        @apply my-4 btn btn-solid-warning bg-warning text-backgroundPrimary font-archivoBlack w-[24rem];
     }
     
     .popover-trigger:hover {
-        @apply bg-backgroundSecondary/90;
+        @apply bg-warning/90;
     }
 
     .popover-content {
-        @apply bg-backgroundSecondary/90 backdrop-blur-sm text-warning p-4 text-sm;
+        @apply bg-backgroundSecondary/90 backdrop-blur-sm text-content1 p-4 text-sm w-[24rem];
         .link {
             @apply text-sm font-bold;
         }
         .popover-arrow {
             @apply bg-backgroundSecondary/90 backdrop-blur-sm
         }
+        --tw-translate-y: -0.5rem !important;
     }
     
 }
@@ -261,7 +304,7 @@ body {
 }
 
 .body-standard {
-    @apply w-5/6 lg:w-full mt-16 mb-16;
+    @apply w-5/6 lg:w-full mt-0 mb-0;
 }
 
 .main {
@@ -272,12 +315,21 @@ body {
     @apply max-w-full flex flex-col items-center justify-center text-center gap-2;
 }
 
+.settings {
+    @apply py-4 w-full;
+}
+
+.list-settings {
+    @apply max-w-full h-6 text-xl flex justify-center text-center self-center content-center my-2 gap-x-4;
+}
+
 .footer {
-    @apply max-w-full h-6 text-xl flex justify-center text-center self-center content-center my-2 gap-x-4 pb-16
+    @apply max-w-full text-center self-center opacity-70 hover:opacity-100 pt-8 pb-16;
+    transition: 0.2s opacity linear;
 }
 
 .content {
-    @apply max-w-full lg:w-1/2 items-center justify-center
+    @apply max-w-full lg:w-1/2 items-center justify-center;
 }
 
 h2 {
@@ -305,7 +357,7 @@ h3 {
 }
 
 .flag-small {
-    @apply size-4 self-center mx-1 ml-0 mr-0;
+    @apply size-4 self-center mx-1 ml-0 mr-0 drop-shadow-[0_2px_2px_rgba(0,0,0,0.2)];
     pointer-events: none;
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -314,6 +366,9 @@ h3 {
 
 .flag-header {
     @apply tooltip tooltip-top;
+    img {
+        @apply drop-shadow-[0_4px_4px_rgba(0,0,0,0.2)];
+    }
 }
 
 .flag-header img {
@@ -325,11 +380,31 @@ h3 {
 }
 
 .tooltip::before {
-    @apply bg-content1/75 backdrop-blur-sm text-backgroundPrimary;
+    @apply bg-content1/90 backdrop-blur-sm bg-backgroundSecondary text-content1 text-sm max-w-[256px] z-10;
 }
 
-.tooltip::after {
-    @apply border-t-content1/75
+.tooltip-top::after {
+    @apply border-t-backgroundSecondary/90;
+}
+
+.tooltip-bottom::after {
+    @apply border-b-backgroundSecondary/90;
+}
+
+.tooltip-left::after {
+    @apply border-l-backgroundSecondary/90;
+}
+
+.tooltip-right::after {
+    @apply border-r-backgroundSecondary/90;
+}
+
+.tooltip {
+    @apply drop-shadow-md;
+}
+
+.tooltip:hover {
+    @apply z-10;
 }
 
 .list-btn {
@@ -350,15 +425,27 @@ html:has(.modal-state:checked, .modal-open) {
 }
 
 .dropdown-menu {
-    @apply bg-backgroundSecondary/90 backdrop-blur-sm text-content1 p-4;
+    @apply bg-backgroundSecondary/90 backdrop-blur-sm text-content1 p-4 z-50;
+}
+
+.dropdown-item  {
+    @apply bg-border/50;        
 }
 
 .dropdown-item:hover  {
     @apply bg-border/90;        
 }
 .dropdown-active {
-    @apply bg-primary text-backgroundPrimary;
+    @apply bg-secondary text-backgroundPrimary;
 }
 .dropdown-item.dropdown-active:hover {
-    @apply bg-primary/90;
+    @apply bg-secondary/90;
+}
+
+.icon-settings {
+    @apply size-8 self-center mr-1;
+    pointer-events: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }

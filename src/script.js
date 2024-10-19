@@ -40,3 +40,34 @@ preloadImage(
 		2500 // delay before starting function
 	) // setTimeOut
 );
+
+
+const hoverableElement = document.querySelectorAll(".tooltip");
+
+hoverableElement.forEach(function(element) {
+	element.addEventListener('mouseover', function() { 
+		var parent = window.getComputedStyle(element,':before');
+		height = parseFloat(parent.height.match(/\d+/)[0]);
+		width = parseFloat(parent.width.match(/\d+/)[0]);
+		var top = parseFloat(this.getBoundingClientRect().top);
+		var left = parseFloat(this.getBoundingClientRect().left);
+		var right = parseFloat(this.getBoundingClientRect().right);
+		var top = top - height;
+		var left = left - width;
+		var right = right + width;
+		if (left <= 0) {
+			this.classList.remove("tooltip-left", "tooltip-right", "tooltip-top", "tooltip-bottom");
+			this.classList.add("tooltip-right");
+		} else if (right <= 0) {
+			this.classList.remove("tooltip-left", "tooltip-right", "tooltip-top", "tooltip-bottom");
+			this.classList.add("tooltip-left");
+		} else if(top <= 0){
+			this.classList.remove("tooltip-top", "tooltip-bottom", "tooltip-left", "tooltip-right");
+			this.classList.add("tooltip-bottom");
+		}
+		else {
+			this.classList.remove("tooltip-top", "tooltip-bottom", "tooltip-left", "tooltip-right");
+			this.classList.add("tooltip-top");
+		}
+	 });
+});

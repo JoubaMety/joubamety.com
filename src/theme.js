@@ -1,10 +1,12 @@
 const themeTextMap = new Map([
-	["dark", "Catppuccin Mocha"],
-	["light", "Catppuccin Latte"],
-	["nord-dark", "Nord (Dark)"],
-	["nord-light", "Nord (Light)"],
-	["catppuccin-frappe", "Catppuccin Frappé"],
-	["catppuccin-macchiato", "Catppuccin Macchiato"],
+	["dark", "Catppuccin (Mocha)"],
+	["light", "Catppuccin (Latte)"],
+	["nord-dark", "Nord (Polar Night)"],
+	["nord-light", "Nord (Snow Storm)"],
+	["catppuccin-frappe", "Catppuccin (Frappé)"],
+	["catppuccin-macchiato", "Catppuccin (Macchiato)"],
+    ["tango-dark", "Tango (Dark)"],
+    ["tango-light", "Tango (Light)"],
 ]);
 
 function earlyTheme() {

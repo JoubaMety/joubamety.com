@@ -10,7 +10,11 @@ module.exports = {
       'archivoBlack': ['Archivo Black', 'sans-serif'],
       'archivo': ['Archivo', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      screens: {
+        'custom-sm': '560px',
+      },
+    },
   },
   plugins: [require("rippleui")],
   rippleui: {
