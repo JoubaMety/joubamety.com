@@ -5,7 +5,7 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     fontFamily: {
-      'mono': ['Source Code Pro', 'monospace'],
+      'sourceCodePro': ['Source Code Pro', 'monospace'],
 
       'archivoBlack': ['Archivo Black', 'sans-serif'],
       'archivo': ['Archivo', 'sans-serif'],

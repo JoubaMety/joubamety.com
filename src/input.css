@@ -343,6 +343,10 @@ h2 {
     }
 }
 
+.card-header h2 {
+    @apply mx-0;
+}
+
 h3 {
     @apply mx-4 text-xl font-bold font-archivoBlack;
     .icon {
@@ -413,6 +417,22 @@ h3 {
 
 .modal {
     @apply bg-black/25 backdrop-blur-md;
+}
+
+.modal-content {
+    @apply bg-backgroundPrimary;
+}
+
+.accordion-group-bordered {
+    @apply border-border;
+}
+
+.accordion-title {
+    @apply bg-backgroundPrimary;
+}
+
+.accordion-group.accordion-group-hover .accordion:focus .accordion-title, .accordion-group.accordion-group-hover>.accordion .accordion-title:hover, .accordion-group.accordion-group-hover>.accordion .accordion-toggle:checked~.accordion-title, .accordion-group.accordion-group-hover>.accordion.accordion-open .accordion-title {
+    @apply bg-backgroundSecondary
 }
 
 html:has(.modal-state:checked, .modal-open) {
