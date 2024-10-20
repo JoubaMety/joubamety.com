@@ -64,10 +64,53 @@ hoverableElement.forEach(function(element) {
 		} else if(top <= 0){
 			this.classList.remove("tooltip-top", "tooltip-bottom", "tooltip-left", "tooltip-right");
 			this.classList.add("tooltip-bottom");
-		}
-		else {
+		} else {
 			this.classList.remove("tooltip-top", "tooltip-bottom", "tooltip-left", "tooltip-right");
 			this.classList.add("tooltip-top");
 		}
-	 });
+		});
 });
+
+(function currentTime() {
+	let tZ = "Europe/Bratislava"; // duh my timezone
+	let date = new Date()
+	let currentTime = date.toLocaleTimeString("en-UK", {
+		timeZone: tZ,
+		timeZoneName: "long",
+		hour: "2-digit",
+		minute: "2-digit",
+	})
+	let time = currentTime.split(" ")[0];
+	// get long name of timezone
+	let timeZone = currentTime.split(" ").slice(1).join(" ");
+	let timeZoneOffset = date.toLocaleTimeString("en-UK", {
+		timeZone: tZ,
+		timeZoneName: "longOffset",
+	}).split(" ")[1].slice(3);
+	// yeet seconds
+	if (timeZoneOffset.includes(":00")) {
+		timeZoneOffset = timeZoneOffset.slice(0,3);
+	}
+	document.getElementById("currentTime").innerHTML = time;
+	document.getElementById("currentTimeZoneOffset").innerHTML = "UTC" + timeZoneOffset;
+	document.getElementById("currentTimeZoneOffset").setAttribute("data-tooltip", timeZone);
+	/*
+	let time = date.toLocaleTimeString("en-UK", {
+		timeZone: tZ,
+		timeZoneName: "short",
+		hour: "2-digit",
+		minute: "2-digit",
+	})
+	let timeZone = time.split(" ")[1];
+	let timeZoneLongName = date.toLocaleTimeString("en-UK", {
+		timeZone: tZ,
+		timeZoneName: "long",
+	}).split(" ").slice(1).join(" ")
+	let timeOffset = date.toTimeString().split(" ")[1].slice(3);
+	document.getElementById("currentTime").innerHTML = time.split(" ")[0];
+	document.getElementById("currentTimeZone").innerHTML = timeZone;
+	document.getElementById("currentTimeZone").setAttribute("data-tooltip", timeZoneLongName);
+	document.getElementById("currentTimeZoneOffset").innerHTML = "(UTC" + timeOffset + ")";
+	*/
+	setTimeout(currentTime, 5000);
+})();

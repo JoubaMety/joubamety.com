@@ -2,6 +2,7 @@
 /** @type {import('rippleui').Config} */
 const { createThemes } = require('tw-colors');
 module.exports = {
+  darkMode: 'selector',
   content: ["./src/**/*.{html,js}"],
   theme: {
     fontFamily: {

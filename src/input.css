@@ -207,8 +207,13 @@ html {
 	opacity: 75%;
 }
 
-.card.card-image-cover img {
-	border-radius: 0 !important;
+.card.card-image-cover img:first-child {
+	border-radius: 0;
+}
+
+.card-cover {
+    border-top-left-radius: .75rem !important;
+    border-top-right-radius: .75rem !important;
 }
 
 .divider-vertical::after,
@@ -269,12 +274,12 @@ html {
     }
 
     .popover-content {
-        @apply bg-backgroundSecondary/90 backdrop-blur-sm text-content1 p-4 text-sm w-[24rem];
+        @apply bg-backgroundSecondary/90 backdrop-blur-sm backdrop-brightness-[1.25] dark:backdrop-brightness-[.25] drop-shadow-md text-content1 p-4 text-sm w-[24rem];
         .link {
             @apply text-sm font-bold;
         }
         .popover-arrow {
-            @apply bg-backgroundSecondary/90 backdrop-blur-sm
+            @apply hidden
         }
         --tw-translate-y: -0.5rem !important;
     }
@@ -315,6 +320,7 @@ body {
     @apply max-w-full flex flex-col items-center justify-center text-center gap-2;
 }
 
+/*
 .settings {
     @apply py-4 w-full;
 }
@@ -322,9 +328,10 @@ body {
 .list-settings {
     @apply max-w-full h-6 text-xl flex justify-center text-center self-center content-center my-2 gap-x-4;
 }
+*/
 
 .footer {
-    @apply max-w-full text-center self-center opacity-70 hover:opacity-100 pt-8 pb-16;
+    @apply max-w-full text-center self-center lg:opacity-70 lg:hover:opacity-100 pt-8 pb-16;
     transition: 0.2s opacity linear;
 }
 
@@ -343,7 +350,7 @@ h2 {
     }
 }
 
-.card-header h2 {
+h2.card-header  {
     @apply mx-0;
 }
 
@@ -384,7 +391,7 @@ h3 {
 }
 
 .tooltip::before {
-    @apply bg-content1/90 backdrop-blur-sm bg-backgroundSecondary text-content1 text-sm max-w-[256px] z-10;
+    @apply bg-backgroundSecondary/90 backdrop-blur-sm backdrop-brightness-[1.25] dark:backdrop-brightness-[.25] drop-shadow-md text-content1 text-sm max-w-[256px] text-wrap z-10;
 }
 
 .tooltip-top::after {
@@ -403,10 +410,6 @@ h3 {
     @apply border-r-backgroundSecondary/90;
 }
 
-.tooltip {
-    @apply drop-shadow-md;
-}
-
 .tooltip:hover {
     @apply z-10;
 }
@@ -416,11 +419,11 @@ h3 {
 }
 
 .modal {
-    @apply bg-black/25 backdrop-blur-md;
+    @apply bg-backgroundPrimary/50 backdrop-blur-md backdrop-brightness-[.50];
 }
 
 .modal-content {
-    @apply bg-backgroundPrimary;
+    @apply bg-backgroundPrimary  drop-shadow-md;
 }
 
 .accordion-group-bordered {
@@ -428,11 +431,11 @@ h3 {
 }
 
 .accordion-title {
-    @apply bg-backgroundPrimary;
+    @apply bg-backgroundSecondary border-border;
 }
 
 .accordion-group.accordion-group-hover .accordion:focus .accordion-title, .accordion-group.accordion-group-hover>.accordion .accordion-title:hover, .accordion-group.accordion-group-hover>.accordion .accordion-toggle:checked~.accordion-title, .accordion-group.accordion-group-hover>.accordion.accordion-open .accordion-title {
-    @apply bg-backgroundSecondary
+    @apply bg-border;
 }
 
 html:has(.modal-state:checked, .modal-open) {
@@ -440,7 +443,7 @@ html:has(.modal-state:checked, .modal-open) {
 }
 
 .dropdown-menu {
-    @apply bg-backgroundSecondary/90 backdrop-blur-sm text-content1 p-4 z-50;
+    @apply bg-backgroundSecondary/90 backdrop-blur-sm backdrop-brightness-[1.25] dark:backdrop-brightness-[.25] drop-shadow-md text-content1 p-4 z-50;
 }
 
 .dropdown-item  {
@@ -451,10 +454,10 @@ html:has(.modal-state:checked, .modal-open) {
     @apply bg-border/90;        
 }
 .dropdown-active {
-    @apply bg-secondary text-backgroundPrimary;
+    @apply bg-primary text-backgroundPrimary;
 }
 .dropdown-item.dropdown-active:hover {
-    @apply bg-secondary/90;
+    @apply bg-primary/90;
 }
 
 .icon-settings {
@@ -467,4 +470,20 @@ html:has(.modal-state:checked, .modal-open) {
 
 *::selection {
     @apply bg-content3/25
+}
+
+.card-body {
+    @apply pt-[1rem]
+}
+
+.badge-primary {
+    @apply text-backgroundPrimary
+}
+
+.card-badges {
+    @apply select-none;
+}
+
+.btn-ghost:hover {
+    @apply bg-backgroundSecondary;
 }

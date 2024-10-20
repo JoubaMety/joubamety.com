@@ -22,12 +22,18 @@ function earlyTheme() {
 
 function theme() {
 	var storedTheme =
-		localStorage.getItem("theme") ||
+		localStorage.getItem("data-theme") ||
 		(window.matchMedia("(prefers-color-scheme: dark)").matches
 			? "dark"
 			: "light");
 	if (storedTheme) {
 		document.documentElement.setAttribute("data-theme", storedTheme);
+		if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+			document.documentElement.setAttribute("theme", "dark");
+			
+		} else {
+			document.documentElement.setAttribute("theme", "light");
+		}
 		changeThemeText(storedTheme);
 		addSelectedTheme(storedTheme);
 	}	
@@ -41,7 +47,9 @@ function changeTheme(targetTheme, ambiance) {
 		document.documentElement.classList.remove("dark");
 	}
 	document.documentElement.setAttribute("data-theme", targetTheme);
+	document.documentElement.setAttribute("theme", ambiance);
 	addSelectedTheme(targetTheme);
+	localStorage.setItem("data-theme", targetTheme);
 	localStorage.setItem("theme", targetTheme);
 	changeThemeText(targetTheme);
 }
@@ -54,6 +62,7 @@ function changeThemeText(targetTheme) {
 function resetTheme() {
     console.info("reset theme to default");
 	localStorage.removeItem("theme");
+	localStorage.removeItem("data-theme");
 	document.documentElement.removeAttribute("data-theme");
 	document.documentElement.classList.remove("dark");
 	theme();
