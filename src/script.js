@@ -112,5 +112,5 @@ hoverableElement.forEach(function(element) {
 	document.getElementById("currentTimeZone").setAttribute("data-tooltip", timeZoneLongName);
 	document.getElementById("currentTimeZoneOffset").innerHTML = "(UTC" + timeOffset + ")";
 	*/
-	setTimeout(currentTime, 5000);
+	setTimeout(currentTime(), 5000);
 })();
