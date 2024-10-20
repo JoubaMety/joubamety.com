@@ -71,7 +71,7 @@ hoverableElement.forEach(function(element) {
 		});
 });
 
-(function currentTime() {
+(function localTime() {
 	let tZ = "Europe/Bratislava"; // duh my timezone
 	let date = new Date()
 	let currentTime = date.toLocaleTimeString("en-UK", {
@@ -112,5 +112,5 @@ hoverableElement.forEach(function(element) {
 	document.getElementById("currentTimeZone").setAttribute("data-tooltip", timeZoneLongName);
 	document.getElementById("currentTimeZoneOffset").innerHTML = "(UTC" + timeOffset + ")";
 	*/
-	setTimeout(currentTime(), 5000);
+	setTimeout(localTime, 5000);
 })();
