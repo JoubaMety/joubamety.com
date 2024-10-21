@@ -45,6 +45,12 @@ preloadImage(
 const hoverableElement = document.querySelectorAll(".tooltip");
 
 hoverableElement.forEach(function(element) {
+	if (
+		!element.classList.contains("tooltip-left") && 
+		!element.classList.contains("tooltip-right") && 
+		!element.classList.contains("tooltip-top") && 
+		!element.classList.contains("tooltip-bottom")
+	) {
 	element.addEventListener('mouseover', function() { 
 		var parent = window.getComputedStyle(element,':before');
 		height = parseFloat(parent.height.match(/\d+/)[0]);
@@ -55,13 +61,14 @@ hoverableElement.forEach(function(element) {
 		var top = top - height;
 		var left = left - width;
 		var right = right + width;
-		if (left <= 0) {
+		var padding = 16;
+		if (left <= padding) {
 			this.classList.remove("tooltip-left", "tooltip-right", "tooltip-top", "tooltip-bottom");
 			this.classList.add("tooltip-right");
-		} else if (right <= 0) {
+		} else if (right <= padding) {
 			this.classList.remove("tooltip-left", "tooltip-right", "tooltip-top", "tooltip-bottom");
 			this.classList.add("tooltip-left");
-		} else if(top <= 0){
+		} else if(top <= padding){
 			this.classList.remove("tooltip-top", "tooltip-bottom", "tooltip-left", "tooltip-right");
 			this.classList.add("tooltip-bottom");
 		} else {
@@ -69,6 +76,7 @@ hoverableElement.forEach(function(element) {
 			this.classList.add("tooltip-top");
 		}
 		});
+	}
 });
 
 (function localTime() {
@@ -79,10 +87,10 @@ hoverableElement.forEach(function(element) {
 		timeZoneName: "long",
 		hour: "2-digit",
 		minute: "2-digit",
-	})
-	let time = currentTime.split(" ")[0];
+	}).split(" ")
+	let time = currentTime[0];
 	// get long name of timezone
-	let timeZone = currentTime.split(" ").slice(1).join(" ");
+	let timeZone = currentTime.slice(1).join(" ");
 	let timeZoneOffset = date.toLocaleTimeString("en-UK", {
 		timeZone: tZ,
 		timeZoneName: "longOffset",
@@ -94,23 +102,34 @@ hoverableElement.forEach(function(element) {
 	document.getElementById("currentTime").innerHTML = time;
 	document.getElementById("currentTimeZoneOffset").innerHTML = "UTC" + timeZoneOffset;
 	document.getElementById("currentTimeZoneOffset").setAttribute("data-tooltip", timeZone);
-	/*
-	let time = date.toLocaleTimeString("en-UK", {
-		timeZone: tZ,
-		timeZoneName: "short",
-		hour: "2-digit",
-		minute: "2-digit",
-	})
-	let timeZone = time.split(" ")[1];
-	let timeZoneLongName = date.toLocaleTimeString("en-UK", {
-		timeZone: tZ,
-		timeZoneName: "long",
-	}).split(" ").slice(1).join(" ")
-	let timeOffset = date.toTimeString().split(" ")[1].slice(3);
-	document.getElementById("currentTime").innerHTML = time.split(" ")[0];
-	document.getElementById("currentTimeZone").innerHTML = timeZone;
-	document.getElementById("currentTimeZone").setAttribute("data-tooltip", timeZoneLongName);
-	document.getElementById("currentTimeZoneOffset").innerHTML = "(UTC" + timeOffset + ")";
-	*/
 	setTimeout(localTime, 5000);
 })();
+
+function copyText(input) {
+	 // Copy the text inside the text field
+	navigator.clipboard.writeText(input);
+  
+	// Alert the copied text
+	console.info("Copied the text: " + input);
+	notificationAlert(
+		"success",
+		2500,
+		"Copy Text Success!",
+		"&quot;<span class=\"font-bold\">" + input + "</span>&quot; was sucessfully copied!"
+	);
+}
+
+function notificationAlert(type, duration, title, description) {
+	const notification = document.getElementById("notification");
+	const ntfc_title = document.getElementById("notification-title");
+	const ntfc_desc = document.getElementById("notification-description");
+	ntfc_title.innerHTML = title;
+	ntfc_desc.innerHTML = description;
+	notification.classList.add("show");
+	setTimeout(
+		function() {
+			notification.classList.remove("show");
+		},
+		duration
+	);
+}

@@ -266,7 +266,7 @@ html {
 
 .popover-warning {
     .popover-trigger {
-        @apply my-4 btn btn-solid-warning bg-warning text-backgroundPrimary font-archivoBlack w-[24rem];
+        @apply my-4 btn btn-solid-warning bg-warning text-backgroundPrimary font-archivoBlack max-w-[24rem];
     }
     
     .popover-trigger:hover {
@@ -274,7 +274,7 @@ html {
     }
 
     .popover-content {
-        @apply bg-backgroundSecondary/90 backdrop-blur-sm backdrop-brightness-[1.25] dark:backdrop-brightness-[.25] drop-shadow-md text-content1 p-4 text-sm w-[24rem];
+        @apply bg-backgroundSecondary/90 backdrop-blur-sm backdrop-brightness-[1.25] dark:backdrop-brightness-[.25] drop-shadow-md text-content1 p-4 text-sm lg:w-[24rem];
         .link {
             @apply text-sm font-bold;
         }
@@ -423,7 +423,7 @@ h3 {
 }
 
 .modal-content {
-    @apply bg-backgroundPrimary  drop-shadow-md;
+    @apply bg-backgroundPrimary drop-shadow-md w-full max-w-full max-h-full rounded-none lg:h-max lg:max-h-[90%] lg:rounded-[.75rem] lg:max-w-3xl;
 }
 
 .accordion-group-bordered {
@@ -436,6 +436,10 @@ h3 {
 
 .accordion-group.accordion-group-hover .accordion:focus .accordion-title, .accordion-group.accordion-group-hover>.accordion .accordion-title:hover, .accordion-group.accordion-group-hover>.accordion .accordion-toggle:checked~.accordion-title, .accordion-group.accordion-group-hover>.accordion.accordion-open .accordion-title {
     @apply bg-border;
+}
+
+.accordion-group .accordion.accordion-open .accordion-content, .accordion-toggle:checked~.accordion-content, .accordion:focus .accordion-content {
+    @apply border-border;
 }
 
 html:has(.modal-state:checked, .modal-open) {
@@ -454,7 +458,7 @@ html:has(.modal-state:checked, .modal-open) {
     @apply bg-border/90;        
 }
 .dropdown-active {
-    @apply bg-primary text-backgroundPrimary;
+    @apply bg-primary text-backgroundPrimary font-bold;
 }
 .dropdown-item.dropdown-active:hover {
     @apply bg-primary/90;
@@ -486,4 +490,17 @@ html:has(.modal-state:checked, .modal-open) {
 
 .btn-ghost:hover {
     @apply bg-backgroundSecondary;
+}
+
+#notification {
+    @apply fixed z-[70] select-none -top-[20rem];
+    transition: 0.2s top ease;
+}
+
+.show#notification {
+    @apply top-0;
+}
+
+.alert-success {
+    @apply bg-success text-backgroundPrimary
 }

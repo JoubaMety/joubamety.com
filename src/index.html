@@ -40,17 +40,22 @@
     <div class="body-standard">
         <div class="flex justify-center">
             <div class="dropdown my-4">
-                <label class="btn btn-backgroundSecondary bg-backgroundSecondary text-content1 mx-2 font-bold" tabindex="0">
-                    <svg class="h-5 mr-1 icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M4.098 19.902a3.75 3.75 0 0 0 5.304 0l6.401-6.402M6.75 21A3.75 3.75 0 0 1 3 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 0 0 3.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008Z" /></svg>
-                    Theme: &nbsp;
-                    <span id="SelectedTheme" class="font-normal text-primary"></span>
+                <label class="btn btn-backgroundSecondary bg-backgroundSecondary text-content1 mx-2 font-archivoBlack gap-1" tabindex="0">
+                    <svg class="h-5 icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M4.098 19.902a3.75 3.75 0 0 0 5.304 0l6.401-6.402M6.75 21A3.75 3.75 0 0 1 3 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 0 0 3.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008Z" /></svg>
+                    <div class="hidden lg:inline">
+                        Theme: &nbsp;
+                        <span id="SelectedTheme" class="font-archivo font-bold text-primary"></span>
+                    </div>
+                    <div class="inline lg:hidden">
+                        Theme
+                    </div>
                 </label>
-                <div class="dropdown-menu dropdown-menu-bottom-center gap-1">
-                    <p tabindex="-1" class="select-none text-sm font-bold text-center px-[6.5px] pt-2">Light Themes</p>
+                <div class="dropdown-menu dropdown-menu-bottom-right lg:dropdown-menu-bottom-center gap-1">
+                    <p tabindex="-1" class="select-none text-sm font-archivoBlack text-center px-[6.5px] pt-2">Light Themes</p>
                     <a id="select-light" aria-label="Switch theme to Catppuccin Latte (Light)" tabindex="-1" class="dropdown-item text-sm" onclick="changeTheme('light', 'light');">Catppuccin (Latte)</a>
                     <a id="select-nord-light" aria-label="Switch theme to Nord (Light)" tabindex="-1" class="dropdown-item text-sm" onclick="changeTheme('nord-light', 'light');">Nord (Snow Storm)</a>
                     <a id="select-tango-light" aria-label="Switch theme to Tango (Light)" tabindex="-1" class="dropdown-item text-sm" onclick="changeTheme('tango-light', 'light');">Tango (Light)</a>
-                    <p class="select-none text-sm font-bold text-center px-[6.5px] pt-2">Dark Themes</p>
+                    <p class="select-none text-sm font-archivoBlack text-center px-[6.5px] pt-2">Dark Themes</p>
                     <a id="select-catppuccin-frappe" aria-label="Switch theme to Catppuccin Frappé (Dark)" tabindex="-1" class="dropdown-item text-sm" onclick="changeTheme('catppuccin-frappe', 'dark');">Catppuccin (Frappé)</a>
                     <a id="select-catppuccin-macchiato" aria-label="Switch theme to Catppuccin Macchiato (Dark)" tabindex="-1" class="dropdown-item text-sm" onclick="changeTheme('catppuccin-macchiato', 'dark');">Catppuccin (Macchiato)</a>
                     <a id="select-dark" aria-label="Switch theme to Catppuccin Mocha (Dark)" tabindex="-1" class="dropdown-item text-sm" onclick="changeTheme('dark', 'dark');">Catppuccin (Mocha)</a>
@@ -62,14 +67,19 @@
             </div>
             <div class="popover popover-hover popover-warning">
                 <label class="popover-trigger">
-                    <span class="inline-flex items-baseline">
-                        <svg class="size-4 self-center mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" >
+                    <span class="inline-flex items-baseline gap-1">
+                        <svg class="size-4 self-center" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" >
                             <path fill-rule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" />
                           </svg>
-                        WEBSITE IS STILL WORK-IN-PROGRESS!
+                        <div class="hidden lg:inline">
+                            WEBSITE IS STILL WORK-IN-PROGRESS!
+                        </div>
+                        <div class="inline lg:hidden">
+                            WIP WEBSITE!
+                        </div>
                     </span>
                 </label>
-                <div class="popover-content">
+                <div class="popover-content popover-bottom-left lg:popover-bottom-center">
                     <div class="popover-arrow"></div>
                     <div><span class="text-warning font-bold">Website is still being worked on.</span> Who knows, I might replace the website entirely again! Anyway, feel free to <a href="https://github.com/JoubaMety/joubamety.com/issues" target="_blank" class="font-bold link link-primary" aria-label="Report any bugs or issues on this website's GitHub Issues page">report any bugs</a>.</div>
                 </div>
@@ -77,7 +87,7 @@
         </div>
         <div class="main">
             <div class="header h-90">
-                <span class="tooltip" data-tooltip="French-ified Ame-chan from NEEDY GIRL OVERDOSE, edited by me, original by @Nyalra on Twitter/X">
+                <span class="tooltip tooltip-bottom lg:tooltip-right" data-tooltip="French-ified Ame-chan from NEEDY GIRL OVERDOSE, edited by me, original by @Nyalra on Twitter (currently &quot;X&quot;)">
                     <img id="avatar" class="avatar-standard" src="./media/avatar.webp" alt="JoubaMety's Avatar">
                 </span>
                 <h1 class="text-5xl font-bold font-archivoBlack">JoubaMety</h1>
@@ -165,17 +175,12 @@
                                     C++
                             </a> and 
                             <a class="font-bold link-primary" aria-label="Website for Kotlin programming language" href="https://kotlinlang.org/">
-                                Kotlin
-                            </a>, nowadays I program in 
+                                Kotlin</a>, nowadays I program in 
                             <a class="font-bold link-primary" aria-label="Website for Go programming language" href="https://go.dev/">
                                 Golang
-                            </a> and also create websites using 
+                            </a>and also create websites using 
                             <a class="font-bold link-primary" aria-label="Website for Tailwind CSS, CSS framework" href="https://tailwindcss.com/">
-                                Tailwind CSS
-                            </a> and 
-                            <a class="font-bold link-primary" aria-label="Website for HTMX" href="https://htmx.org/">
-                                HTMX
-                            </a>.
+                                Tailwind CSS</a>.
                         </p>
                         <br>
                         <span class="font-bold inline-flex items-baseline">
@@ -232,7 +237,7 @@
                             Works / Creations
                         </span>
                     </h2>
-                    <div class="flex flex-wrap gap-4 m-4 justify-center">
+                    <div class="flex flex-wrap gap-4 m-4 justify-center lg:justify-start">
                         <!-- 2024-06-YUI -->
                         <div class="flex-auto w-96 card card-image-cover bg-backgroundSecondary">
                             <div class="h-[216px]">
@@ -334,8 +339,8 @@
                     </button>
                 </a>
                 <label class="btn-standard" for="modal-2">
-                    <svg class="size-5 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M4.098 19.902a3.75 3.75 0 0 0 5.304 0l6.401-6.402M6.75 21A3.75 3.75 0 0 1 3 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 0 0 3.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008Z" /></svg>
-                    <svg class="size-5 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" /></svg>                  
+                    <svg class="size-5 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.098 19.902a3.75 3.75 0 0 0 5.304 0l6.401-6.402M6.75 21A3.75 3.75 0 0 1 3 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 0 0 3.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008Z" /></svg>
+                    <svg class="size-5 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" /></svg>                  
                     Color Palettes Info
                 </label>
             </div>
@@ -353,182 +358,197 @@
             
         </div>
     </div>
-    <input class="modal-state" id="modal-1" type="checkbox" />
-    <div class="modal">
-        <label class="modal-overlay" for="modal-1"></label>
-        <div class="modal-content flex flex-col gap-5">
-            <label for="modal-1" class="flex-1 btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
-            <h2 class="flex-1 text-2xl font-bold">
-                <span class="inline-flex items-baseline">
-                    <svg class="size-8 self-center mx-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" /></svg>                  
-                    Info about 
+    <div id="notification" class="alert alert-success w-max m-4 drop-shadow-sm">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M24 4C12.96 4 4 12.96 4 24C4 35.04 12.96 44 24 44C35.04 44 44 35.04 44 24C44 12.96 35.04 4 24 4ZM18.58 32.58L11.4 25.4C10.62 24.62 10.62 23.36 11.4 22.58C12.18 21.8 13.44 21.8 14.22 22.58L20 28.34L33.76 14.58C34.54 13.8 35.8 13.8 36.58 14.58C37.36 15.36 37.36 16.62 36.58 17.4L21.4 32.58C20.64 33.36 19.36 33.36 18.58 32.58Z" fill="currentColor" />
+        </svg>
+        <div class="flex flex-col">
+            <span class="font-archivoBlack" id="notification-title">Title</span>
+            <span class="text-backgroundSecondary" id="notification-description">Long sample text</span>
+        </div>
+    </div>
+    <div class="w-full min-w-[475.75px]">
+        <input class="modal-state" id="modal-1" type="checkbox" />
+        <div class="modal w-full px-0 lg:px-[1rem]">
+            <label class="modal-overlay" for="modal-1"></label>
+            <div class="modal-content flex flex-col gap-5 lg:w-[512px]">
+                <label for="modal-1" class="flex-1 btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
+                <h2 class="flex-1 text-2xl font-bold select-none">
                     <span class="inline-flex items-baseline">
-                        <img class="h-5 self-center mx-2" src="./media/discord.webp">
-                        Discord
+                        <svg class="size-8 self-center mx-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" /></svg>                  
+                        Info about 
+                        <span class="inline-flex items-baseline">
+                            <img class="h-5 self-center mx-2" src="./media/discord.webp">
+                            Discord
+                        </span>
                     </span>
-                </span>
-            </h2>
-            <div class="flex-1 flex flex-col gap-4">
-                <p><span class="font-bold text-error">I'm not accepting unsolicited friend requests!</span> But my DMs are free, so <span class="font-bold text-success">message me with general introduction / courtesies</span> and then <span class="italic">maybe</span> I'll accept your friend request.</p>
-                <p>Anyway, my user handle is <span class="text-primary">joubamety</span> or here's a user link:</p>
-                <a href="https://discord.com/users/266528098772713474" aria-label="My Discord User URL" target="_blank"><button class="btn-standard"><img class="h-4" src="./media/discord.webp"><div class="divider"></div>User Link</button></a>
+                </h2>
+                <div class="flex-1 flex flex-col gap-4">
+                    <p><span class="font-bold text-error">I'm not accepting unsolicited friend requests!</span> But my DMs are free, so <span class="font-bold text-success">message me with general introduction / courtesies</span> and then <span class="italic">maybe</span> I'll accept your friend request.</p>
+                    <p>Anyway, my user handle is <button class="link-primary" onclick="copyText('joubamety');">joubamety</button> or here's a user link:</p>
+                    <a class="w-max" href="https://discord.com/users/266528098772713474" aria-label="My Discord User URL" target="_blank"><button class="btn-standard"><img class="h-4" src="./media/discord.webp"><div class="divider"></div>User Link</button></a>
+                </div>
             </div>
         </div>
-	</div>
-    <input class="modal-state" id="modal-2" type="checkbox" />
-    <div class="modal w-screen">
-        <label class="modal-overlay" for="modal-2"></label>
-        <div class="modal-content flex flex-col gap-5 max-w-3xl">
-            <label for="modal-2" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
-            <h2 class="text-xl">Color Palettes Info</h2>
-            <div class="accordion-group accordion-group-hover accordion-group-bordered">
-                <div class="accordion">
-                    <input type="checkbox" id="toggle-9" class="accordion-toggle" />
-                    <label for="toggle-9" class="accordion-title">
-                        <span>Catppuccin</span>
-                    </label>
-                    <span class="accordion-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg>
-                    </span>
-                    <div class="accordion-content text-content2">
-                        <div class="min-h-0">
-                            <div class="flex gap-4 mb-4">
-                                <a href="https://catppuccin.com/" target="_blank" class="btn-standard"><img class="h-4" src="./media/catppuccin.webp" alt="Catppuccin Logo"><div class="divider"></div>Website</a>
-                                <a href="https://github.com/catppuccin/catppuccin/blob/main/README.md" target="_blank" class="btn-standard"><img class="size-4 github-logo" src="./media/github_white.webp" alt="GitHub Logo"><div class="divider"></div>GitHub</a>
-                                <a href="https://ctp-webr.ing/" target="_blank" class="btn-standard"><img class="h-4" src="./media/catppuccin.webp" alt="Catppuccin Logo"><div class="divider"></div>Webring</a>
-                            </div>
-                            <!-- MIT License -->
-                            <div class="accordion-group accordion-group-hover my-2">
-                                <div class="accordion">
-                                    <input type="checkbox" id="toggle-5" class="accordion-toggle" />
-                                    <label for="toggle-5" class="accordion-title">MIT License</label>
-                                    <span class="accordion-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg>
-                                    </span>
-                                    <div class="accordion-content text-content2">
-                                        <div class="min-h-0 font-sourceCodePro text-[0.7rem]">
-                                            <div class="italic font-bold">
-                                                Source: <a href="https://github.com/catppuccin/catppuccin/blob/main/LICENSE" class="link-primary">https://github.com/catppuccin/catppuccin/blob/main/LICENSE</a><br><br>
+        <input class="modal-state" id="modal-2" type="checkbox" />
+        <div class="modal w-full px-0 lg:px-[1rem]">
+            <label class="modal-overlay" for="modal-2"></label>
+            <div class="modal-content flex flex-col gap-5 h-full px-0 lg:px-[1.5rem]">
+                <label for="modal-2" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
+                <h2 class="text-xl inline-flex items-center gap-1 select-none">
+                    <svg class="size-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 4.125c0-1.036.84-1.875 1.875-1.875h5.25c1.036 0 1.875.84 1.875 1.875V17.25a4.5 4.5 0 1 1-9 0V4.125Zm4.5 14.25a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" /><path d="M10.719 21.75h9.156c1.036 0 1.875-.84 1.875-1.875v-5.25c0-1.036-.84-1.875-1.875-1.875h-.14l-8.742 8.743c-.09.089-.18.175-.274.257ZM12.738 17.625l6.474-6.474a1.875 1.875 0 0 0 0-2.651L15.5 4.787a1.875 1.875 0 0 0-2.651 0l-.1.099V17.25c0 .126-.003.251-.01.375Z" /></svg>
+                    <svg class="size-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" /></svg>                      
+                    Color Palettes Info
+                </h2>
+                <div class="accordion-group accordion-group-hover accordion-group-bordered rounded-none lg:rounded-[.75rem]">
+                    <div class="accordion">
+                        <input type="checkbox" id="toggle-9" class="accordion-toggle" />
+                        <label for="toggle-9" class="accordion-title">
+                            <span>Catppuccin</span>
+                        </label>
+                        <span class="accordion-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg>
+                        </span>
+                        <div class="accordion-content text-content2">
+                            <div class="min-h-0">
+                                <div class="flex gap-4 mb-4">
+                                    <a href="https://catppuccin.com/" target="_blank" class="btn-standard"><img class="h-4" src="./media/catppuccin.webp" alt="Catppuccin Logo"><div class="divider"></div>Website</a>
+                                    <a href="https://github.com/catppuccin/catppuccin/blob/main/README.md" target="_blank" class="btn-standard"><img class="size-4 github-logo" src="./media/github_white.webp" alt="GitHub Logo"><div class="divider"></div>GitHub</a>
+                                    <a href="https://ctp-webr.ing/" target="_blank" class="btn-standard"><img class="h-4" src="./media/catppuccin.webp" alt="Catppuccin Logo"><div class="divider"></div>Webring</a>
+                                </div>
+                                <!-- MIT License -->
+                                <div class="accordion-group accordion-group-hover my-2">
+                                    <div class="accordion">
+                                        <input type="checkbox" id="toggle-5" class="accordion-toggle" />
+                                        <label for="toggle-5" class="accordion-title">MIT License</label>
+                                        <span class="accordion-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg>
+                                        </span>
+                                        <div class="accordion-content text-content2">
+                                            <div class="min-h-0 font-sourceCodePro text-[0.7rem]">
+                                                <div class="italic font-bold">
+                                                    Source: <a href="https://github.com/catppuccin/catppuccin/blob/main/LICENSE" class="link-primary">https://github.com/catppuccin/catppuccin/blob/main/LICENSE</a><br><br>
+                                                </div>
+                                                MIT License<br><br>Copyright (c) 2021 Catppuccin<br><br>
+                                                Permission is hereby granted, free of charge, to any person obtaining a copy<br>
+                                                of this software and associated documentation files (the "Software"), to deal<br>
+                                                in the Software without restriction, including without limitation the rights<br>
+                                                to use, copy, modify, merge, publish, distribute, sublicense, and/or sell<br>
+                                                copies of the Software, and to permit persons to whom the Software is<br>
+                                                furnished to do so, subject to the following conditions:<br><br>
+                                                The above copyright notice and this permission notice shall be included in all<br>
+                                                copies or substantial portions of the Software.<br><br>
+                                                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<br>
+                                                IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<br>
+                                                FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br>
+                                                AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<br>
+                                                LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<br>
+                                                OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE<br>
+                                                SOFTWARE.<br>
                                             </div>
-                                            MIT License<br><br>Copyright (c) 2021 Catppuccin<br><br>
-                                            Permission is hereby granted, free of charge, to any person obtaining a copy<br>
-                                            of this software and associated documentation files (the "Software"), to deal<br>
-                                            in the Software without restriction, including without limitation the rights<br>
-                                            to use, copy, modify, merge, publish, distribute, sublicense, and/or sell<br>
-                                            copies of the Software, and to permit persons to whom the Software is<br>
-                                            furnished to do so, subject to the following conditions:<br><br>
-                                            The above copyright notice and this permission notice shall be included in all<br>
-                                            copies or substantial portions of the Software.<br><br>
-                                            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<br>
-                                            IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<br>
-                                            FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br>
-                                            AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<br>
-                                            LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<br>
-                                            OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE<br>
-                                            SOFTWARE.<br>
                                         </div>
                                     </div>
-                                </div>
-                            </div><!-- MIT License -->
-                            <span class="font-bold">Catppuccin Mocha</span> and <span class="font-bold">Catppuccin Latte</span> are the main color palettes/schemes I used for default dark/light theme.<br>
-                            I more or less adhered to <a class="link link-primary" href="https://github.com/catppuccin/catppuccin/blob/main/docs/style-guide.md">style guide</a>, which was also one of the easiest color palettes to implement, which wasn't even main motive for using Catppuccin as main color pallete(s), it just look pretty :3.
+                                </div><!-- MIT License -->
+                                <span class="font-bold">Catppuccin Mocha</span> and <span class="font-bold">Catppuccin Latte</span> are the main color palettes/schemes I used for default dark/light theme.<br>
+                                I more or less adhered to <a class="link link-primary" href="https://github.com/catppuccin/catppuccin/blob/main/docs/style-guide.md">style guide</a>, which was also one of the easiest color palettes to implement, which wasn't even main motive for using Catppuccin as main color pallete(s), it just look pretty :3.
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion">
-                    <input type="checkbox" id="toggle-10" class="accordion-toggle" />
-                    <label for="toggle-10" class="accordion-title">
-                        <span>Nord</span>
-                    </label>
-                    <span class="accordion-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg>
-                    </span>
-                    <div class="accordion-content">
-                        <div class="min-h-0">
-                            <div class="flex gap-4 mb-4">
-                                <a href="https://www.nordtheme.com/" target="_blank" class="btn-standard">
-                                    <svg class="h-4 mr-[0.5] icon" fill="currentColor" viewBox="0 0 128 128" size="80" class="Nord-sc-11bxow5-0 Logo-sc-14rqkl1-0 gCAkw"><path d="M87.102 118.131L42.667 61.255V45.473l49.247 63.665h26.463V19.492H73.87l-9.623-9.623H128v108.262z"></path><path d="M40.899 9.869l44.434 56.874v15.781L36.087 18.861H9.624v89.646h44.507l9.623 9.623H0V9.869z"></path></svg>
-                                    <div class="divider"></div>Website</a>
-                                <a href="https://github.com/nordtheme/nord/blob/develop/readme.md" target="_blank" class="btn-standard"><img class="size-4 github-logo" src="./media/github_white.webp" alt="GitHub Logo"><div class="divider"></div>GitHub</a>
-                            </div>
-                            <!-- MIT License -->
-                            <div class="accordion-group accordion-group-hover my-2">
-                                <div class="accordion">
-                                    <input type="checkbox" id="license-nord" class="accordion-toggle" />
-                                    <label for="license-nord" class="accordion-title">MIT License</label>
-                                    <span class="accordion-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg>
-                                    </span>
-                                    <div class="accordion-content text-content2">
-                                        <div class="min-h-0 font-sourceCodePro text-[0.7rem]">
-                                            <div class="italic font-bold">
-                                                Source: <a href="https://github.com/nordtheme/nord/blob/develop/license" class="link-primary">https://github.com/nordtheme/nord/blob/develop/license</a><br><br>
+                    <div class="accordion">
+                        <input type="checkbox" id="toggle-10" class="accordion-toggle" />
+                        <label for="toggle-10" class="accordion-title">
+                            <span>Nord</span>
+                        </label>
+                        <span class="accordion-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg>
+                        </span>
+                        <div class="accordion-content">
+                            <div class="min-h-0">
+                                <div class="flex gap-4 mb-4">
+                                    <a href="https://www.nordtheme.com/" target="_blank" class="btn-standard">
+                                        <svg class="h-4 mr-[0.5] icon" fill="currentColor" viewBox="0 0 128 128" size="80" class="Nord-sc-11bxow5-0 Logo-sc-14rqkl1-0 gCAkw"><path d="M87.102 118.131L42.667 61.255V45.473l49.247 63.665h26.463V19.492H73.87l-9.623-9.623H128v108.262z"></path><path d="M40.899 9.869l44.434 56.874v15.781L36.087 18.861H9.624v89.646h44.507l9.623 9.623H0V9.869z"></path></svg>
+                                        <div class="divider"></div>Website</a>
+                                    <a href="https://github.com/nordtheme/nord/blob/develop/readme.md" target="_blank" class="btn-standard"><img class="size-4 github-logo" src="./media/github_white.webp" alt="GitHub Logo"><div class="divider"></div>GitHub</a>
+                                </div>
+                                <!-- MIT License -->
+                                <div class="accordion-group accordion-group-hover my-2">
+                                    <div class="accordion">
+                                        <input type="checkbox" id="license-nord" class="accordion-toggle" />
+                                        <label for="license-nord" class="accordion-title">MIT License</label>
+                                        <span class="accordion-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg>
+                                        </span>
+                                        <div class="accordion-content text-content2">
+                                            <div class="min-h-0 font-sourceCodePro text-[0.7rem]">
+                                                <div class="italic font-bold">
+                                                    Source: <a href="https://github.com/nordtheme/nord/blob/develop/license" class="link-primary">https://github.com/nordtheme/nord/blob/develop/license</a><br><br>
+                                                </div>
+                                                MIT License (MIT)<br><br>Copyright (c) 2016-present Sven Greb &lt;development@svengreb.de&gt; (<a href="https://www.svengreb.de" class="link-primary">https://www.svengreb.de</a>)<br><br>
+                                                Permission is hereby granted, free of charge, to any person obtaining a copy<br>
+                                                of this software and associated documentation files (the "Software"), to deal<br>
+                                                in the Software without restriction, including without limitation the rights<br>
+                                                to use, copy, modify, merge, publish, distribute, sublicense, and/or sell<br>
+                                                copies of the Software, and to permit persons to whom the Software is<br>
+                                                furnished to do so, subject to the following conditions:<br><br>
+                                                The above copyright notice and this permission notice shall be included in all<br>
+                                                copies or substantial portions of the Software.<br><br>
+                                                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<br>
+                                                IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<br>
+                                                FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br>
+                                                AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<br>
+                                                LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<br>
+                                                OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE<br>
+                                                SOFTWARE.<br>
                                             </div>
-                                            MIT License (MIT)<br><br>Copyright (c) 2016-present Sven Greb &lt;development@svengreb.de&gt; (<a href="https://www.svengreb.de" class="link-primary">https://www.svengreb.de</a>)<br><br>
-                                            Permission is hereby granted, free of charge, to any person obtaining a copy<br>
-                                            of this software and associated documentation files (the "Software"), to deal<br>
-                                            in the Software without restriction, including without limitation the rights<br>
-                                            to use, copy, modify, merge, publish, distribute, sublicense, and/or sell<br>
-                                            copies of the Software, and to permit persons to whom the Software is<br>
-                                            furnished to do so, subject to the following conditions:<br><br>
-                                            The above copyright notice and this permission notice shall be included in all<br>
-                                            copies or substantial portions of the Software.<br><br>
-                                            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<br>
-                                            IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<br>
-                                            FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br>
-                                            AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<br>
-                                            LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<br>
-                                            OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE<br>
-                                            SOFTWARE.<br>
                                         </div>
                                     </div>
-                                </div>
-                            </div><!-- MIT License -->
-                            I like the idea behind <span class="font-bold">Nord</span>, but the docs about <a class="link-primary" href="https://www.nordtheme.com/docs/colors-and-palettes">colors and palettes</a> was frustrating.<br>
-                            Because of me using Catppuccin as base, I had to modify colors unfortunately, so contrast is fine and all.
+                                </div><!-- MIT License -->
+                                I like the idea behind <span class="font-bold">Nord</span>, but the docs about <a class="link-primary" href="https://www.nordtheme.com/docs/colors-and-palettes">colors and palettes</a> was frustrating.<br>
+                                Because of me using Catppuccin as base, I had to modify colors unfortunately, so contrast is fine and all.
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion">
-                    <input type="checkbox" id="toggle-11" class="accordion-toggle" />
-                    <label for="toggle-11" class="accordion-title">
-                        <span>Tango</span>
-                    </label>
-                    <span class="accordion-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg>
-                    </span>
-                    <div class="accordion-content">
-                        <div class="min-h-0">
-                            <div class="flex gap-4 mb-4">
-                                <a href="https://web.archive.org/web/20160202081724/http://tango.freedesktop.org/Tango_Desktop_Project" target="_blank" class="btn-standard"><img class="h-4 drop-shadow-sm" src="./media/tango.webp" alt="Tango Logo"><div class="divider"></div>Website (Archive)</a>
-                                <a href="https://en.wikipedia.org/wiki/Tango_Desktop_Project#Palette" target="_blank" class="btn-standard"><img class="h-4" src="./media/wikipedia.webp" alt="Wikipedia Logo"><div class="divider"></div>Wikipedia</a>
-                            </div>
-                            <!-- Tango's Terms of Use -->
-                            <div class="accordion-group accordion-group-hover my-2">
-                                <div class="accordion">
-                                    <input type="checkbox" id="license-tango" class="accordion-toggle" />
-                                    <label for="license-tango" class="accordion-title">Tango's Terms of Use</label>
-                                    <span class="accordion-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg>
-                                    </span>
-                                    <div class="accordion-content text-content2">
-                                        <div class="min-h-0 text-[1rem]">
-                                            <div class="italic font-bold">
-                                                Source (Archive): <a href="https://web.archive.org/web/20160202081724/http://tango.freedesktop.org/Tango_Desktop_Project" class="link-primary">http://tango.freedesktop.org/Tango_Desktop_Project</a><br><br>
+                    <div class="accordion">
+                        <input type="checkbox" id="toggle-11" class="accordion-toggle" />
+                        <label for="toggle-11" class="accordion-title">
+                            <span>Tango</span>
+                        </label>
+                        <span class="accordion-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg>
+                        </span>
+                        <div class="accordion-content">
+                            <div class="min-h-0">
+                                <div class="flex gap-4 mb-4">
+                                    <a href="https://web.archive.org/web/20160202081724/http://tango.freedesktop.org/Tango_Desktop_Project" target="_blank" class="btn-standard"><img class="h-4 drop-shadow-sm" src="./media/tango.webp" alt="Tango Logo"><div class="divider"></div>Website (Archive)</a>
+                                    <a href="https://en.wikipedia.org/wiki/Tango_Desktop_Project#Palette" target="_blank" class="btn-standard"><img class="h-4" src="./media/wikipedia.webp" alt="Wikipedia Logo"><div class="divider"></div>Wikipedia</a>
+                                </div>
+                                <!-- Tango's Terms of Use -->
+                                <div class="accordion-group accordion-group-hover my-2">
+                                    <div class="accordion">
+                                        <input type="checkbox" id="license-tango" class="accordion-toggle" />
+                                        <label for="license-tango" class="accordion-title">Tango's Terms of Use</label>
+                                        <span class="accordion-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg>
+                                        </span>
+                                        <div class="accordion-content text-content2">
+                                            <div class="min-h-0 text-[1rem]">
+                                                <div class="italic font-bold">
+                                                    Source (Archive): <a href="https://web.archive.org/web/20160202081724/http://tango.freedesktop.org/Tango_Desktop_Project" class="link-primary">http://tango.freedesktop.org/Tango_Desktop_Project</a><br><br>
+                                                </div>
+                                                The Tango base icon theme is released to the Public Domain.<br>
+                                                <span class="font-bold">The palette is in public domain.</span><br>
+                                                Developers, feel free to ship it along with your application.<br>
+                                                The icon naming utilities are licensed under the GPL.<br><br>
+                                                Though the tango-icon-theme package is released to the Public Domain,<br>
+                                                we ask that you still please attribute the Tango Desktop Project,<br>
+                                                for all the hard work we've done. Thanks.
                                             </div>
-                                            The Tango base icon theme is released to the Public Domain.<br>
-                                            <span class="font-bold">The palette is in public domain.</span><br>
-                                            Developers, feel free to ship it along with your application.<br>
-                                            The icon naming utilities are licensed under the GPL.<br><br>
-                                            Though the tango-icon-theme package is released to the Public Domain,<br>
-                                            we ask that you still please attribute the Tango Desktop Project,<br>
-                                            for all the hard work we've done. Thanks.
                                         </div>
                                     </div>
-                                </div>
-                            </div><!-- Tango's Terms of Use -->
-                            Thanks, the Tango Desktop Project! Anyway eugh, I discovered the website after I already did a theme, basing it on wikipedia's palette and screenshots (was too lazy to fire it up in terminal).<br>
-                            I ought to redo the Tango themes later.
+                                </div><!-- Tango's Terms of Use -->
+                                Thanks, the Tango Desktop Project! Anyway eugh, I discovered the website after I already did a theme, basing it on wikipedia's palette and screenshots (was too lazy to fire it up in terminal).<br>
+                                I ought to redo the Tango themes later.
+                            </div>
                         </div>
                     </div>
                 </div>
