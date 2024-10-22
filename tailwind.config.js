@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 /** @type {import('rippleui').Config} */
-const { createThemes } = require('tw-colors');
 module.exports = {
   darkMode: 'selector',
   content: ["./src/**/*.{html,js}"],
@@ -8,8 +7,8 @@ module.exports = {
     fontFamily: {
       'sourceCodePro': ['Source Code Pro', 'monospace'],
 
-      'archivoBlack': ['Archivo Black', 'sans-serif'],
-      'archivo': ['Archivo', 'sans-serif'],
+      'archivoBlack': ['Archivo Black', 'Dela Gothic One', 'sans-serif'],
+      'archivo': ['Archivo', 'Noto Sans JP', 'sans-serif'],
     },
     extend: {
       screens: {
@@ -17,7 +16,9 @@ module.exports = {
       },
     },
   },
-  plugins: [require("rippleui")],
+  plugins: [
+    require("rippleui"),
+  ],
   rippleui: {
     /*
     themes: [

@@ -172,6 +172,27 @@
 	--twitter-x_logo: url("./media/twitter-x_black.webp");
 	--brainmade_logo: url("./media/brainmade_black.svg");    
 }
+:root[data-theme="halloween"] {
+    color-scheme: dark;
+    --backgroundPrimary: 21 9 0;
+    --backgroundSecondary: 64 26 0;
+    --border: 94 38 0;
+    --content1: 255 221 191;
+    --content2: 255 199 149;
+    --content3: 255 179 111;
+    --whiteInverted: 255 255 255;
+    --blackInverted: 0 0 0;
+    --neutral: 105 113 119;
+    --primary: 255 145 0;
+    --secondary: 212 142 224;
+    --success: 255 205 0;
+    --error: 255 111 0;
+    --warning: 255 222 0;
+
+    --github_logo: url("./media/github_white.webp");
+	--twitter-x_logo: url("./media/twitter-x_white.webp");
+	--brainmade_logo: url("./media/brainmade__halloween.svg"); 
+}
 
 :root {
     @apply bg-backgroundPrimary;
@@ -180,6 +201,14 @@
     --avatar_blink_img: ./media/avatar_blink.webp;
     --favicon: ./favicon.ico;
     --favicon_blink: ./favicon_blink.ico;
+}
+
+:root[data-theme="halloween"] {
+    background-image: url(./media/halloween_background.png);
+    --avatar_img: ./media/avatar__halloween.webp;
+    --avatar_blink_img: ./media/avatar__halloween_blink.webp;
+    --favicon: ./media/avatar__halloween.webp;
+    --favicon_blink: ./media/avatar__halloween_blink.webp;
 }
 
 html {
@@ -392,6 +421,10 @@ h3 {
 
 .tooltip::before {
     @apply bg-backgroundSecondary/90 backdrop-blur-sm backdrop-brightness-[1.25] dark:backdrop-brightness-[.25] drop-shadow-md text-content1 text-sm max-w-[256px] text-wrap z-10;
+}
+
+.tooltip::after {
+    @apply border-t-backgroundSecondary/90;
 }
 
 .tooltip-top::after {

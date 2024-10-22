@@ -8,6 +8,7 @@
     "tw-colors": "^3.3.2"
   },
   "dependencies": {
+    "@tailwindcss/container-queries": "^0.1.1",
     "rippleui": "^1.12.1"
   }
 }

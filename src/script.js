@@ -34,6 +34,11 @@ preloadImage(
 					document.querySelector("link[rel*='icon']").href =
 						style.getPropertyValue("--favicon");
 				}, time * 1000);
+				if (style.getPropertyValue("--avatar_img").includes("halloween")) {
+					document.getElementById("avatar-span").setAttribute("data-tooltip", "Spooky Ame-chan by @Nyalra on Twitter (currently \"X\")");
+				} else {
+					document.getElementById("avatar-span").setAttribute("data-tooltip", "French-ified Ame-chan from NEEDY GIRL OVERDOSE, edited by me, original by @Nyalra on Twitter (currently \"X\")");
+				}
 				setTimeout(blink, random = (Math.random() * (max - min) + min) * 1000);
 			})(); // function blink
 		},
@@ -133,3 +138,39 @@ function notificationAlert(type, duration, title, description) {
 		duration
 	);
 }
+
+(async function replaceDiscordStatus(){
+	const url = "https://api.joubamety.com/v1/joubamety.com/discord"
+	fetch(url)
+	.then((response) => {
+		return response.text();
+	})
+	.then((html) => {
+		let element = document.getElementById("discord-status-card")
+		if (html == "") {
+			if(!element.classList.contains("hidden")) {
+				element.classList.add("hidden")
+			}
+		} else {
+			if (element.innerHTML != html) {
+				element.innerHTML = html  
+				if(element.classList.contains("hidden")) {
+					element.classList.remove("hidden")
+				}
+				console.info("discord status update")
+				setTimeout( () => {
+					fetch(url + "/emote.webp")
+					fetch(url + "/albumArt.webp")
+					fetch(url + "/gameArt.webp")
+				}, 1000);
+			}
+		}
+	});
+	setTimeout(replaceDiscordStatus, 15*1000)
+})();
+
+// preload halloween avatars
+(() => {
+	preloadImage("./media/avatar__halloween.webp");
+	preloadImage("./media/avatar__halloween_blink.webp")
+})();

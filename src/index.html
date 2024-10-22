@@ -33,6 +33,7 @@
   <link href="./output.css" rel="stylesheet">
   <script src="./theme.js"></script>
   <script src="./script.js" defer></script>
+  <script src="https://unpkg.com/htmx.org@2.0.3"></script>
   <link rel="prefetch" href="./media/avatar_blink.webp" as="image" type="image/webp" />
 </head>
 <body>
@@ -51,6 +52,7 @@
                     </div>
                 </label>
                 <div class="dropdown-menu dropdown-menu-bottom-right lg:dropdown-menu-bottom-center gap-1">
+                    <a aria-label="Reset to System Theme" class="dropdown-item text-sm text-error" onclick="resetTheme();">Revert To System Theme</a>
                     <p tabindex="-1" class="select-none text-sm font-archivoBlack text-center px-[6.5px] pt-2">Light Themes</p>
                     <a id="select-light" aria-label="Switch theme to Catppuccin Latte (Light)" tabindex="-1" class="dropdown-item text-sm" onclick="changeTheme('light', 'light');">Catppuccin (Latte)</a>
                     <a id="select-nord-light" aria-label="Switch theme to Nord (Light)" tabindex="-1" class="dropdown-item text-sm" onclick="changeTheme('nord-light', 'light');">Nord (Snow Storm)</a>
@@ -61,8 +63,9 @@
                     <a id="select-dark" aria-label="Switch theme to Catppuccin Mocha (Dark)" tabindex="-1" class="dropdown-item text-sm" onclick="changeTheme('dark', 'dark');">Catppuccin (Mocha)</a>
                     <a id="select-nord-dark" aria-label="Switch theme to Nord (Dark)" tabindex="-1" class="dropdown-item text-sm" onclick="changeTheme('nord-dark', 'dark');">Nord (Polar Night)</a>
                     <a id="select-tango-dark" aria-label="Switch theme to Tango (Dark)" tabindex="-1" class="dropdown-item text-sm" onclick="changeTheme('tango-dark', 'dark');">Tango (Dark)</a>
+                    <p class="select-none text-sm font-archivoBlack text-center px-[6.5px] pt-2">Special Themes</p>
+                    <a id="select-halloween" aria-label="Switch theme to Halloween" tabindex="-1" class="dropdown-item text-sm" onclick="changeTheme('halloween', 'dark');">Halloween</a>
                     <p class="select-none text-sm font-bold text-center px-[6.5px] pt-2"></p>
-                    <a class="dropdown-item text-sm text-error" onclick="resetTheme();">Revert To System Theme</a>
                 </div>
             </div>
             <div class="popover popover-hover popover-warning">
@@ -87,7 +90,10 @@
         </div>
         <div class="main">
             <div class="header h-90">
-                <span class="tooltip tooltip-bottom lg:tooltip-right" data-tooltip="French-ified Ame-chan from NEEDY GIRL OVERDOSE, edited by me, original by @Nyalra on Twitter (currently &quot;X&quot;)">
+                <a id="select-halloween" aria-label="Switch theme to Halloween" onclick="changeTheme('halloween', 'dark');notificationAlert('success', 2500, 'Halloween Alert', 'Peak-a-boo!');">
+                    <img alt="The Halloween Pumpkin" class="select-none z-[30] size-24 absolute top-5 left-2 -rotate-[25deg]" src="./media/halloween-pumpkin.svg"></img>
+                </a>
+                <span id="avatar-span" class="tooltip tooltip-bottom lg:tooltip-right" data-tooltip="French-ified Ame-chan from NEEDY GIRL OVERDOSE, edited by me, original by @Nyalra on Twitter (currently &quot;X&quot;)">
                     <img id="avatar" class="avatar-standard" src="./media/avatar.webp" alt="JoubaMety's Avatar">
                 </span>
                 <h1 class="text-5xl font-bold font-archivoBlack">JoubaMety</h1>
@@ -115,6 +121,7 @@
                         )
                     </span>
                 </div>
+                <div id="discord-status-card" class="card bg-backgroundSecondary w-max max-w-72 p-[1rem] px-[1.5rem] gap-0 hidden"></div>
             </div>
             <div class="content">
                 <div>

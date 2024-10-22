@@ -7,6 +7,7 @@ const themeTextMap = new Map([
 	["catppuccin-macchiato", "Catppuccin (Macchiato)"],
     ["tango-dark", "Tango (Dark)"],
     ["tango-light", "Tango (Light)"],
+	["halloween", "Halloween"]
 ]);
 
 function earlyTheme() {

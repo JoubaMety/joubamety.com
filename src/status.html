@@ -1,0 +1,78 @@
+<!-- This is taken from API response template, so Tailwind CLI can do proper CSS thingy -->
+if dS.status != "offline" {
+    if dS.statusText != "" && dS.statusEmote != "" {
+        <div class="flex items-center gap-1">
+            <div class="font-archivoBlack">
+                Status
+            </div>
+        </div>
+        <div class="flex flex-row max-w-72 max-h-14 items-center gap-1">
+            <div class="tooltip flex-shrink-0" data-tooltip={ dS.statusEmoteName }>
+                <img class="h-8 w-max rounded-sm" src={ dS.statusEmote }/>
+            </div>
+            <div class={ getTooltip(dS.statusText) } data-tooltip={ dS.statusText }>
+                <div class="overflow-hidden whitespace-nowrap text-ellipsis max-h-14 max-w-[208px]">
+                    { dS.statusText }
+                </div>
+            </div>
+        </div>
+    }
+    if dS.playingName != "" {
+        <div class="flex items-center gap-1">
+            <div class="font-archivoBlack">
+                Playing
+            </div>
+        </div>
+        <div class="flex flex-row max-w-72 max-h-14 items-center gap-1">
+            <div class="tooltip flex-shrink-0" data-tooltip={ dS.playingName }>
+                <img class="size-8 rounded-sm" src={ dS.playingImage }/>
+            </div>
+            <div class={ getTooltip(dS.playingName) } data-tooltip={ dS.playingName }>
+                <div class="overflow-hidden whitespace-nowrap text-ellipsis max-h-14 max-w-[208px]">
+                    { dS.playingName }
+                </div>
+            </div>
+        </div>
+    }
+    if dS.streamingName != "" {
+        <div class="flex items-center gap-1">
+            <div class="font-archivoBlack">
+                Streaming
+            </div>
+        </div>
+        <a href={ templ.SafeURL(dS.streamingUrl) } class="flex flex-row max-w-72 max-h-14 items-center">
+            <div class={ getTooltip(dS.streamingName) } data-tooltip={ dS.streamingName }>
+                <div class="overflow-hidden whitespace-nowrap text-ellipsis max-h-14 max-w-[240px] text-primary hover:text-primary/75">
+                    { dS.streamingName }
+                </div>
+            </div>
+        </a>
+    }
+    if dS.listeningTrack != "" {
+        <div class="text-start font-archivoBlack">
+            Listening to
+        </div>
+        <div class="flex gap-1 items-center max-w-72 max-h-16">
+            <div class="flex-shrink-0 tooltip" data-tooltip={ dS.listeningAlbum }>
+                <img class="size-16 rounded-md" src={ dS.listeningImage }>
+            </div>
+            <div class="max-h-16 max-w-[176px] text-sm flex flex-col text-start">
+                <div class={ getTooltip(dS.listeningTrack) } data-tooltip={ dS.listeningTrack }>
+                    <div class="overflow-hidden whitespace-nowrap text-ellipsis">
+                        { dS.listeningTrack }
+                    </div>
+                </div>
+                <div class={ getTooltip(dS.listeningArtists) } data-tooltip={ dS.listeningArtists }>
+                    <div class="overflow-hidden whitespace-nowrap text-ellipsis">
+                        { dS.listeningArtists }
+                    </div>
+                </div>
+                <div class={ getTooltip(dS.listeningAlbum) } data-tooltip={ dS.listeningAlbum }>
+                    <div class="overflow-hidden whitespace-nowrap text-ellipsis">
+                        { dS.listeningAlbum }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
