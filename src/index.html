@@ -26,13 +26,13 @@
   <meta name="twitter:image" content="./media/avatar.webp">
   <meta name="twitter:url" content="https://joubamety.com/">
   
-  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="./media/avatar.webp">
   <link rel="canonical" href="https://joubamety.com/">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,100..900;1,100..900&family=Kosugi&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
   <link href="./output.css" rel="stylesheet">
   <script src="./theme.js"></script>
   <script src="./script.js" defer></script>
@@ -92,9 +92,6 @@
         </div>
         <div class="main">
             <div class="header h-90">
-                <a id="select-halloween" aria-label="Switch theme to Halloween" onclick="changeTheme('halloween', 'dark');notificationAlert('success', 2500, 'Halloween Alert', 'Peak-a-boo!');">
-                    <img alt="The Halloween Pumpkin" class="select-none z-[30] size-24 absolute top-5 left-2 -rotate-[25deg]" src="./media/halloween-pumpkin.svg"></img>
-                </a>
                 <span id="avatar-span" class="tooltip tooltip-bottom lg:tooltip-right" data-tooltip="French-ified Ame-chan from NEEDY GIRL OVERDOSE, edited by me, original by @Nyalra on Twitter (currently &quot;X&quot;)">
                     <img id="avatar" class="avatar-standard" src="./media/avatar.webp" alt="JoubaMety's Avatar">
                 </span>
@@ -116,10 +113,14 @@
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                       </svg>                      
-                    <div id="currentTime" class="font-bold"></div>
+                    <div id="currentTime" class="font-bold">
+                        24:00
+                    </div>
                     <span class="inline-flex">
                         (
-                        <div id="currentTimeZoneOffset" class="tooltip underline decoration-dotted" data-tooltip=""></div>
+                        <div id="currentTimeZoneOffset" class="tooltip underline decoration-dotted" data-tooltip="">
+                            UTC+24
+                        </div>
                         )
                     </span>
                 </div>
@@ -138,7 +139,7 @@
                         </h3>
                         <div class="flex gap-4 m-4">
                             <a href="https://notes.joubamety.com/" aria-label="Website where I store my notes" target="_blank"><button class="btn-standard" aria-label="Website where I store my notes"><img class="size-4" src="./media/notes.webp" alt="Logo of notes.joubamety.com"><div class="divider"></div>JoubaMety's Notes</button></a>
-                            <a href="https://ctp-webr.ing/" target="_blank" class="btn-standard"><img class="h-4" src="./media/catppuccin.webp" alt="Catppuccin Logo"><div class="divider"></div>Catppuccin Webring</a>
+                            <a href="https://ctp-webr.ing/" target="_blank" class="btn-standard"><img class="size-4" src="./media/catppuccin.webp" alt="Catppuccin Logo"><div class="divider"></div>Catppuccin Webring</a>
                         </div>
                     </div>
                     <div>
@@ -160,6 +161,24 @@
                             <a href="https://x.com/JoubaMety" aria-label="My Twitter (currently &quot;X&quot;) Profile" target="_blank" class="btn-standard"><img class="w-4 h-[13.156px]" src="./media/twitter.webp" alt="Twitter Logo"><div class="spacer w-2 h-2"></div><img class="w-[13.16px] h-[13.438px] twitter-x-logo" src="./media/twitter-x_white.webp" alt="Twitter (currently X) Logo"><div class="divider"></div>Twitter (currently X)</a>
                         </div>
                     </div>
+                    <div>
+                        <h3>
+                            <span class="inline-flex items-baseline">
+                                <a href="https://discord.com/" target="_blank" class="text-primary hover:opacity-75 transition-opacity inline-flex items-baseline">
+                                    <img class="h-4 w-[21.06px] mr-1" src="./media/discord.webp" alt="Discord Logo">
+                                    Discord
+                                </a>&nbsp;Communities
+                            </span>
+                        </h3>
+                        <div class="list-btn">
+                            <a href="https://discord.gg/RpzWN9S" aria-label="shaderLABS Discord Invite" target="_blank" class="btn-standard"><img class="size-4" src="./media/server-shaderLABS.webp" alt="shaderLABS Logo"><div class="divider"></div>shaderLABS</a>
+                            <a href="https://discord.gg/XkzyWZb" aria-label="Continuum Graphics Discord Invite" target="_blank" class="btn-standard"><img class="size-4" src="./media/server-ContinuumGraphics.webp" alt="Continuum Graphics Logo"><div class="divider"></div>Continuum Graphics</a>
+                            <a href="https://discord.gg/4YFUmJp" aria-label="MachinimaHub Discord Invite" target="_blank" class="btn-standard"><img class="size-4" src="./media/server-MachinimaHub.webp" alt="MachinimaHub Logo"><div class="divider"></div>MachinimaHub</a>
+                            <a href="https://discord.gg/qfxrqUF" aria-label="McHorse's Pub Discord Invite" target="_blank" class="btn-standard"><img class="size-4" src="./media/server-McHorses_Pub.webp" alt="McHorse's Pub Logo"><div class="divider"></div>McHorse's Pub</a>
+                            <a href="https://discord.gg/wcVtYmdJ9W" aria-label="Panda Loft Discord Invite" target="_blank" class="btn-standard"><img class="size-4" src="./media/server-Panda_Loft.webp" alt="Panda Loft Logo"><div class="divider"></div>Panda Loft</a>
+                            <a href="https://discord.gg/blue-archive" aria-label="ブルーアーカイブ非公式コミュニティのDiscord Invite" target="_blank" class="btn-standard"><img class="size-4" src="./media/server-UnofficialBlueArchiveCommunity.webp" alt="ブルーアーカイブ非公式コミュニティのLogo"><div class="divider"></div>ブルーアーカイブ非公式コミュニティ</a>
+                        </div>
+                    </div>
                     <h2>
                         <span class="inline-flex items-baseline">
                             <img class="icon" alt="Waving Hand Emote" src="./media/waving-hand_1f44b.webp">
@@ -178,7 +197,7 @@
                                 <img class="flag-small" alt="Flag of Slovakia" src="./media/flag_slovakia.webp">
                                 <span>&nbsp;Slovak</span>
                             </span>
-                            young adult man. I create <span class="font-bold">Minecraft content</span> (<span class="tooltip underline decoration-dotted" data-tooltip="Videos, like films, roleplays or shorts, created in-game.">machinimas</span> and pictures/screenshots) and work with <a class="font-bold link-primary" href="https://en.wikipedia.org/wiki/FFmpeg">FFmpeg</a> extensively.
+                            young adult man. I create <span class="font-bold"><a href="https://www.minecraft.net" target="_blank" class="link link-primary">Minecraft</a> content</span> (<span class="tooltip underline decoration-dotted" data-tooltip="Videos, like films, roleplays or shorts, created in-game.">machinimas</span> and pictures/screenshots) and work with <a class="font-bold link-primary" href="https://en.wikipedia.org/wiki/FFmpeg">FFmpeg</a> extensively.
                             I program from time to time, used to program in 
                             <a class="font-bold link-primary" aria-label="Website for C++ programming language" href="https://isocpp.org/">
                                     C++
@@ -191,14 +210,32 @@
                             <a class="font-bold link-primary" aria-label="Website for Tailwind CSS, CSS framework" href="https://tailwindcss.com/">
                                 Tailwind CSS</a>.
                         </p>
-                        <br>
-                        <span class="font-bold inline-flex items-baseline">
+                        <span class="font-bold inline-flex items-baseline my-1">
+                            <svg class="size-4 self-center mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M4.5 4.5a3 3 0 0 0-3 3v9a3 3 0 0 0 3 3h8.25a3 3 0 0 0 3-3v-9a3 3 0 0 0-3-3H4.5ZM19.94 18.75l-2.69-2.69V7.94l2.69-2.69c.944-.945 2.56-.276 2.56 1.06v11.38c0 1.336-1.616 2.005-2.56 1.06Z" />
+                                </svg>
+                            <span>Video Creation / Production</span>
+                        </span>
+                        <p class="ml-5">
+                            I've been dabbling around <span class="font-bold">video creation</span> basically since 2012, got significiantly more active in 
+                            Minecraft's <span class="font-bold">shaders community</span> and consequently <span class="font-bold">Czechoslovak machinima community</span> around 2018, with 
+                            me getting involved with <a href="https://www.youtube.com/watch?v=ToK8rmCPZZg" target="_blank" class="link link-primary font-bold">"Odyssea III"</a> Minecraft Machinima project as it's <span class="font-bold">resource pack artist</span> & <span class="font-bold">body actor</span>. 
+                            After that, in 2019, I joined then-recently founded <a href="https://www.youtube.com/@FUProductionOfficial" target="_blank" class="link link-primary font-bold">F-U Production</a> Minecraft machinima studio as it's <span class="font-bold">main cameraman</span>, 
+                            <span class="font-bold">resourcepack artist</span> and other roles.
+                            <br>
+                            Later that same year, I've discovered an international Minecraft machinima community revolving around <a href="https://www.youtube.com/@McHorse" target="_blank" class="link link-primary font-bold">McHorse</a>'s 
+                            suite of mods such as <a href="https://www.curseforge.com/minecraft/mc-mods/blockbuster" target="_blank" class="link link-primary font-bold">Blockbuster</a>, that let you create amazing machinimas in-game, and joined <a href="https://www.youtube.com/@machinima_hub" target="_blank" class="link link-primary font-bold">MachinimaHub</a> in January 2020.
+                            <br>
+                            Nowadays I rarely do video projects and focus more on automation scripts / commands for creating videos suitable for sharing 
+                            across Discord.
+                        </p>
+                        <span class="font-bold inline-flex items-baseline my-1">
                             <svg class="size-4 self-center mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                 <path fill-rule="evenodd" d="M9 2.25a.75.75 0 0 1 .75.75v1.506a49.384 49.384 0 0 1 5.343.371.75.75 0 1 1-.186 1.489c-.66-.083-1.323-.151-1.99-.206a18.67 18.67 0 0 1-2.97 6.323c.318.384.65.753 1 1.107a.75.75 0 0 1-1.07 1.052A18.902 18.902 0 0 1 9 13.687a18.823 18.823 0 0 1-5.656 4.482.75.75 0 0 1-.688-1.333 17.323 17.323 0 0 0 5.396-4.353A18.72 18.72 0 0 1 5.89 8.598a.75.75 0 0 1 1.388-.568A17.21 17.21 0 0 0 9 11.224a17.168 17.168 0 0 0 2.391-5.165 48.04 48.04 0 0 0-8.298.307.75.75 0 0 1-.186-1.489 49.159 49.159 0 0 1 5.343-.371V3A.75.75 0 0 1 9 2.25ZM15.75 9a.75.75 0 0 1 .68.433l5.25 11.25a.75.75 0 1 1-1.36.634l-1.198-2.567h-6.744l-1.198 2.567a.75.75 0 0 1-1.36-.634l5.25-11.25A.75.75 0 0 1 15.75 9Zm-2.672 8.25h5.344l-2.672-5.726-2.672 5.726Z" clip-rule="evenodd" />
                                 </svg>
                             <span>Languages</span>
                         </span>
-                        <p>
+                        <p class="ml-5">
                             I'm native speaker of both
                             <span class="inline-flex items-baseline tooltip" data-tooltip="Čus bus! Tak to je prostě pecka, že ješte umíš čísť!">
                                 <img class="flag-small" alt="Flag of Czech Republic" src="./media/flag_czechia.webp">
@@ -230,10 +267,6 @@
                                     <span>&nbsp;Japanese.</span>
                             </span>
                         </p>
-                        <br>
-                        <p class="italic">
-                            More stuff will be added soon...
-                        </p>
                     </div>
                 </div>
                 <div>
@@ -246,9 +279,9 @@
                             Works / Creations
                         </span>
                     </h2>
-                    <div class="flex flex-wrap gap-4 m-4 justify-center lg:justify-start">
+                    <div class="flex flex-wrap gap-4 m-4 lg:mx-4 justify-center lg:justify-start">
                         <!-- 2024-06-YUI -->
-                        <div class="flex-auto w-96 card card-image-cover bg-backgroundSecondary">
+                        <div class="flex-none w-96 card card-image-cover bg-backgroundSecondary">
                             <div class="h-[216px]">
                                 <img class="card-cover" src="./media/2024-06-YUI.webp" alt="Thumbnail of 2024-06-YUI Machinima" />
                             </div>
@@ -259,10 +292,11 @@
                                         <span class="tooltip underline decoration-dotted" data-tooltip="Videos, like films, roleplays or shorts, created in-game.">Machinima</span>
                                     </span>
                                     <span class="badge badge-primary">Minecraft</span>
+                                    <span class="badge badge-primary">English</span>
                                 </div>
                                 <p class="text-content2">A Minecraft Machinima -- <span class="italic">Yuuta finds an old box and examines the "sweet memories" with Yui.</span></p>
                                 <div class="card-footer">
-                                    <a href="https://youtu.be/ksJQnBe_qGE" aria-label="Watch my Minecraft Machinima &quot;2024-06-YUI&quot; on YouTube" target="_blank"class="btn btn-primary text-backgroundPrimary">
+                                    <a href="https://youtu.be/ksJQnBe_qGE" aria-label="Watch my Minecraft Machinima &quot;2024-06-YUI&quot; on YouTube" target="_blank" class="btn btn-primary text-backgroundPrimary">
                                             <img class="w-4 h-[11.266px] self-center mx-1" alt="YouTube Logo" src="./media/youtube.webp">
                                             <div class="divider divider-vertical-backgroundPrimary mx-0 h-2"></div>
                                             Watch on YouTube (03:00)
@@ -279,7 +313,7 @@
                             </div>
                         </div>
                         <!-- notes.joubamety.com -->
-                        <div class="flex-auto w-96 card card-image-cover bg-backgroundSecondary">
+                        <div class="flex-none w-96 card card-image-cover bg-backgroundSecondary">
                             <div class="h-[216px]">
                                 <img class="card-cover" src="./media/notes_banner.webp" alt="Banner of website of JoubaMety's Notes" />
                             </div>
@@ -287,7 +321,7 @@
                                 <h2 class="card-header">JoubaMety's Notes</h2>
                                 <div class="card-badges">
                                     <span class="badge badge-primary">Website</span>
-                                    <span class="badge badge-primary">Video</span>
+                                    <span class="badge badge-primary">Video Creation</span>
                                     <span class="badge badge-primary">FFmpeg</span>
                                 </div>
                                 <p class="text-content2">Website where I store all my notes.</p>
@@ -301,14 +335,135 @@
                                 <div class="card-footer">
                                     <a href="https://github.com/JoubaMety/notes.joubamety.com" aria-label="GitHub Page for my notes website." target="_blank" class="btn btn-outline">
                                         <img class="size-4 github-logo" src="./media/github_white.webp" alt="GitHub Logo">
-                                        <div class="divider"></div>
+                                        <div class="divider mx-0 h-2"></div>
                                         GitHub Repository
                                     </a>
                                 </div>
                             </div>
                         </div>
+                        <!-- JoubaMety's Gallery -->
+                        <div class="flex-none w-96 card card-image-cover bg-backgroundSecondary">
+                            <div class="h-[216px]">
+                                <img class="card-cover" src="./media/gallery_banner.webp" alt="Banner of NAZOX" />
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-header font-archivoBlack">JoubaMety's Gallery</h2>
+                                <div class="card-badges">
+                                    <span class="badge badge-error font-archivoBlack">CONCEPT</span>
+                                    <span class="badge badge-primary">Pictures</span>
+                                    <span class="badge badge-primary">Screenshots</span>
+                                    <span class="badge badge-primary">Minecraft</span>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn btn-outline">Coming Soon...</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- NAZOX -->
+                        <div class="flex-none w-96 card card-image-cover bg-backgroundSecondary">
+                            <div class="h-[216px]">
+                                <img class="card-cover" src="./media/nazox_banner.webp" alt="Banner of NAZOX" />
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-header font-archivoBlack">NAZOX</h2>
+                                <div class="card-badges">
+                                    <span class="badge badge-primary">YouTube Channel</span>
+                                    <span class="badge badge-primary">Cinematics</span>
+                                    <span class="badge badge-primary">Minecraft</span>
+                                </div>
+                                <p class="text-content2">My YouTube Channel dedicated to Minecraft cinematic videos.</p>
+                                <p class="text-content2">I haven't created any new videos since 2022 due to lack of interest.</p>
+                                <div class="card-footer">
+                                    <a href="https://www.youtube.com/channel/UCiEY6aavPkMMChB1xFv3QXA" aria-label="Check out NAZOX on YouTube" target="_blank"class="btn btn-primary text-backgroundPrimary">
+                                            <img class="w-4 h-[11.266px] self-center mx-1" alt="YouTube Logo" src="./media/youtube.webp">
+                                            <div class="divider divider-vertical-backgroundPrimary mx-0 h-2"></div>
+                                            YouTube Channel
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- F-U Production -->
+                        <div class="flex-none w-96 card card-image-cover bg-backgroundSecondary">
+                            <div class="h-[216px]">
+                                <img class="card-cover" src="./media/fu_banner.webp" alt="Banner of F-U Production" />
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-header font-archivoBlack">F-U Production</h2>
+                                <div class="card-badges">
+                                    <span class="badge badge-primary">YouTube Channel</span>
+                                    <span class="badge badge-primary">
+                                        <span class="tooltip underline decoration-dotted" data-tooltip="Videos, like films, roleplays or shorts, created in-game.">Machinimas</span>
+                                    </span>
+                                    <span class="badge badge-primary">Minecraft</span>
+                                    <span class="badge badge-primary">Czechoslovak</span>
+                                </div>
+                                <p class="text-content2">Czechoslovak Minecraft machinima studio which I used to co-manage until I left in 2022 due to personal issues.</p>
+                                <div class="card-footer">
+                                    <a href="https://www.youtube.com/@FUProductionOfficial" aria-label="Check out F-U Production on YouTube" target="_blank"class="btn btn-primary text-backgroundPrimary">
+                                            <img class="w-4 h-[11.266px] self-center mx-1" alt="YouTube Logo" src="./media/youtube.webp">
+                                            <div class="divider divider-vertical-backgroundPrimary mx-0 h-2"></div>
+                                            YouTube Channel
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Odyssea III -->
+                        <div class="flex-none w-96 card card-image-cover bg-backgroundSecondary">
+                            <div class="h-[284px]">
+                                <img class="card-cover" src="./media/odysseaiii_banner.webp" alt="Thumbnail of Odyssae III Machinima" />
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-header font-archivoBlack">ODYSSEA III</h2>
+                                <div class="card-badges">
+                                    <span class="badge badge-warning font-archivoBlack">In Production</span>
+                                    <span class="badge badge-primary">
+                                        <span class="tooltip underline decoration-dotted" data-tooltip="Videos, like films, roleplays or shorts, created in-game.">Machinima</span>
+                                    </span>
+                                    <span class="badge badge-primary">Horror</span>
+                                    <span class="badge badge-primary">Sci-Fi</span>
+                                    <span class="badge badge-primary">Minecraft</span>
+                                    <span class="badge badge-primary">Czechoslovak</span>
+                                </div>
+                                <p class="text-content2">Massive multi-year Czechoslovak sci-fi horror machinima project produced by multiple studios, including <a href="https://www.youtube.com/@FrostBurnStudio" target="_blank" class="link link-primary">FrostBurn Studio</a> and many others.</p>
+                                <p class="text-content2">I used to participate in production from 2019 until 2022 due to personal issues.</p>
+                                <div class="card-footer">
+                                    <a href="https://youtu.be/ToK8rmCPZZg" aria-label="Watch Teaser of &quot;ODYSSEA III&quot; on YouTube" target="_blank"class="btn btn-primary text-backgroundPrimary">
+                                            <img class="w-4 h-[11.266px] self-center mx-1" alt="YouTube Logo" src="./media/youtube.webp">
+                                            <div class="divider divider-vertical-backgroundPrimary mx-0 h-2"></div>
+                                            Watch Teaser on YouTube (1:30)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Manual+ Debug Shaderpack -->
+                        <div class="flex-none w-96 card card-image-cover bg-backgroundSecondary">
+                            <div class="h-[162px]">
+                                <video type="video/webm" loop autoplay muted class="card-cover" src="./media/manualplus-banner.webm" alt="Banner of F-U Production" />
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-header font-archivoBlack">Manual+ Focus Overlay Shaderpack</h2>
+                                <div class="card-badges">
+                                    <span class="badge badge-primary">Shaders</span>
+                                    <span class="badge badge-primary">Minecraft</span>
+                                </div>
+                                <p class="text-content2">Little debug shaderpack for Manual+ focus in Minecraft, which is controlled via in-game Brightness setting. </p>
+                                <div class="card-footer">
+                                    <a href="https://github.com/JoubaMety/ManualPlus-Focus-Debug" aria-label="Check out Manual+ Focus Overlay Shaderpack GitHub Repo" target="_blank"class="btn btn-outline-primary">
+                                        <img class="size-4 github-logo" src="./media/github_white.webp" alt="GitHub Logo">
+                                        <div class="divider"></div>
+                                        GitHub Repository
+                                    </a>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="https://github.com/JoubaMety/ManualPlus-Focus-Mode" aria-label="Check out Manual+ Focus Info GitHub Repo" target="_blank"class="btn btn-outline">
+                                        <img class="size-4 github-logo" src="./media/github_white.webp" alt="GitHub Logo">
+                                        <div class="divider"></div>
+                                        Manual+ Focus Info
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
                 </div>
             </div>
         </div>

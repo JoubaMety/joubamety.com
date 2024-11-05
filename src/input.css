@@ -289,6 +289,14 @@ html {
     @apply border-border text-content1;
 }
 
+.btn-outline-primary {
+    @apply border-primary text-content1;
+}
+
+.btn-outline-primary:hover {
+    @apply bg-primary/50 border-primary/50 text-content1;
+}
+
 .btn-outline:hover {
 	@apply bg-border border-border;
 }
@@ -299,11 +307,11 @@ html {
     }
     
     .popover-trigger:hover {
-        @apply bg-warning/90;
+        @apply bg-warning;
     }
 
     .popover-content {
-        @apply bg-backgroundSecondary/90 backdrop-blur-sm backdrop-brightness-[1.25] dark:backdrop-brightness-[.25] drop-shadow-md text-content1 p-4 text-sm lg:w-[24rem];
+        @apply bg-backgroundSecondary drop-shadow-md text-content1 p-4 text-sm lg:w-[24rem];
         .link {
             @apply text-sm font-bold;
         }
@@ -322,7 +330,11 @@ html {
     }
 }
 
-.btn-outline .divider  {
+.btn-outline .divider {
+    @apply divider-vertical mx-0 h-2;
+}
+
+.btn-outline-primary .divider {
     @apply divider-vertical mx-0 h-2;
 }
 
@@ -420,27 +432,27 @@ h3 {
 }
 
 .tooltip::before {
-    @apply bg-backgroundSecondary/90 backdrop-blur-sm backdrop-brightness-[1.25] dark:backdrop-brightness-[.25] drop-shadow-md text-content1 text-sm max-w-[256px] text-wrap z-10;
+    @apply bg-backgroundSecondary drop-shadow-md text-content1 text-sm max-w-[256px] text-wrap z-10;
 }
 
 .tooltip::after {
-    @apply border-t-backgroundSecondary/90;
+    @apply border-t-backgroundSecondary;
 }
 
 .tooltip-top::after {
-    @apply border-t-backgroundSecondary/90;
+    @apply border-t-backgroundSecondary;
 }
 
 .tooltip-bottom::after {
-    @apply border-b-backgroundSecondary/90;
+    @apply border-b-backgroundSecondary;
 }
 
 .tooltip-left::after {
-    @apply border-l-backgroundSecondary/90;
+    @apply border-l-backgroundSecondary;
 }
 
 .tooltip-right::after {
-    @apply border-r-backgroundSecondary/90;
+    @apply border-r-backgroundSecondary;
 }
 
 .tooltip:hover {
@@ -452,11 +464,11 @@ h3 {
 }
 
 .modal {
-    @apply bg-backgroundPrimary/50 backdrop-blur-md backdrop-brightness-[.50];
+    @apply bg-backgroundPrimary/75 backdrop-blur-sm;
 }
 
 .modal-content {
-    @apply bg-backgroundPrimary drop-shadow-md w-full max-w-full max-h-full rounded-none lg:h-max lg:max-h-[90%] lg:rounded-[.75rem] lg:max-w-3xl;
+    @apply bg-backgroundPrimary drop-shadow-lg w-full max-w-full max-h-full rounded-none lg:h-max lg:max-h-[90%] lg:rounded-[.75rem] lg:max-w-3xl;
 }
 
 .accordion-group-bordered {
@@ -480,21 +492,21 @@ html:has(.modal-state:checked, .modal-open) {
 }
 
 .dropdown-menu {
-    @apply bg-backgroundSecondary/90 backdrop-blur-sm backdrop-brightness-[1.25] dark:backdrop-brightness-[.25] drop-shadow-md text-content1 p-4 z-50;
+    @apply bg-backgroundSecondary drop-shadow-md text-content1 p-4 z-50;
 }
 
 .dropdown-item  {
-    @apply bg-border/50;        
+    @apply bg-border/50;
 }
 
 .dropdown-item:hover  {
-    @apply bg-border/90;        
+    @apply bg-border;
 }
 .dropdown-active {
     @apply bg-primary text-backgroundPrimary font-bold;
 }
 .dropdown-item.dropdown-active:hover {
-    @apply bg-primary/90;
+    @apply bg-primary;
 }
 
 .icon-settings {
@@ -517,8 +529,20 @@ html:has(.modal-state:checked, .modal-open) {
     @apply text-backgroundPrimary
 }
 
+.badge-error {
+    @apply text-backgroundPrimary
+}
+
+.badge-warning {
+    @apply text-backgroundPrimary
+}
+
 .card-badges {
-    @apply select-none;
+    @apply select-none flex flex-wrap gap-1;
+}
+
+.btn-ghost {
+    @apply text-content1;
 }
 
 .btn-ghost:hover {

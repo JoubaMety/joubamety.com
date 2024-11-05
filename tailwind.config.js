@@ -7,8 +7,8 @@ module.exports = {
     fontFamily: {
       'sourceCodePro': ['Source Code Pro', 'monospace'],
 
-      'archivoBlack': ['Archivo Black', 'Kosugi Maru', 'sans-serif'],
-      'archivo': ['Archivo', 'Kosugi Maru', 'sans-serif'],
+      'archivoBlack': ['Archivo Black', 'Noto Sans JP', 'sans-serif'],
+      'archivo': ['Archivo', 'Noto Sans JP', 'sans-serif'],
     },
     extend: {
       screens: {

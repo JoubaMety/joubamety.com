@@ -139,7 +139,7 @@ function notificationAlert(type, duration, title, description) {
 	);
 }
 
-(async function replaceDiscordStatus(){
+(async function replaceDiscordStatus(interval = 30){
 	const url = "https://api.joubamety.com/v1/joubamety.com/discord"
 	fetch(url)
 	.then((response) => {
@@ -154,10 +154,10 @@ function notificationAlert(type, duration, title, description) {
 		} else {
 			if (element.innerHTML != html) {
 				element.innerHTML = html  
+				console.info("discord status update")
 				if(element.classList.contains("hidden")) {
 					element.classList.remove("hidden")
 				}
-				console.info("discord status update")
 				setTimeout( () => {
 					fetch(url + "/emote.webp")
 					fetch(url + "/albumArt.webp")
@@ -166,7 +166,7 @@ function notificationAlert(type, duration, title, description) {
 			}
 		}
 	});
-	setTimeout(replaceDiscordStatus, 15*1000)
+	setTimeout(replaceDiscordStatus, interval*1000)
 })();
 
 // preload halloween avatars

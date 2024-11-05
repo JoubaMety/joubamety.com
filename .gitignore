@@ -2,3 +2,9 @@ package-lock.json
 node_modules/
 src/media/-p
 .vscode
+src/media/fu_banner.pdn
+src/media/nazox_banner.pdn
+src/media/nazox_banner.png
+src/media/odysseaiii_banner.png
+src/media/gallery_banner.png
+src/media/fu_banner.png

@@ -18,12 +18,6 @@ function earlyTheme() {
 			: "light");
 	if (storedTheme) {
 		document.documentElement.setAttribute("data-theme", storedTheme);
-		if(
-			localStorage.getItem("halloween") == null &&
-			(new Date).getDate() == 30 && (new Date).getMonth() + 1 == 10
-		) {
-			document.documentElement.setAttribute("data-theme", "halloween");
-		}
 	}
 }
 
@@ -34,26 +28,15 @@ function theme() {
 	? "dark"
 	: "light");
 	if (storedTheme) {
-		if(
-			localStorage.getItem("halloween") == null &&
-			(new Date).getDate() == 31 && (new Date).getMonth() + 1 == 10
-		) {
-			document.documentElement.setAttribute("data-theme", "halloween");
+		document.documentElement.setAttribute("data-theme", storedTheme);
+		if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
 			document.documentElement.setAttribute("theme", "dark");
-			localStorage.setItem("halloween", "true")
-			changeThemeText("halloween")
-			addSelectedTheme("halloween")
+			
 		} else {
-			document.documentElement.setAttribute("data-theme", storedTheme);
-			if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-				document.documentElement.setAttribute("theme", "dark");
-				
-			} else {
-				document.documentElement.setAttribute("theme", "light");
-			}
-			changeThemeText(storedTheme);
-			addSelectedTheme(storedTheme);
+			document.documentElement.setAttribute("theme", "light");
 		}
+		changeThemeText(storedTheme);
+		addSelectedTheme(storedTheme);
 	}	
 }
 
