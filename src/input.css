@@ -266,6 +266,20 @@ html {
 	@apply bg-backgroundPrimary h-4 w-px content-[""];
 }
 
+.divider-horizontal-content3::after,
+.divider-horizontal-content3::before {
+    @apply bg-content3 text-content3
+}
+
+.divider-horizontal-content3-25 {
+    @apply opacity-25 select-none
+}
+
+.divider-horizontal-content3-25::after,
+.divider-horizontal-content3-25::before {
+    @apply bg-content3 text-content3
+}
+
 .btn img {
     pointer-events: none;
     -moz-user-select: none;
@@ -328,6 +342,14 @@ html {
     .divider {
         @apply divider-vertical mx-0 h-2;
     }
+}
+
+.btn-castingcallclub {
+    @apply !bg-transparent bg-gradient-to-r from-[#6452a1]/15 via-[#00afe6]/15 to-[#f26a2b]/15 hover:from-[#6452a1]/10 hover:via-[#00afe6]/10 hover:to-[#f26a2b]/10;
+}
+
+.btn-bg-opacity {
+    @apply !bg-opacity-15 hover:!bg-opacity-10;
 }
 
 .btn-outline .divider {
@@ -463,9 +485,6 @@ h3 {
     @apply flex flex-wrap gap-4 m-4;
 }
 
-.modal {
-    @apply bg-backgroundPrimary/75 backdrop-blur-sm;
-}
 
 .modal-content {
     @apply bg-backgroundPrimary drop-shadow-lg w-full max-w-full max-h-full rounded-none lg:h-max lg:max-h-[90%] lg:rounded-[.75rem] lg:max-w-3xl;
