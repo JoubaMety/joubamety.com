@@ -147,7 +147,7 @@ function notificationAlert(type, duration, title, description) {
 	})
 	.then((html) => {
 		let element = document.getElementById("discord-status-card")
-		if (html == "") {
+		if (html == "" || html == "   ") {
 			if(!element.classList.contains("hidden")) {
 				element.classList.add("hidden")
 			}
