@@ -7,17 +7,22 @@ const themeTextMap = new Map([
 	["catppuccin-macchiato", "Catppuccin (Macchiato)"],
     ["tango-dark", "Tango (Dark)"],
     ["tango-light", "Tango (Light)"],
-	["halloween", "Halloween"]
+	["halloween", "Halloween"],
+	["gruvbox-light", "gruvbox (Light)"],
+	["gruvbox-dark", "gruvbox (Dark)"],
 ]);
 
 function earlyTheme() {
 	var storedTheme =
-		localStorage.getItem("theme") ||
+		localStorage.getItem("data-theme") ||
 		(window.matchMedia("(prefers-color-scheme: dark)").matches
 			? "dark"
 			: "light");
 	if (storedTheme) {
 		document.documentElement.setAttribute("data-theme", storedTheme);
+		if (localStorage.getItem("theme") == "dark") {
+			document.documentElement.classList.add("dark");
+		}
 	}
 }
 
@@ -29,11 +34,14 @@ function theme() {
 	: "light");
 	if (storedTheme) {
 		document.documentElement.setAttribute("data-theme", storedTheme);
-		if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-			document.documentElement.setAttribute("theme", "dark");
-			
-		} else {
-			document.documentElement.setAttribute("theme", "light");
+		if (localStorage.getItem("theme") == "dark" ||
+		((localStorage.getItem("theme") == null) && storedTheme == "dark")
+		) {
+			document.documentElement.classList.add("dark");
+		} else if (localStorage.getItem("theme") == "light" ||
+		((localStorage.getItem("theme") == null) && storedTheme == "light")
+		) {
+			document.documentElement.classList.remove("dark");
 		}
 		changeThemeText(storedTheme);
 		addSelectedTheme(storedTheme);
@@ -48,10 +56,9 @@ function changeTheme(targetTheme, ambiance) {
 		document.documentElement.classList.remove("dark");
 	}
 	document.documentElement.setAttribute("data-theme", targetTheme);
-	document.documentElement.setAttribute("theme", ambiance);
 	addSelectedTheme(targetTheme);
 	localStorage.setItem("data-theme", targetTheme);
-	localStorage.setItem("theme", targetTheme);
+	localStorage.setItem("theme", ambiance);
 	changeThemeText(targetTheme);
 }
 

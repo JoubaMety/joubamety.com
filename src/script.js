@@ -54,35 +54,76 @@ hoverableElement.forEach(function(element) {
 		!element.classList.contains("tooltip-left") && 
 		!element.classList.contains("tooltip-right") && 
 		!element.classList.contains("tooltip-top") && 
-		!element.classList.contains("tooltip-bottom")
+		!element.classList.contains("tooltip-bottom") &&
+		!element.classList.contains("tooltip-bottom-right")
 	) {
-	element.addEventListener('mouseover', function() { 
-		var parent = window.getComputedStyle(element,':before');
-		height = parseFloat(parent.height.match(/\d+/)[0]);
-		width = parseFloat(parent.width.match(/\d+/)[0]);
-		var top = parseFloat(this.getBoundingClientRect().top);
-		var left = parseFloat(this.getBoundingClientRect().left);
-		var right = parseFloat(this.getBoundingClientRect().right);
-		var top = top - height;
-		var left = left - width;
-		var right = right + width;
-		var padding = 16;
-		if (left <= padding) {
-			this.classList.remove("tooltip-left", "tooltip-right", "tooltip-top", "tooltip-bottom");
-			this.classList.add("tooltip-right");
-		} else if (right <= padding) {
-			this.classList.remove("tooltip-left", "tooltip-right", "tooltip-top", "tooltip-bottom");
-			this.classList.add("tooltip-left");
-		} else if(top <= padding){
-			this.classList.remove("tooltip-top", "tooltip-bottom", "tooltip-left", "tooltip-right");
-			this.classList.add("tooltip-bottom");
-		} else {
-			this.classList.remove("tooltip-top", "tooltip-bottom", "tooltip-left", "tooltip-right");
-			this.classList.add("tooltip-top");
-		}
+		element.addEventListener('mouseover', function() {
+			removeToolTip(element)
+			var parent = window.getComputedStyle(element,':before');
+			var html_width = document.documentElement.clientWidth;
+			var html_height = document.documentElement.clientHeight;
+			height = parseFloat(parent.height.match(/\d+/)[0]);
+			width = parseFloat(parent.width.match(/\d+/)[0]);
+			var top = parseFloat(this.getBoundingClientRect().top);
+			var bottom = parseFloat(this.getBoundingClientRect().bottom);
+			var left = parseFloat(this.getBoundingClientRect().left);
+			var right = parseFloat(this.getBoundingClientRect().right);
+			var padding = 16;
+			
+			console.log("html.width  ", html_width);
+			console.log("html.height ", html_height);
+			console.log("el.width    ", width)
+			console.log("top         ", top)
+			console.log("bottom      ", bottom)
+			console.log("left        ", left)
+			console.log("right       ", right)
+			
+			// bottom
+			if (
+				left - width >= padding &&
+				right + width <= html_width - padding &&
+				top - height > padding
+			) {
+				this.classList.add("tooltip-top");
+			// right
+			} else if (
+				left - width >= padding && 
+				right + width <= html_width - padding
+			) {
+				this.classList.add("tooltip-right");
+			// left
+			} else if (
+				right + width >= html_width - padding &&
+				left - width >= padding 
+			) {
+				this.classList.add("tooltip-left");
+			// bottom-top-right
+			} else if (
+				bottom + height <= html_height - padding &&
+				top - height >= padding //&&
+				//right + (width * 1.225) <= html_width - padding && 
+				//left - (width / 1.225) >= padding 
+			) {
+				this.classList.add("tooltip-top-right");
+			// bottom-bottom-right
+			} else if (
+				top - height < padding
+			) {
+				this.classList.add("tooltip-bottom-right");
+			}
 		});
 	}
 });
+
+function removeToolTip(element) {
+	element.classList.remove(
+		"tooltip-top",
+		"tooltip-bottom",
+		"tooltip-left",
+		"tooltip-right",
+		"tooltip-bottom-right"
+	);
+}
 
 (function localTime() {
 	let tZ = "Europe/Bratislava"; // duh my timezone

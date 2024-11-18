@@ -9,6 +9,7 @@ module.exports = {
 
       'archivoBlack': ['Archivo Black', 'Noto Sans JP', 'sans-serif'],
       'archivo': ['Archivo', 'Noto Sans JP', 'sans-serif'],
+      'notoSerif': ['Noto Serif', 'serif'],
     },
     extend: {
       screens: {
