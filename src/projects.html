@@ -59,13 +59,13 @@
                 <!-- spacer -->
                 <div class="hidden lg:inline mx-2"></div>
                 <!-- "Home" -->
-                <div class="inline-flex items-center select-none text-primary text-xl font-bold">
+                <a href="/" class="inline-flex items-center select-none hover:text-content1/75 transition-colors text-xl font-bold">
                     Home
-                </div>
-                <!-- "Projects" -->
-                <a href="/projects" class="inline-flex items-center select-none hover:text-content1/75 transition-colors text-xl font-bold">
-                    Projects
                 </a>
+                <!-- "Projects" -->
+                <div class="inline-flex items-center select-none text-primary text-xl font-bold">
+                    Projects
+                </div>
                 <!-- Theme Selection -->
                 <div class="dropdown">
                     <label class="btn btn-backgroundSecondary bg-backgroundSecondary text-content1 mx-2 font-archivoBlack gap-1" tabindex="0">
@@ -131,202 +131,204 @@
                 </div>
             </div>
         </div>
-        <div class="main">
-            <div class="header h-90 lg:w-72">
-                <span id="avatar-span" class="tooltip tooltip-bottom lg:tooltip-right" data-tooltip="French-ified Ame-chan from NEEDY GIRL OVERDOSE, edited by me, original by @Nyalra on Twitter (currently &quot;X&quot;)">
-                    <img id="avatar" class="avatar-standard" src="./media/avatar.webp" alt="JoubaMety's Avatar">
-                </span>
-                <h1 class="text-5xl font-bold font-archivoBlack">JoubaMety</h1>
-                <p class="text-xl italic tooltip tooltip-pronunciation" data-tooltip="ˈjan raʂnɔfskiː">Jan Rašnovský</p>
-                <a class="text-xl hover:text-primary/75 transition-colors tooltip tooltip-link" href="https://en.pronouns.page/@joubamety" target="_blank" aria-label="Link to my pronouns.page">he/him</a>
-                <div class="card-badges justify-center">
-                    <span class="badge badge-primary">Content Creator</span>
-                    <span class="badge badge-primary">Developer</span>
-                </div>
-                <div class="w-56 flex flex-wrap items-center content-center gap-4">
-                    <span class="flag-header" data-tooltip="Proud Citizen of Czech Republic">
-                        <img alt="Flag of Czech Republic" src="./media/flag_czechia.webp">
+        <!-- Works / Creations -->
+        <div class="m-4 max-w-full flex justify-center items-center">
+            <div class="lg:mx-12">
+                <h2>
+                    <span class="inline-flex items-baseline">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M7.5 5.25a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0 1 12 15.75c-2.73 0-5.357-.442-7.814-1.259-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 0 1 7.5 5.455V5.25Zm7.5 0v.09a49.488 49.488 0 0 0-6 0v-.09a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5Zm-3 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" />
+                            <path d="M3 18.4v-2.796a4.3 4.3 0 0 0 .713.31A26.226 26.226 0 0 0 12 17.25c2.892 0 5.68-.468 8.287-1.335.252-.084.49-.189.713-.311V18.4c0 1.452-1.047 2.728-2.523 2.923-2.12.282-4.282.427-6.477.427a49.19 49.19 0 0 1-6.477-.427C4.047 21.128 3 19.852 3 18.4Z" />
+                            </svg>                              
+                        Works / Creations
                     </span>
-                    <span class="flag-header" data-tooltip="(Not So) Proud Citizen of Slovakia">
-                        <img alt="Flag of Slovakia" src="./media/flag_slovakia.webp">
-                    </span>
-                    <span class="flag-header" data-tooltip="Proud Citizen of European Union">
-                        <img alt="Flag of European Union" src="./media/flag_eu.webp">
-                    </span>
-                </div>
-                <div class="inline-flex gap-1 font-sourceCodePro">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                      </svg>                      
-                    <div id="currentTime" class="font-bold">
-                        24:00
-                    </div>
-                    <span class="inline-flex">
-                        (
-                        <div id="currentTimeZoneOffset" class="tooltip underline decoration-dotted" data-tooltip="">
-                            UTC+24
+                </h2>
+                <div class="flex flex-wrap gap-4 m-4 lg:mx-4 justify-center items-center">
+                    <!-- 2024-06-YUI -->
+                    <div class="flex-none w-96 card card-image-cover bg-backgroundSecondary">
+                        <div class="h-[216px]">
+                            <img class="card-cover" src="./media/2024-06-YUI.webp" alt="Thumbnail of 2024-06-YUI Machinima" />
                         </div>
-                        )
-                    </span>
-                </div>
-                <div class="list-btn max-w-full justify-center !gap-1">
-                    <label class="btn-standard" for="modal-1" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-[21.06px] text-[#5765f2]" viewBox="0 0 127.14 96.36"><path fill="currentColor" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/></svg></label>
-                    <a href="https://bsky.app/profile/joubamety.com" aria-label="My BlueSky Profile" target="_blank" class="btn-standard tooltip tooltip-link"><img class="size-4" src="./media/bluesky-crop.svg" alt="BlueSky Logo"></a>
-                    <a href="https://github.com/JoubaMety" aria-label="My GitHub Profile" target="_blank" class="btn-standard tooltip tooltip-link"><svg class="size-4" viewBox="0 0 98 98" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="currentColor"/></svg></a>
-                    <a href="https://www.youtube.com/@JoubaMety" aria-label="My Main YouTube Channel" target="_blank" class="btn-standard tooltip tooltip-link"><img class="w-4 h-[11.266px]" src="./media/youtube.webp" alt="YouTube Logo"></a>
-                    <a href="https://myanimelist.net/profile/JoubaMety" aria-label="My MyAnimeList Profile" target="_blank" class="btn-standard tooltip tooltip-link"><img class="size-4" src="./media/myanimelist.svg" alt="MyAnimeList Logo"></a>
-                    <a href="https://x.com/JoubaMety" aria-label="My Twitter (currently &quot;X&quot;) Profile" target="_blank" class="btn-standard tooltip tooltip-link"><img class="w-4 h-[13.156px]" src="./media/twitter.webp" alt="Twitter Logo"><div class="spacer w-2 h-2"></div><svg class="w-[13.16px] h-[13.438px]" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="currentColor"/></svg></a>
-                    <a href="https://www.castingcall.club/joubamety" aria-label="My Casting Call Club Page" target="_blank" class="btn-standard tooltip tooltip-link"><img class="h-3 w-[140.422px] drop-shadow-md" src="./media/casting_call_club.webp" alt="Logo of Casting Call Club"></a>
-                </div>
-                <div id="discord-status-card" class="card bg-backgroundSecondary w-max max-w-72 min-w-36 p-[1rem] px-[1.5rem] gap-0 hidden relative"></div>
-            </div>
-            <div class="content">
-                <!-- About Me -->
-                <div>
-                    <h2>
-                        <span class="inline-flex items-baseline">
-                            <img class="icon" alt="Waving Hand Emote" src="./media/waving-hand_1f44b.webp">
-                            Hello
-                        </span>
-                    </h2>
-                    <div class="m-4">
-                        <p>
-                            I'm
-                            <span class="inline-flex items-baseline">
-                                <img class="flag-small" alt="Flag of Czech Republic" src="./media/flag_czechia.webp">
-                                <span>&nbsp;Czech</span>
-                            </span>
-                            & 
-                            <span class="inline-flex items-baseline">
-                                <img class="flag-small" alt="Flag of Slovakia" src="./media/flag_slovakia.webp">
-                                <span>&nbsp;Slovak</span>
-                            </span>
-                            young adult man. I create <span class="font-bold">
-                                <a href="https://www.minecraft.net" target="_blank" class="link link-primary tooltip tooltip-link">
-                                    Minecraft</a> content
-                            </span> (<span class="tooltip underline decoration-dotted" data-tooltip="Videos, like films, roleplays or shorts, created in-game.">machinimas</span> and pictures/screenshots) and work with <a class="font-bold link link-primary tooltip tooltip-link" href="https://ffmpeg.org/">FFmpeg</a> extensively.
-                            I program from time to time, used to program in 
-                            <a class="font-bold link link-primary tooltip tooltip-link" aria-label="Website for C++ programming language" href="https://isocpp.org/">
-                                    C++
-                            </a> and 
-                            <a class="font-bold link link-primary tooltip tooltip-link" aria-label="Website for Kotlin programming language" href="https://kotlinlang.org/">
-                                Kotlin</a>, nowadays I program in 
-                            <a class="font-bold link link-primary tooltip tooltip-link" aria-label="Website for Go programming language" href="https://go.dev/">
-                                Golang
-                            </a> and also create websites using 
-                            <a class="font-bold link link-primary tooltip tooltip-link" aria-label="Website for Tailwind CSS, CSS framework" href="https://tailwindcss.com/">
-                                Tailwind CSS</a>.
-                        </p>
-                        <span class="font-bold inline-flex items-baseline my-1">
-                            <svg class="size-4 self-center mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M4.5 4.5a3 3 0 0 0-3 3v9a3 3 0 0 0 3 3h8.25a3 3 0 0 0 3-3v-9a3 3 0 0 0-3-3H4.5ZM19.94 18.75l-2.69-2.69V7.94l2.69-2.69c.944-.945 2.56-.276 2.56 1.06v11.38c0 1.336-1.616 2.005-2.56 1.06Z" />
-                                </svg>
-                            <span>Video Creation / Production</span>
-                        </span>
-                        <p class="ml-5">
-                            I've been dabbling around <span class="font-bold">video creation</span> basically since 2012, got significiantly more active in 
-                            Minecraft's <span class="font-bold">shaders community</span> and consequently <span class="font-bold">Czechoslovak machinima community</span> around 2018, with 
-                            me getting involved with <a href="https://www.youtube.com/watch?v=ToK8rmCPZZg" target="_blank" class="link link-primary font-bold tooltip tooltip-link">"Odyssea III"</a> Minecraft Machinima project as it's <span class="font-bold">resource pack artist</span> & <span class="font-bold">body actor</span>. 
-                            After that, in 2019, I joined then-recently founded <a href="https://www.youtube.com/@FUProductionOfficial" target="_blank" class="link link-primary font-bold tooltip tooltip-link">F-U Production</a> Minecraft machinima studio as it's <span class="font-bold">main cameraman</span>, 
-                            <span class="font-bold">resourcepack artist</span> and other roles.
-                            <br>
-                            Later that same year, I've discovered an international Minecraft machinima community revolving around <a href="https://www.youtube.com/@McHorse" target="_blank" class="link link-primary font-bold tooltip tooltip-link">McHorse</a>'s 
-                            suite of mods such as <a href="https://www.curseforge.com/minecraft/mc-mods/blockbuster" target="_blank" class="link link-primary font-bold tooltip tooltip-link">Blockbuster</a>, that let you create amazing machinimas in-game, and joined <a href="https://www.youtube.com/@machinima_hub" target="_blank" class="link link-primary font-bold tooltip tooltip-link">MachinimaHub</a> in January 2020.
-                            <br>
-                            Nowadays I rarely do video projects and focus more on automation scripts / commands for creating videos suitable for sharing 
-                            across Discord.
-                        </p>
-                        <span class="font-bold inline-flex items-baseline my-1">
-                            <svg class="size-4 self-center mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path fill-rule="evenodd" d="M9 2.25a.75.75 0 0 1 .75.75v1.506a49.384 49.384 0 0 1 5.343.371.75.75 0 1 1-.186 1.489c-.66-.083-1.323-.151-1.99-.206a18.67 18.67 0 0 1-2.97 6.323c.318.384.65.753 1 1.107a.75.75 0 0 1-1.07 1.052A18.902 18.902 0 0 1 9 13.687a18.823 18.823 0 0 1-5.656 4.482.75.75 0 0 1-.688-1.333 17.323 17.323 0 0 0 5.396-4.353A18.72 18.72 0 0 1 5.89 8.598a.75.75 0 0 1 1.388-.568A17.21 17.21 0 0 0 9 11.224a17.168 17.168 0 0 0 2.391-5.165 48.04 48.04 0 0 0-8.298.307.75.75 0 0 1-.186-1.489 49.159 49.159 0 0 1 5.343-.371V3A.75.75 0 0 1 9 2.25ZM15.75 9a.75.75 0 0 1 .68.433l5.25 11.25a.75.75 0 1 1-1.36.634l-1.198-2.567h-6.744l-1.198 2.567a.75.75 0 0 1-1.36-.634l5.25-11.25A.75.75 0 0 1 15.75 9Zm-2.672 8.25h5.344l-2.672-5.726-2.672 5.726Z" clip-rule="evenodd" />
-                                </svg>
-                            <span>Languages</span>
-                        </span>
-                        <p class="ml-5">
-                            I'm native speaker of both
-                            <span class="inline-flex items-baseline tooltip" data-tooltip="Čus bus! Tak to je prostě pecka, že ješte umíš čísť!">
-                                <img class="flag-small" alt="Flag of Czech Republic" src="./media/flag_czechia.webp">
-                                <span>&nbsp;Czech</span>
-                            </span>
-                            and
-                            <span class="inline-flex items-baseline tooltip" data-tooltip="Ahoj, ešte vieš čítať, pekne.">
-                                <img class="flag-small" alt="Flag of Slovakia" src="./media/flag_slovakia.webp">
-                                <span>&nbsp;Slovak</span>
-                            </span>
-                            language, expert/intermediate speaker of
-                            <span class="inline-flex items-baseline tooltip" data-tooltip="I would be worried if you couldn't read English, considering this website is English-only... for now.">
-                                <img class="flag-small" alt="Flag of United Kingdom" src="./media/flag_uk.webp">
-                                <span>&nbsp;English.</span>
-                            </span>
-                            I did study
-                            <span class="inline-flex items-baseline tooltip" data-tooltip="Na ja, ich verstande nichts, entschuldigung!">
-                                <img class="flag-small" alt="Flag of Germany" src="./media/flag_germany.webp">
-                                <span>&nbsp;German</span>
-                            </span>
-                            in secondary school and high school, but I still suck at it. I know basics of
-                            <span class="inline-flex items-baseline tooltip" data-tooltip="K**** mać, ty umiesz czytać? Zajebiste...">
-                                <img class="flag-small" alt="Flag of Poland" src="./media/flag_poland.webp">
-                                <span>&nbsp;Polish,</span>
-                            </span>
-                            but I also suck at it. Am passive learner of
-                            <span class="inline-flex items-baseline tooltip" data-tooltip="はい。僕の日本語上手ですね...でしょう？！">
-                                    <img class="flag-small" alt="Flag of Japan" src="./media/flag_japan.webp">
-                                    <span>&nbsp;Japanese.</span>
-                            </span>
-                        </p>
-                    </div>
-                    <div class="divider divider-horizontal divider-horizontal-content3-25">END OF "ABOUT ME"</div>
-                </div>
-                <!-- Socials -->
-                <div>
-                    <div>
-                        <h3>
-                            <span class="inline-flex items-baseline">
-                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM8.547 4.505a8.25 8.25 0 1 0 11.672 8.214l-.46-.46a2.252 2.252 0 0 1-.422-.586l-1.08-2.16a.414.414 0 0 0-.663-.107.827.827 0 0 1-.812.21l-1.273-.363a.89.89 0 0 0-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.211.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 0 1-1.81 1.025 1.055 1.055 0 0 1-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.654-.261a2.25 2.25 0 0 1-1.384-2.46l.007-.042a2.25 2.25 0 0 1 .29-.787l.09-.15a2.25 2.25 0 0 1 2.37-1.048l1.178.236a1.125 1.125 0 0 0 1.302-.795l.208-.73a1.125 1.125 0 0 0-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 0 1-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 0 1-1.458-1.137l1.279-2.132Z" clip-rule="evenodd" />
-                                </svg>                              
-                                Other Websites
-                            </span>
-                        </h3>
-                        <div class="flex gap-4 m-4">
-                            <a href="https://notes.joubamety.com/" aria-label="Website where I store my notes" target="_blank" class="btn-standard tooltip tooltip-link"><img class="size-4" src="./media/notes.webp" alt="Logo of notes.joubamety.com"><div class="divider"></div>JoubaMety's Notes</a>
-                            <a href="https://ctp-webr.ing/" target="_blank" class="btn-standard tooltip tooltip-link"><img class="size-4" src="./media/catppuccin.webp" alt="Catppuccin Logo"><div class="divider"></div>Catppuccin Webring</a>
-
-                            <!-- preparation for ctp-webr change
-                            <div class="inline-flex gap-0.5">
-                                <a href="https://ctp-webr.ing/joubamety.com/previous" target="_blank" class="btn-standard tooltip tooltip-link !rounded-none !rounded-tl-xl !rounded-bl-xl !w-0.5">&leftarrow;</a>
-                                <a href="https://ctp-webr.ing/" target="_blank" class="btn-standard tooltip tooltip-link !rounded-none"><img class="size-4" src="./media/catppuccin.webp" alt="Catppuccin Logo"><div class="divider"></div>Catppuccin Webring</a>
-                                <a href="https://ctp-webr.ing/joubamety.com/previous" target="_blank" class="btn-standard tooltip tooltip-link !rounded-none !rounded-tr-xl !rounded-br-xl !w-0.5">&rightarrow;</a>
+                        <div class="card-body">
+                            <h2 class="card-header font-archivoBlack">2024-06-YUI</h2>
+                            <div class="card-badges">
+                                <span class="badge badge-primary">
+                                    <span class="tooltip underline decoration-dotted" data-tooltip="Videos, like films, roleplays or shorts, created in-game.">Machinima</span>
+                                </span>
+                                <span class="badge badge-primary">Minecraft</span>
+                                <span class="badge badge-primary">English</span>
                             </div>
-                             -->
+                            <p class="text-content2">A Minecraft Machinima -- <span class="italic">Yuuta finds an old box and examines the "sweet memories" with Yui.</span></p>
+                            <div class="card-footer">
+                                <a href="https://youtu.be/ksJQnBe_qGE" aria-label="Watch my Minecraft Machinima &quot;2024-06-YUI&quot; on YouTube" target="_blank" class="btn btn-primary text-backgroundPrimary tooltip tooltip-link">
+                                        <img class="w-4 h-[11.266px] self-center mx-1" alt="YouTube Logo" src="./media/youtube.webp">
+                                        <div class="divider divider-vertical-backgroundPrimary mx-0 h-2"></div>
+                                        Watch on YouTube (03:00)
+                                </a>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.castingcall.club/credits/7983-2024-06-yui" aria-label="Check out Production Credits of &quot;2024-06-YUI&quot; on Casting Call Club Project Page" target="_blank"class="btn btn-outline tooltip tooltip-link">
+                                    <span class="inline-flex items-baseline">
+                                        <img class="w-20 self-center mx-1 drop-shadow-sm" alt="Logo of Casting Call Club" src="./media/casting_call_club.webp">
+                                        <span>Production Credits</span>
+                                    </span>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div>
-                        <h3>
-                            <span class="inline-flex items-baseline">
-                                <a href="https://discord.com/" target="_blank" class="hover:text-primary/75 inline-flex items-baseline transition-colors tooltip tooltip-link">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-[21.06px] mr-1" viewBox="0 0 127.14 96.36">
-                                        <path fill="currentColor" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/>
-                                    </svg>
-                                    Discord
-                                </a>&nbsp;Communities
-                            </span>
-                        </h3>
-                        <div class="list-btn">
-                            <a href="https://discord.gg/RpzWN9S" aria-label="shaderLABS Discord Invite" target="_blank" class="btn-standard tooltip tooltip-link"><img class="size-4" src="./media/server-shaderLABS.webp" alt="shaderLABS Logo"><div class="divider"></div>shaderLABS</a>
-                            <a href="https://discord.gg/XkzyWZb" aria-label="Continuum Graphics Discord Invite" target="_blank" class="btn-standard tooltip tooltip-link"><img class="size-4" src="./media/server-ContinuumGraphics.webp" alt="Continuum Graphics Logo"><div class="divider"></div>Continuum Graphics</a>
-                            <a href="https://discord.gg/4YFUmJp" aria-label="MachinimaHub Discord Invite" target="_blank" class="btn-standard tooltip tooltip-link"><img class="size-4" src="./media/server-MachinimaHub.webp" alt="MachinimaHub Logo"><div class="divider"></div>MachinimaHub</a>
-                            <a href="https://discord.gg/qfxrqUF" aria-label="McHorse's Pub Discord Invite" target="_blank" class="btn-standard tooltip tooltip-link"><img class="size-4" src="./media/server-McHorses_Pub.webp" alt="McHorse's Pub Logo"><div class="divider"></div>McHorse's Pub</a>
-                            <a href="https://discord.gg/wcVtYmdJ9W" aria-label="Panda Loft Discord Invite" target="_blank" class="btn-standard tooltip tooltip-link"><img class="size-4" src="./media/server-Panda_Loft.webp" alt="Panda Loft Logo"><div class="divider"></div>Panda Loft</a>
-                            <a href="https://discord.gg/blue-archive" aria-label="ブルーアーカイブ非公式コミュニティのDiscord Invite" target="_blank" class="btn-standard tooltip tooltip-link"><img class="size-4" src="./media/server-UnofficialBlueArchiveCommunity.webp" alt="ブルーアーカイブ非公式コミュニティのLogo"><div class="divider"></div>ブルーアーカイブ非公式コミュニティ</a>
-                            <a href="https://discord.gg/catppuccin-907385605422448742" aria-label="Catppuccin Discord Invite" target="_blank" class="btn-standard tooltip tooltip-link"><img class="size-4" src="./media/catppuccin.webp" alt="Catppuccin Logo"><div class="divider"></div>Catppuccin</a>
+                    <!-- notes.joubamety.com -->
+                    <div class="flex-none w-96 card card-image-cover bg-backgroundSecondary">
+                        <div class="h-[216px]">
+                            <img class="card-cover" src="./media/notes_banner.webp" alt="Banner of website of JoubaMety's Notes" />
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-header">JoubaMety's Notes</h2>
+                            <div class="card-badges">
+                                <span class="badge badge-primary">Website</span>
+                                <span class="badge badge-primary">Video Creation</span>
+                                <span class="badge badge-primary">FFmpeg</span>
+                            </div>
+                            <p class="text-content2">Website where I store all my notes.</p>
+                            <div class="card-footer">
+                                <a href="https://notes.joubamety.com/" aria-label="Website where I store my notes" target="_blank" class="btn btn-primary text-backgroundPrimary tooltip tooltip-link">
+                                    <img class="size-4" src="./media/notes.webp" alt="Logo of notes.joubamety.com">
+                                    <div class="divider divider-vertical-backgroundPrimary mx-0 h-2"></div>
+                                    Read JoubaMety's Notes
+                                </a>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://github.com/JoubaMety/notes.joubamety.com" aria-label="GitHub Page for my notes website." target="_blank" class="btn btn-outline tooltip tooltip-link">
+                                    <svg class="size-4" viewBox="0 0 98 98" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="currentColor"/></svg>
+                                    <div class="divider mx-0 h-2"></div>
+                                    GitHub Repository
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="divider divider-horizontal divider-horizontal-content3-25">END OF "LINKS"</div>
+                    <!-- JoubaMety's Gallery -->
+                    <div class="flex-none w-96 card card-image-cover bg-backgroundSecondary">
+                        <div class="h-[216px]">
+                            <img class="card-cover" src="./media/gallery_banner.webp" alt="Banner of NAZOX" />
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-header font-archivoBlack">JoubaMety's Gallery</h2>
+                            <div class="card-badges">
+                                <span class="badge badge-error font-archivoBlack">CONCEPT</span>
+                                <span class="badge badge-primary">Pictures</span>
+                                <span class="badge badge-primary">Screenshots</span>
+                                <span class="badge badge-primary">Minecraft</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="btn btn-outline">Coming Soon...</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- NAZOX -->
+                    <div class="flex-none w-96 card card-image-cover bg-backgroundSecondary">
+                        <div class="h-[216px]">
+                            <img class="card-cover" src="./media/nazox_banner.webp" alt="Banner of NAZOX" />
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-header font-archivoBlack">NAZOX</h2>
+                            <div class="card-badges">
+                                <span class="badge badge-primary">YouTube Channel</span>
+                                <span class="badge badge-primary">Cinematics</span>
+                                <span class="badge badge-primary">Minecraft</span>
+                            </div>
+                            <p class="text-content2">My YouTube Channel dedicated to Minecraft cinematic videos.</p>
+                            <p class="text-content2">I haven't created any new videos since 2022 due to lack of interest.</p>
+                            <div class="card-footer">
+                                <a href="https://www.youtube.com/channel/UCiEY6aavPkMMChB1xFv3QXA" aria-label="Check out NAZOX on YouTube" target="_blank" class="btn btn-primary text-backgroundPrimary tooltip tooltip-link">
+                                        <img class="w-4 h-[11.266px] self-center mx-1" alt="YouTube Logo" src="./media/youtube.webp">
+                                        <div class="divider divider-vertical-backgroundPrimary mx-0 h-2"></div>
+                                        YouTube Channel
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- F-U Production -->
+                    <div class="flex-none w-96 card card-image-cover bg-backgroundSecondary">
+                        <div class="h-[216px]">
+                            <img class="card-cover" src="./media/fu_banner.webp" alt="Banner of F-U Production" />
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-header font-archivoBlack">F-U Production</h2>
+                            <div class="card-badges">
+                                <span class="badge badge-primary">YouTube Channel</span>
+                                <span class="badge badge-primary">
+                                    <span class="tooltip underline decoration-dotted" data-tooltip="Videos, like films, roleplays or shorts, created in-game.">Machinimas</span>
+                                </span>
+                                <span class="badge badge-primary">Minecraft</span>
+                                <span class="badge badge-primary">Czechoslovak</span>
+                            </div>
+                            <p class="text-content2">Czechoslovak Minecraft machinima studio which I used to co-manage until I left in 2022 due to personal issues.</p>
+                            <div class="card-footer">
+                                <a href="https://www.youtube.com/@FUProductionOfficial" aria-label="Check out F-U Production on YouTube" target="_blank" class="btn btn-primary text-backgroundPrimary tooltip tooltip-link">
+                                        <img class="w-4 h-[11.266px] self-center mx-1" alt="YouTube Logo" src="./media/youtube.webp">
+                                        <div class="divider divider-vertical-backgroundPrimary mx-0 h-2"></div>
+                                        YouTube Channel
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Odyssea III -->
+                    <div class="flex-none w-96 card card-image-cover bg-backgroundSecondary">
+                        <div class="h-[284px]">
+                            <img class="card-cover" src="./media/odysseaiii_banner.webp" alt="Thumbnail of Odyssae III Machinima" />
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-header font-archivoBlack">ODYSSEA III</h2>
+                            <div class="card-badges">
+                                <span class="badge badge-warning font-archivoBlack">In Production</span>
+                                <span class="badge badge-primary">
+                                    <span class="tooltip underline decoration-dotted" data-tooltip="Videos, like films, roleplays or shorts, created in-game.">Machinima</span>
+                                </span>
+                                <span class="badge badge-primary">Horror</span>
+                                <span class="badge badge-primary">Sci-Fi</span>
+                                <span class="badge badge-primary">Minecraft</span>
+                                <span class="badge badge-primary">Czechoslovak</span>
+                            </div>
+                            <p class="text-content2">Massive multi-year Czechoslovak sci-fi horror machinima project produced by multiple studios, including <a href="https://www.youtube.com/@FrostBurnStudio" target="_blank" class="link link-primary tooltip tooltip-link">FrostBurn Studio</a> and many others.</p>
+                            <p class="text-content2">I used to participate in production from 2019 until 2022 due to personal issues.</p>
+                            <div class="card-footer">
+                                <a href="https://youtu.be/ToK8rmCPZZg" aria-label="Watch Teaser of &quot;ODYSSEA III&quot; on YouTube" target="_blank"class="btn btn-primary text-backgroundPrimary tooltip tooltip-link">
+                                        <img class="w-4 h-[11.266px] self-center mx-1" alt="YouTube Logo" src="./media/youtube.webp">
+                                        <div class="divider divider-vertical-backgroundPrimary mx-0 h-2"></div>
+                                        Watch Teaser on YouTube (1:30)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Manual+ Debug Shaderpack -->
+                    <div class="flex-none w-96 card card-image-cover bg-backgroundSecondary">
+                        <div class="h-[162px]">
+                            <video type="video/webm" loop autoplay muted class="card-cover" src="./media/manualplus-banner.webm" alt="Banner of F-U Production" />
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-header font-archivoBlack">Manual+ Focus Overlay Shaderpack</h2>
+                            <div class="card-badges">
+                                <span class="badge badge-primary">Shaders</span>
+                                <span class="badge badge-primary">Minecraft</span>
+                            </div>
+                            <p class="text-content2">Little debug shaderpack for Manual+ focus in Minecraft, which is controlled via in-game Brightness setting. </p>
+                            <div class="card-footer">
+                                <a href="https://github.com/JoubaMety/ManualPlus-Focus-Debug" aria-label="Check out Manual+ Focus Overlay Shaderpack GitHub Repo" target="_blank" class="btn btn-primary tooltip tooltip-link">
+                                    <svg class="size-4" viewBox="0 0 98 98" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="currentColor"/></svg>
+                                    <div class="divider divider-vertical-backgroundPrimary"></div>
+                                    GitHub Repository
+                                </a>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://github.com/JoubaMety/ManualPlus-Focus-Mode" aria-label="Check out Manual+ Focus Info GitHub Repo" target="_blank"class="btn btn-outline tooltip tooltip-link">
+                                    <svg class="size-4" viewBox="0 0 98 98" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="currentColor"/></svg>
+                                    <div class="divider"></div>
+                                    Manual+ Focus Info
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- temp spacer -->
         </div>
         <!-- footer -->
         <div class="footer">
@@ -379,7 +381,7 @@
                     <span class="inline-flex items-baseline gap-1">
                         <svg class="size-4 self-center" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" >
                             <path fill-rule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" />
-                          </svg>
+                            </svg>
                         <div class="hidden lg:inline">
                             WEBSITE IS STILL WORK-IN-PROGRESS!
                         </div>
@@ -423,7 +425,7 @@
                     </span>
                 </h2>
                 <div class="flex-1 flex flex-col gap-4">
-                    <p><span class="font-bold text-error">I'm not accepting unsolicited friend requests!</span> But my DMs should be open, so <span class="font-bold text-success">message me with general introduction / courtesies</span> and then <span class="italic">maybe</span> I'll accept your friend request.</p>
+                    <p><span class="font-bold text-error">I'm not accepting unsolicited friend requests!</span> But my DMs are free, so <span class="font-bold text-success">message me with general introduction / courtesies</span> and then <span class="italic">maybe</span> I'll accept your friend request.</p>
                     <p>Anyway, my user handle is <button class="link-primary" onclick="copyText('joubamety');">joubamety</button> or here's a user link:</p>
                     <a class="w-max" href="https://discord.com/users/266528098772713474" aria-label="My Discord User URL" target="_blank"><button class="btn-standard"><img class="h-4" src="./media/discord.webp"><div class="divider"></div>User Link</button></a>
                 </div>

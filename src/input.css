@@ -340,7 +340,7 @@ html {
 }
 
 body {
-	@apply w-full flex flex-col items-center font-archivo;
+	@apply w-full flex flex-col items-center font-archivo transition-colors;
 	--blink-min: 2.25;
 	--blink-max: 15;
 	--blink-time: 0.25;

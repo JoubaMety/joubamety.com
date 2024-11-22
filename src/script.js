@@ -11,40 +11,42 @@ const preloadImage = (src) =>
 
 var random = 0.0
 // blink, yoinked from https://github.com/sugoidogo/pngtube2/blob/master/v8/blink.html
-preloadImage(
-	// get the image from the CSS variable --avatar_blink_img
-	style.getPropertyValue("--avatar_blink_img")
-).then(
-	//getComputedStyle(document.body).getPropertyValue("--avatar_blink_img")
-	setTimeout(
-		() => {
-			(function blink() {
-				const style = getComputedStyle(document.body);
-				const min = +style.getPropertyValue("--blink-min");
-				const max = +style.getPropertyValue("--blink-max");
-				const time = +style.getPropertyValue("--blink-time");
-				console.info("blink! (min: " + min + " s, max: " + max + " s, duration: " + time + " s, random: " + Math.round(random) / 1000 + " s)");
-				document.getElementById("avatar").src =
-					style.getPropertyValue("--avatar_blink_img");
-				document.querySelector("link[rel*='icon']").href =
-					style.getPropertyValue("--favicon_blink");
-				setTimeout(() => {
+if (document.getElementById("avatar") !== null) {
+	preloadImage(
+		// get the image from the CSS variable --avatar_blink_img
+		style.getPropertyValue("--avatar_blink_img")
+	).then(
+		//getComputedStyle(document.body).getPropertyValue("--avatar_blink_img")
+		setTimeout(
+			() => {
+				(function blink() {
+					const style = getComputedStyle(document.body);
+					const min = +style.getPropertyValue("--blink-min");
+					const max = +style.getPropertyValue("--blink-max");
+					const time = +style.getPropertyValue("--blink-time");
+					console.info("blink! (min: " + min + " s, max: " + max + " s, duration: " + time + " s, random: " + Math.round(random) / 1000 + " s)");
 					document.getElementById("avatar").src =
-						style.getPropertyValue("--avatar_img");
+						style.getPropertyValue("--avatar_blink_img");
 					document.querySelector("link[rel*='icon']").href =
-						style.getPropertyValue("--favicon");
-				}, time * 1000);
-				if (style.getPropertyValue("--avatar_img").includes("halloween")) {
-					document.getElementById("avatar-span").setAttribute("data-tooltip", "Spooky Ame-chan by @Nyalra on Twitter (currently \"X\")");
-				} else {
-					document.getElementById("avatar-span").setAttribute("data-tooltip", "French-ified Ame-chan from NEEDY GIRL OVERDOSE, edited by me, original by @Nyalra on Twitter (currently \"X\")");
-				}
-				setTimeout(blink, random = (Math.random() * (max - min) + min) * 1000);
-			})(); // function blink
-		},
-		2500 // delay before starting function
-	) // setTimeOut
-);
+						style.getPropertyValue("--favicon_blink");
+					setTimeout(() => {
+						document.getElementById("avatar").src =
+							style.getPropertyValue("--avatar_img");
+						document.querySelector("link[rel*='icon']").href =
+							style.getPropertyValue("--favicon");
+					}, time * 1000);
+					if (style.getPropertyValue("--avatar_img").includes("halloween")) {
+						document.getElementById("avatar-span").setAttribute("data-tooltip", "Spooky Ame-chan by @Nyalra on Twitter (currently \"X\")");
+					} else {
+						document.getElementById("avatar-span").setAttribute("data-tooltip", "French-ified Ame-chan from NEEDY GIRL OVERDOSE, edited by me, original by @Nyalra on Twitter (currently \"X\")");
+					}
+					setTimeout(blink, random = (Math.random() * (max - min) + min) * 1000);
+				})(); // function blink
+			},
+			2500 // delay before starting function
+		) // setTimeOut
+	);
+}
 
 
 const hoverableElement = document.querySelectorAll(".tooltip");
@@ -70,6 +72,7 @@ hoverableElement.forEach(function(element) {
 			var right = parseFloat(this.getBoundingClientRect().right);
 			var padding = 16;
 			
+			/*
 			console.log("html.width  ", html_width);
 			console.log("html.height ", html_height);
 			console.log("el.width    ", width)
@@ -77,7 +80,8 @@ hoverableElement.forEach(function(element) {
 			console.log("bottom      ", bottom)
 			console.log("left        ", left)
 			console.log("right       ", right)
-			
+			*/
+
 			// bottom
 			if (
 				left - width >= padding &&
@@ -125,6 +129,10 @@ function removeToolTip(element) {
 	);
 }
 
+if (
+	document.getElementById("currentTime") !== null &&
+	document.getElementById("currentTimeZoneOffset") !== null
+)
 (function localTime() {
 	let tZ = "Europe/Bratislava"; // duh my timezone
 	let date = new Date()
@@ -180,35 +188,37 @@ function notificationAlert(type, duration, title, description) {
 	);
 }
 
-(async function replaceDiscordStatus(interval = 30){
-	const url = "https://api.joubamety.com/v1/joubamety.com/discord"
-	fetch(url)
-	.then((response) => {
-		return response.text();
-	})
-	.then((html) => {
-		let element = document.getElementById("discord-status-card")
-		if (html == "" || html == "   ") {
-			if(!element.classList.contains("hidden")) {
-				element.classList.add("hidden")
-			}
-		} else {
-			if (element.innerHTML != html) {
-				element.innerHTML = html  
-				console.info("discord status update")
-				if(element.classList.contains("hidden")) {
-					element.classList.remove("hidden")
+if (document.getElementById("discord-status-card") !== null) {
+	(async function replaceDiscordStatus(interval = 30){
+		const url = "https://api.joubamety.com/v1/joubamety.com/discord"
+		fetch(url)
+		.then((response) => {
+			return response.text();
+		})
+		.then((html) => {
+			let element = document.getElementById("discord-status-card")
+			if (html == "" || html == "   ") {
+				if(!element.classList.contains("hidden")) {
+					element.classList.add("hidden")
 				}
-				setTimeout( () => {
-					fetch(url + "/emote.webp")
-					fetch(url + "/albumArt.webp")
-					fetch(url + "/gameArt.webp")
-				}, 1000);
+			} else {
+				if (element.innerHTML != html) {
+					element.innerHTML = html  
+					console.info("discord status update")
+					if(element.classList.contains("hidden")) {
+						element.classList.remove("hidden")
+					}
+					setTimeout( () => {
+						fetch(url + "/emote.webp")
+						fetch(url + "/albumArt.webp")
+						fetch(url + "/gameArt.webp")
+					}, 1000);
+				}
 			}
-		}
-	});
-	setTimeout(replaceDiscordStatus, interval*1000)
-})();
+		});
+		setTimeout(replaceDiscordStatus, interval*1000)
+	})();
+}
 
 // preload halloween avatars
 (() => {
