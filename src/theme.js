@@ -10,6 +10,8 @@ const themeTextMap = new Map([
 	["halloween", "Halloween"],
 	["gruvbox-light", "gruvbox (Light)"],
 	["gruvbox-dark", "gruvbox (Dark)"],
+	["dracula-dark", "Dracula (Dark)"],
+	["dracula-light", "Dracula (Light)"],
 ]);
 
 function earlyTheme() {

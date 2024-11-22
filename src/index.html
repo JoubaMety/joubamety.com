@@ -96,6 +96,10 @@
                         <a id="select-gruvbox-light" aria-label="Switch theme to gruvbox (Light)" tabindex="-1" class="dropdown-item text-sm inline-flex items-center flex-row gap-1" onclick="changeTheme('gruvbox-light', 'light');">
                             gruvbox (Light)
                         </a>
+                        <a id="select-dracula-light" aria-label="Switch theme to Dracula (Light)" tabindex="-1" class="dropdown-item text-sm inline-flex items-center flex-row gap-1" onclick="changeTheme('dracula-light', 'light');">
+                            <img class="h-4" src="./media/draculatheme.svg" alt="Dracula Theme Logo">
+                            Dracula (Light)
+                        </a>
                         <!-- DARK THEMES -->
                         <p class="select-none text-sm font-archivoBlack text-center px-[6.5px] pt-2">Dark Themes</p>
                         <a id="select-catppuccin-frappe" aria-label="Switch theme to Catppuccin Frappé (Dark)" tabindex="-1" class="dropdown-item text-sm inline-flex items-center flex-row gap-1" onclick="changeTheme('catppuccin-frappe', 'dark');">
@@ -119,6 +123,10 @@
                         </a>
                         <a id="select-gruvbox-dark" aria-label="Switch theme to gruvbox (Dark)" tabindex="-1" class="dropdown-item text-sm inline-flex items-center flex-row gap-1" onclick="changeTheme('gruvbox-dark', 'dark');">
                             gruvbox (Dark)
+                        </a>
+                        <a id="select-dracula-dark" aria-label="Switch theme to Dracula (Dark)" tabindex="-1" class="dropdown-item text-sm inline-flex items-center flex-row gap-1" onclick="changeTheme('dracula-dark', 'dark');">
+                            <img class="h-4" src="./media/draculatheme.svg" alt="Dracula Theme Logo">
+                            Dracula (Dark)
                         </a>
                         <!-- SPECIAL THEMES -->
                         <p class="select-none text-sm font-archivoBlack text-center px-[6.5px] pt-2">Special Themes</p>
@@ -340,7 +348,7 @@
             <p>Created with love by <span class="italic">yours truly</span> with:</p>
             <div class="flex justify-center align-middle gap-2">
                 <a href="https://www.ripple-ui.com/" aria-label="Website for Ripple-UI, CSS framework built on top of Tailwind CSS" target="_blank" class="btn-standard font-bold text-[1rem] tooltip tooltip-link">
-                    <svg class="size-4 mr-1" width="16" height="16" viewBox="0 0 391 415" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M180.07 1.16449C172.081 3.52719 159.327 11.3102 153.301 17.5645C146.994 23.9577 137.744 40.6357 118.123 81.7747C113.918 90.5306 106.07 106.792 100.744 117.91C95.2782 129.029 88.6911 142.788 85.8881 148.487C83.2252 154.185 74.2555 172.531 66.1267 189.348C57.9979 206.026 51.2707 219.924 51.2707 220.202C51.2707 220.341 46.5055 230.487 40.6191 242.578C16.7934 291.639 3.61914 319.853 3.61914 321.937C3.61914 322.632 4.8805 324.3 6.56232 325.829C9.2252 328.192 11.4676 328.331 31.3691 327.914C43.4222 327.775 60.3805 327.08 68.7896 326.663L84.2063 325.69L94.2972 305.537C103.127 287.748 129.615 233.683 157.926 175.588C171.24 148.07 185.816 116.242 185.816 114.575C185.816 114.158 188.059 108.876 190.862 103.039C197.589 88.5848 212.725 52.8662 218.752 37.5781C224.498 22.8459 225.619 16.3136 224.077 8.80856C222.956 3.94415 222.256 3.11026 217.35 1.58145C211.043 -0.225342 185.676 -0.642303 180.07 1.16449Z" class="fill-content2"></path><path d="M234.799 28.1441C232.837 36.0661 220.223 67.4763 210.973 87.3508C207.89 93.8831 204.386 102.5 203.125 106.392L201.022 113.758L213.356 138.358C220.223 151.839 235.64 182.971 247.833 207.432C301.371 315.7 319.731 350.307 336.549 374.907C342.996 384.219 356.17 398.534 358.272 398.534C361.496 398.534 375.511 386.303 379.716 379.493C387.704 367.263 390.507 358.09 390.647 342.941C390.788 325.29 392.049 328.486 337.53 218.551C286.655 115.842 272.78 87.7678 255.682 52.4661C252.318 45.6559 237.602 20.5 236.901 20.5C236.621 20.5 235.78 23.9746 234.799 28.1441Z" class="fill-content2"></path><path d="M36.2043 340.161C17.7043 340.717 2.4278 341.273 2.28765 341.273C2.14749 341.412 1.30658 342.802 0.465675 344.331C-1.49645 347.944 2.9884 364.761 9.29522 377.686C17.8445 395.059 40.6892 410.348 63.1134 413.822C74.6058 415.629 332.905 415.073 337.951 413.266C339.632 412.571 341.034 411.459 341.034 410.764C341.034 409.236 307.117 348.639 302.913 342.524L300.25 338.771L185.045 339.049C121.697 339.188 54.7043 339.744 36.2043 340.161Z" class="fill-content2"></path></svg>
+                    <svg class="size-4 mr-1" width="16" height="16" viewBox="0 0 391 415" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M180.07 1.16449C172.081 3.52719 159.327 11.3102 153.301 17.5645C146.994 23.9577 137.744 40.6357 118.123 81.7747C113.918 90.5306 106.07 106.792 100.744 117.91C95.2782 129.029 88.6911 142.788 85.8881 148.487C83.2252 154.185 74.2555 172.531 66.1267 189.348C57.9979 206.026 51.2707 219.924 51.2707 220.202C51.2707 220.341 46.5055 230.487 40.6191 242.578C16.7934 291.639 3.61914 319.853 3.61914 321.937C3.61914 322.632 4.8805 324.3 6.56232 325.829C9.2252 328.192 11.4676 328.331 31.3691 327.914C43.4222 327.775 60.3805 327.08 68.7896 326.663L84.2063 325.69L94.2972 305.537C103.127 287.748 129.615 233.683 157.926 175.588C171.24 148.07 185.816 116.242 185.816 114.575C185.816 114.158 188.059 108.876 190.862 103.039C197.589 88.5848 212.725 52.8662 218.752 37.5781C224.498 22.8459 225.619 16.3136 224.077 8.80856C222.956 3.94415 222.256 3.11026 217.35 1.58145C211.043 -0.225342 185.676 -0.642303 180.07 1.16449Z" class="currentColor"></path><path d="M234.799 28.1441C232.837 36.0661 220.223 67.4763 210.973 87.3508C207.89 93.8831 204.386 102.5 203.125 106.392L201.022 113.758L213.356 138.358C220.223 151.839 235.64 182.971 247.833 207.432C301.371 315.7 319.731 350.307 336.549 374.907C342.996 384.219 356.17 398.534 358.272 398.534C361.496 398.534 375.511 386.303 379.716 379.493C387.704 367.263 390.507 358.09 390.647 342.941C390.788 325.29 392.049 328.486 337.53 218.551C286.655 115.842 272.78 87.7678 255.682 52.4661C252.318 45.6559 237.602 20.5 236.901 20.5C236.621 20.5 235.78 23.9746 234.799 28.1441Z" class="currentColor"></path><path d="M36.2043 340.161C17.7043 340.717 2.4278 341.273 2.28765 341.273C2.14749 341.412 1.30658 342.802 0.465675 344.331C-1.49645 347.944 2.9884 364.761 9.29522 377.686C17.8445 395.059 40.6892 410.348 63.1134 413.822C74.6058 415.629 332.905 415.073 337.951 413.266C339.632 412.571 341.034 411.459 341.034 410.764C341.034 409.236 307.117 348.639 302.913 342.524L300.25 338.771L185.045 339.049C121.697 339.188 54.7043 339.744 36.2043 340.161Z" class="currentColor"></path></svg>
                     Ripple UI
                 </a>
                 <a href="https://tailwindcss.com/" aria-label="Website for Tailwind CSS, CSS framework" target="_blank" class="btn-standard tooltip tooltip-link">
@@ -404,9 +412,9 @@
             <span class="text-backgroundSecondary" id="notification-description">Long sample text</span>
         </div>
     </div>
-    <div class="w-full min-w-[475.75px]">
+    <div class="w-screen min-w-[475.75px]">
         <input class="modal-state" id="modal-1" type="checkbox" />
-        <div class="modal w-full px-0 lg:px-[1rem]">
+        <div class="modal w-screen px-0 lg:px-[1rem]">
             <label class="modal-overlay" for="modal-1"></label>
             <div class="modal-content flex flex-col gap-5 lg:w-[512px]">
                 <label for="modal-1" class="flex-1 btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
@@ -430,9 +438,9 @@
             </div>
         </div>
         <input class="modal-state" id="modal-2" type="checkbox" />
-        <div class="modal w-full px-0 lg:px-[1rem]">
+        <div class="modal w-screen px-0 lg:px-[1rem]">
             <label class="modal-overlay" for="modal-2"></label>
-            <div class="modal-content flex flex-col gap-5 h-full px-0 lg:px-[1.5rem]">
+            <div class="modal-content flex flex-col gap-5 h-screen px-0 lg:px-[1.5rem]">
                 <label for="modal-2" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
                 <h2 class="text-xl inline-flex items-center gap-1 select-none">
                     <svg class="size-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 4.125c0-1.036.84-1.875 1.875-1.875h5.25c1.036 0 1.875.84 1.875 1.875V17.25a4.5 4.5 0 1 1-9 0V4.125Zm4.5 14.25a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" /><path d="M10.719 21.75h9.156c1.036 0 1.875-.84 1.875-1.875v-5.25c0-1.036-.84-1.875-1.875-1.875h-.14l-8.742 8.743c-.09.089-.18.175-.274.257ZM12.738 17.625l6.474-6.474a1.875 1.875 0 0 0 0-2.651L15.5 4.787a1.875 1.875 0 0 0-2.651 0l-.1.099V17.25c0 .126-.003.251-.01.375Z" /></svg>
@@ -604,6 +612,23 @@
                                     <a href="https://github.com/morhetz/gruvbox/blob/master/README.md" target="_blank" class="btn-standard"><svg class="size-4" viewBox="0 0 98 98" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="currentColor"/></svg><div class="divider"></div>GitHub</a>
                                 </div>
                                 The most comprehensive color palette I've seen yet. Apparently licensed under <a class="link link-primary" href="https://en.wikipedia.org/wiki/MIT_License" aria-label="MIT License Wikipedia">MIT</a>.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <input type="checkbox" id="toggle-13" class="accordion-toggle" />
+                        <label for="toggle-13" class="accordion-title">
+                            <span>Dracula</span>
+                        </label>
+                        <span class="accordion-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg>
+                        </span>
+                        <div class="accordion-content">
+                            <div class="min-h-0">
+                                <div class="flex gap-4 mb-4">
+                                    <a href="https://draculatheme.com/" target="_blank" class="btn-standard"><img class="h-4" src="./media/draculatheme.svg" alt="Dracula Theme Logo"><div class="divider"></div>Website</a>
+                                </div>
+                                for the pro memes
                             </div>
                         </div>
                     </div>

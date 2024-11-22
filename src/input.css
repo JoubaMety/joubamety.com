@@ -185,6 +185,34 @@
 	--error: 157 0 6; /* red */
 	--warning: 181 118 20; /* yellow */
 }
+:root[data-theme="dracula-dark"] {
+    color-scheme: dark;
+	--backgroundPrimary: 21 19 32; /* bg0 */
+	--backgroundSecondary: 43 38 64; /* bg1 */
+	--border: 83 73 126; /* bg2 */
+	--content1: 248 248 243; /* fg0 */
+	--content2: 194 177 230; /* fg2 */
+	--content3: 157 143 186; /* fg4 */
+	--primary: 149 128 255; /* blue */
+	--secondary: 128 255 234; /* purple */
+	--success: 138 255 128; /* green */
+	--error: 255 149 128; /* red */
+	--warning: 255 255 128; /* yellow */
+}
+:root[data-theme="dracula-light"] {
+    color-scheme: light;
+    --backgroundPrimary: 245 245 245; /* bg0 */
+	--backgroundSecondary: 230 230 230; /* bg1 */
+	--border: 184 184 184; /* bg2 */
+	--content1: 31 31 31; /* fg0 */
+	--content2: 63 62 75; /* fg2 */
+	--content3: 99 93 151; /* fg4 */
+	--primary: 100 74 201; /* purple */
+	--secondary: 3 106 150; /* blue */
+	--success: 48 127 39; /* green */
+	--error: 163 19 77; /* red */
+	--warning: 131 110 21; /* yellow */
+}
 
 
 :root {
@@ -239,6 +267,9 @@ html {
 	@apply bg-backgroundPrimary h-4 w-px content-[""];
 }
 
+.divider-horizontal-content3 {
+	@apply bg-content3 text-content3;
+}
 .divider-horizontal-content3::after,
 .divider-horizontal-content3::before {
 	@apply bg-content3 text-content3;

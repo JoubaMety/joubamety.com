@@ -96,6 +96,10 @@
                         <a id="select-gruvbox-light" aria-label="Switch theme to gruvbox (Light)" tabindex="-1" class="dropdown-item text-sm inline-flex items-center flex-row gap-1" onclick="changeTheme('gruvbox-light', 'light');">
                             gruvbox (Light)
                         </a>
+                        <a id="select-dracula-light" aria-label="Switch theme to Dracula (Light)" tabindex="-1" class="dropdown-item text-sm inline-flex items-center flex-row gap-1" onclick="changeTheme('dracula-light', 'light');">
+                            <img class="h-4" src="./media/draculatheme.svg" alt="Dracula Theme Logo">
+                            Dracula (Light)
+                        </a>
                         <!-- DARK THEMES -->
                         <p class="select-none text-sm font-archivoBlack text-center px-[6.5px] pt-2">Dark Themes</p>
                         <a id="select-catppuccin-frappe" aria-label="Switch theme to Catppuccin Frappé (Dark)" tabindex="-1" class="dropdown-item text-sm inline-flex items-center flex-row gap-1" onclick="changeTheme('catppuccin-frappe', 'dark');">
@@ -119,6 +123,10 @@
                         </a>
                         <a id="select-gruvbox-dark" aria-label="Switch theme to gruvbox (Dark)" tabindex="-1" class="dropdown-item text-sm inline-flex items-center flex-row gap-1" onclick="changeTheme('gruvbox-dark', 'dark');">
                             gruvbox (Dark)
+                        </a>
+                        <a id="select-dracula-dark" aria-label="Switch theme to Dracula (Dark)" tabindex="-1" class="dropdown-item text-sm inline-flex items-center flex-row gap-1" onclick="changeTheme('dracula-dark', 'dark');">
+                            <img class="h-4" src="./media/draculatheme.svg" alt="Dracula Theme Logo">
+                            Dracula (Dark)
                         </a>
                         <!-- SPECIAL THEMES -->
                         <p class="select-none text-sm font-archivoBlack text-center px-[6.5px] pt-2">Special Themes</p>
@@ -406,35 +414,11 @@
             <span class="text-backgroundSecondary" id="notification-description">Long sample text</span>
         </div>
     </div>
-    <div class="w-full min-w-[475.75px]">
-        <input class="modal-state" id="modal-1" type="checkbox" />
-        <div class="modal w-full px-0 lg:px-[1rem]">
-            <label class="modal-overlay" for="modal-1"></label>
-            <div class="modal-content flex flex-col gap-5 lg:w-[512px]">
-                <label for="modal-1" class="flex-1 btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
-                <h2 class="flex-1 text-2xl font-bold select-none">
-                    <span class="inline-flex items-baseline">
-                        <svg class="size-8 self-center mx-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" /></svg>                  
-                        Info about 
-                        <span class="inline-flex items-baseline">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 self-center mx-2" viewBox="0 0 127.14 96.36">
-                                <path fill="currentColor" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/>
-                            </svg>
-                            Discord
-                        </span>
-                    </span>
-                </h2>
-                <div class="flex-1 flex flex-col gap-4">
-                    <p><span class="font-bold text-error">I'm not accepting unsolicited friend requests!</span> But my DMs are free, so <span class="font-bold text-success">message me with general introduction / courtesies</span> and then <span class="italic">maybe</span> I'll accept your friend request.</p>
-                    <p>Anyway, my user handle is <button class="link-primary" onclick="copyText('joubamety');">joubamety</button> or here's a user link:</p>
-                    <a class="w-max" href="https://discord.com/users/266528098772713474" aria-label="My Discord User URL" target="_blank"><button class="btn-standard"><img class="h-4" src="./media/discord.webp"><div class="divider"></div>User Link</button></a>
-                </div>
-            </div>
-        </div>
+    <div class="w-screen min-w-[475.75px]">
         <input class="modal-state" id="modal-2" type="checkbox" />
-        <div class="modal w-full px-0 lg:px-[1rem]">
+        <div class="modal w-screen px-0 lg:px-[1rem]">
             <label class="modal-overlay" for="modal-2"></label>
-            <div class="modal-content flex flex-col gap-5 h-full px-0 lg:px-[1.5rem]">
+            <div class="modal-content flex flex-col gap-5 h-screen px-0 lg:px-[1.5rem]">
                 <label for="modal-2" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
                 <h2 class="text-xl inline-flex items-center gap-1 select-none">
                     <svg class="size-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 4.125c0-1.036.84-1.875 1.875-1.875h5.25c1.036 0 1.875.84 1.875 1.875V17.25a4.5 4.5 0 1 1-9 0V4.125Zm4.5 14.25a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clip-rule="evenodd" /><path d="M10.719 21.75h9.156c1.036 0 1.875-.84 1.875-1.875v-5.25c0-1.036-.84-1.875-1.875-1.875h-.14l-8.742 8.743c-.09.089-.18.175-.274.257ZM12.738 17.625l6.474-6.474a1.875 1.875 0 0 0 0-2.651L15.5 4.787a1.875 1.875 0 0 0-2.651 0l-.1.099V17.25c0 .126-.003.251-.01.375Z" /></svg>
@@ -606,6 +590,23 @@
                                     <a href="https://github.com/morhetz/gruvbox/blob/master/README.md" target="_blank" class="btn-standard"><svg class="size-4" viewBox="0 0 98 98" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="currentColor"/></svg><div class="divider"></div>GitHub</a>
                                 </div>
                                 The most comprehensive color palette I've seen yet. Apparently licensed under <a class="link link-primary" href="https://en.wikipedia.org/wiki/MIT_License" aria-label="MIT License Wikipedia">MIT</a>.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <input type="checkbox" id="toggle-13" class="accordion-toggle" />
+                        <label for="toggle-13" class="accordion-title">
+                            <span>Dracula</span>
+                        </label>
+                        <span class="accordion-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg>
+                        </span>
+                        <div class="accordion-content">
+                            <div class="min-h-0">
+                                <div class="flex gap-4 mb-4">
+                                    <a href="https://draculatheme.com/" target="_blank" class="btn-standard"><img class="h-4" src="./media/draculatheme.svg" alt="Dracula Theme Logo"><div class="divider"></div>Website</a>
+                                </div>
+                                for the pro memes
                             </div>
                         </div>
                     </div>
