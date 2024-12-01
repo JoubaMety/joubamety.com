@@ -1,54 +1,3 @@
-var style = getComputedStyle(document.body)
-
-// preload image
-const preloadImage = (src) =>
-	new Promise((resolve, reject) => {
-		const image = new Image();
-		image.onload = resolve;
-		image.onerror = reject;
-		image.src = src;
-	});
-
-var random = 0.0
-// blink, yoinked from https://github.com/sugoidogo/pngtube2/blob/master/v8/blink.html
-if (document.getElementById("avatar") !== null) {
-	preloadImage(
-		// get the image from the CSS variable --avatar_blink_img
-		style.getPropertyValue("--avatar_blink_img")
-	).then(
-		//getComputedStyle(document.body).getPropertyValue("--avatar_blink_img")
-		setTimeout(
-			() => {
-				(function blink() {
-					const style = getComputedStyle(document.body);
-					const min = +style.getPropertyValue("--blink-min");
-					const max = +style.getPropertyValue("--blink-max");
-					const time = +style.getPropertyValue("--blink-time");
-					console.info("blink! (min: " + min + " s, max: " + max + " s, duration: " + time + " s, random: " + Math.round(random) / 1000 + " s)");
-					document.getElementById("avatar").src =
-						style.getPropertyValue("--avatar_blink_img");
-					document.querySelector("link[rel*='icon']").href =
-						style.getPropertyValue("--favicon_blink");
-					setTimeout(() => {
-						document.getElementById("avatar").src =
-							style.getPropertyValue("--avatar_img");
-						document.querySelector("link[rel*='icon']").href =
-							style.getPropertyValue("--favicon");
-					}, time * 1000);
-					if (style.getPropertyValue("--avatar_img").includes("halloween")) {
-						document.getElementById("avatar-span").setAttribute("data-tooltip", "Spooky Ame-chan by @Nyalra on Twitter (currently \"X\")");
-					} else {
-						document.getElementById("avatar-span").setAttribute("data-tooltip", "French-ified Ame-chan from NEEDY GIRL OVERDOSE, edited by me, original by @Nyalra on Twitter (currently \"X\")");
-					}
-					setTimeout(blink, random = (Math.random() * (max - min) + min) * 1000);
-				})(); // function blink
-			},
-			2500 // delay before starting function
-		) // setTimeOut
-	);
-}
-
-
 const hoverableElement = document.querySelectorAll(".tooltip");
 
 hoverableElement.forEach(function(element) {
@@ -133,31 +82,6 @@ if (
 	document.getElementById("currentTime") !== null &&
 	document.getElementById("currentTimeZoneOffset") !== null
 )
-(function localTime() {
-	let tZ = "Europe/Bratislava"; // duh my timezone
-	let date = new Date()
-	let currentTime = date.toLocaleTimeString("en-UK", {
-		timeZone: tZ,
-		timeZoneName: "long",
-		hour: "2-digit",
-		minute: "2-digit",
-	}).split(" ")
-	let time = currentTime[0];
-	// get long name of timezone
-	let timeZone = currentTime.slice(1).join(" ");
-	let timeZoneOffset = date.toLocaleTimeString("en-UK", {
-		timeZone: tZ,
-		timeZoneName: "longOffset",
-	}).split(" ")[1].slice(3);
-	// yeet seconds
-	if (timeZoneOffset.includes(":00")) {
-		timeZoneOffset = timeZoneOffset.slice(0,3);
-	}
-	document.getElementById("currentTime").innerHTML = time;
-	document.getElementById("currentTimeZoneOffset").innerHTML = "UTC" + timeZoneOffset;
-	document.getElementById("currentTimeZoneOffset").setAttribute("data-tooltip", timeZone);
-	setTimeout(localTime, 5000);
-})();
 
 function copyText(input) {
 	 // Copy the text inside the text field
@@ -186,6 +110,103 @@ function notificationAlert(type, duration, title, description) {
 		},
 		duration
 	);
+}
+
+//
+// index.html
+//
+// preload image
+const preloadImage = (src) =>
+	new Promise((resolve, reject) => {
+		const image = new Image();
+		image.onload = resolve;
+		image.onerror = reject;
+		image.src = src;
+	});
+
+	// blink, yoinked from https://github.com/sugoidogo/pngtube2/blob/master/v8/blink.html
+(function blinkAvatar() {
+	var random = 0.0
+	preloadImage(
+		// get the image from the CSS variable --avatar_blink_img
+		getComputedStyle(document.body).getPropertyValue("--avatar_blink_img")
+	).then(
+		//getComputedStyle(document.body).getPropertyValue("--avatar_blink_img")
+		setTimeout(
+			() => {
+				(function blink() {
+					const style = getComputedStyle(document.body);
+					const min = +style.getPropertyValue("--blink-min");
+					const max = +style.getPropertyValue("--blink-max");
+					const time = +style.getPropertyValue("--blink-time");
+					if(checkIfAvatarStillExists()) {
+						console.info("blink! (min: " + min + " s, max: " + max + " s, duration: " + time + " s, random: " + Math.round(random) / 1000 + " s)");
+						document.getElementById("avatar").src =
+							style.getPropertyValue("--avatar_blink_img");
+						document.querySelector("link[rel*='icon']").href =
+							style.getPropertyValue("--favicon_blink");
+						setTimeout(() => {
+							document.getElementById("avatar").src =
+								style.getPropertyValue("--avatar_img");
+							document.querySelector("link[rel*='icon']").href =
+								style.getPropertyValue("--favicon");
+						}, time * 1000);
+					}
+					if(checkIfAvatarStillExists()){
+						if (style.getPropertyValue("--avatar_img").includes("halloween")) {
+							document.getElementById("avatar-span").setAttribute("data-tooltip", "Spooky Ame-chan by @Nyalra on Twitter (currently \"X\")");
+						} else {
+							document.getElementById("avatar-span").setAttribute("data-tooltip", "French-ified Ame-chan from NEEDY GIRL OVERDOSE, edited by me, original by @Nyalra on Twitter (currently \"X\")");
+						}
+						setTimeout(blink, random = (Math.random() * (max - min) + min) * 1000);
+					} else {
+						setTimeout(blink, random = (Math.random() * (max - min) + min) * 1000);
+					}
+				})(); // function blink
+			},
+			2500 // delay before starting function
+		) // setTimeOut
+	);
+})();
+
+function checkIfAvatarStillExists() {
+	var element = document.getElementById("avatar-span")
+	if (typeof(element) != 'undefined' && element != null) { return true } else { return false }
+}
+
+(function localTime() {
+	(function timeChange() {
+		if(checkIfTimeStillExists()) {
+			let tZ = "Europe/Bratislava"; // duh my timezone
+			let date = new Date()
+			let currentTime = date.toLocaleTimeString("en-UK", {
+				timeZone: tZ,
+				timeZoneName: "long",
+				hour: "2-digit",
+				minute: "2-digit",
+			}).split(" ")
+			let time = currentTime[0];
+			// get long name of timezone
+			let timeZone = currentTime.slice(1).join(" ");
+			let timeZoneOffset = date.toLocaleTimeString("en-UK", {
+				timeZone: tZ,
+				timeZoneName: "longOffset",
+			}).split(" ")[1].slice(3);
+			// yeet seconds
+			if (timeZoneOffset.includes(":00")) {
+				timeZoneOffset = timeZoneOffset.slice(0,3);
+			}
+			document.getElementById("currentTime").innerHTML = time;
+			document.getElementById("currentTimeZoneOffset").innerHTML = "UTC" + timeZoneOffset;
+			document.getElementById("currentTimeZoneOffset").setAttribute("data-tooltip", timeZone);
+			setTimeout(timeChange, 1000);
+		}
+	})();
+})();
+
+function checkIfTimeStillExists() {
+	var element = document.getElementById("currentTime")
+	if (typeof(element) != 'undefined' && element != null) { return true } else { return false }
 }
 
 if (document.getElementById("discord-status-card") !== null) {

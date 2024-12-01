@@ -332,7 +332,7 @@ html {
 	}
 
 	.popover-content {
-		@apply bg-backgroundSecondary/75 drop-shadow-md backdrop-blur-3xl backdrop-brightness-125 dark:backdrop-brightness-75 text-content1 p-4 text-sm lg:w-[24rem];
+		@apply bg-backgroundSecondary/75 drop-shadow-md backdrop-blur-sm backdrop-brightness-125 dark:backdrop-brightness-75 text-content1 p-4 text-sm lg:w-[24rem];
 		.link {
 			@apply text-sm font-bold;
 		}
@@ -465,7 +465,7 @@ h3 {
 }
 
 .tooltip::before {
-	@apply bg-backgroundSecondary/75 drop-shadow-md backdrop-blur-3xl backdrop-brightness-125 dark:backdrop-brightness-75 text-content1 text-sm max-w-[256px] text-wrap z-10;
+	@apply bg-backgroundSecondary/75 drop-shadow-md backdrop-blur-sm backdrop-brightness-125 dark:backdrop-brightness-75 text-content1 text-sm max-w-[256px] text-wrap z-10;
     
 }
 
@@ -564,7 +564,7 @@ h3 {
 }
 
 .modal {
-	@apply bg-content1/75 dark:bg-backgroundPrimary/75 backdrop-blur-xl backdrop-brightness-75;
+	@apply bg-content1/75 dark:bg-backgroundPrimary/75 backdrop-blur-sm backdrop-brightness-75;
 }
 
 .accordion-group-bordered {
@@ -598,7 +598,7 @@ html:has(.modal-state:checked, .modal-open) {
 }
 
 .dropdown-menu {
-	@apply bg-backgroundSecondary/75 drop-shadow-md backdrop-blur-3xl backdrop-brightness-125 dark:backdrop-brightness-75 text-content1 p-4 z-50;
+	@apply bg-backgroundSecondary/75 drop-shadow-md backdrop-blur-sm backdrop-brightness-125 dark:backdrop-brightness-75 text-content1 p-4 z-50;
 }
 
 .dropdown-item {

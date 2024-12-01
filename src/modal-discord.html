@@ -1,0 +1,24 @@
+<input class="modal-state" id="modal-1" type="checkbox" />
+<div class="modal w-screen px-0 lg:px-[1rem]">
+    <label class="modal-overlay" for="modal-1"></label>
+    <div class="modal-content flex flex-col gap-5 lg:w-[512px]">
+        <label for="modal-1" class="flex-1 btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
+        <h2 class="flex-1 text-2xl font-bold select-none">
+            <span class="inline-flex items-baseline">
+                <svg class="size-8 self-center mx-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" /></svg>                  
+                Info about 
+                <span class="inline-flex items-baseline">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 self-center mx-2" viewBox="0 0 127.14 96.36">
+                        <path fill="currentColor" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/>
+                    </svg>
+                    Discord
+                </span>
+            </span>
+        </h2>
+        <div class="flex-1 flex flex-col gap-4">
+            <p><span class="font-bold text-error">I'm not accepting unsolicited friend requests!</span> But my DMs should be open, so <span class="font-bold text-success">message me with general introduction / courtesies</span> and then <span class="italic">maybe</span> I'll accept your friend request.</p>
+            <p>Anyway, my user handle is <button class="link-primary" onclick="copyText('joubamety');">joubamety</button> or here's a user link:</p>
+            <a class="w-max" href="https://discord.com/users/266528098772713474" aria-label="My Discord User URL" target="_blank"><button class="btn-standard"><img class="h-4" src="./media/discord.webp"><div class="divider"></div>User Link</button></a>
+        </div>
+    </div>
+</div>
