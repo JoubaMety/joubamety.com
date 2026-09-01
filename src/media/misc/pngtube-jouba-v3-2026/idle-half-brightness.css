@@ -1,0 +1,10 @@
+img {
+    transition-property: filter;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition-delay: 0.5s;
+}
+
+#idle, #idle-blink {
+    /*filter: brightness(75%);*/
+}
