@@ -210,7 +210,7 @@ function checkIfTimeStillExists() {
 }
 
 if (document.getElementById("discord-status-card") !== null) {
-	(async function replaceDiscordStatus(interval = 30){
+	(async function replaceDiscordStatus(interval = 5){
 		const url = "https://api.joubamety.com/v1/joubamety.com/discord"
 		fetch(url)
 		.then((response) => {
@@ -229,11 +229,6 @@ if (document.getElementById("discord-status-card") !== null) {
 					if(element.classList.contains("hidden")) {
 						element.classList.remove("hidden")
 					}
-					setTimeout( () => {
-						fetch(url + "/emote.webp")
-						fetch(url + "/albumArt.webp")
-						fetch(url + "/gameArt.webp")
-					}, 1000);
 				}
 			}
 		});
